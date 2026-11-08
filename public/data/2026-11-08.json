@@ -1,0 +1,676 @@
+{
+  "date": "2026-11-08",
+  "label": "Today",
+  "lastUpdated": "2026-11-08T12:24:03.642Z",
+  "agentLog": [
+    {
+      "timestamp": "12:23:16",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit f87d157: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:23:16",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:23:21",
+      "module": "SCOUT",
+      "message": "Scouted 115 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:23:21",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:23:22",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 71 off-beat/redundant wires. 44 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:23:22",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:23:22",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:24:03",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 28 items (6 via LLM, 22 via deterministic synthesis; top 15 LLM quota applied, 1 dropped for thin context). Tokens: 3528. Est cost: $0.00085.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:24:03",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:24:03",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (28 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:24:03",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-08 live (28 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261108-6",
+            "source": "TechCrunch AI",
+            "date": "2026-11-06",
+            "headline": "OpenAI Reportedly Raises $11 Billion at $1.25 Trillion Valuation",
+            "summary": "OpenAI has reportedly secured an additional $11 billion in capital as part of a round valuing the company at $1.25 trillion. The funding round has not officially closed but is expected to finalize in the coming weeks.",
+            "tag": "VENTURE_DEALS",
+            "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 9.5,
+              "total": 7.7
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261108-5",
+            "source": "arXiv Preprint",
+            "date": "2026-11-05",
+            "headline": "XStack Benchmark Evaluates AI Agents Migrating Repositories Between PyTorch and JAX",
+            "summary": "Researchers introduced XStack, a benchmark evaluating AI agents on migrating machine learning repositories from PyTorch on NVIDIA GPUs to JAX on Google TPUs. Agent performance remains unreliable, with Claude Opus 5 passing 75%, GPT-5.6-sol passing 45%, and all other agents passing at most 40%. XStack grades outputs against authenticated source repository results to make migration progress measurable.",
+            "tag": "BENCHMARKS",
+            "url": "http://arxiv.org/abs/2611.08472v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 8.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "ai-venture-research-20261108-14",
+            "source": "arXiv Preprint",
+            "date": "2026-11-05",
+            "headline": "Scientist World: Grow a Research World for AI-Scientists",
+            "summary": "AI-Scientists arrived, but a world for them to grow in did not. Human scientists take theirs for granted $-$ centuries of open problems and shared ideas, waiting in the scientific literature. To AI-Scientists, that world is readable but not runnable, so we build Scientist World for them: every research paper becomes an executable environment.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.08478v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261108-15",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-02",
+            "headline": "Stop counting tokens, start counting what ships",
+            "summary": "When a developer gives an AI agent a coding task, the agent does more than answer once. It plans, generates code, runs tests, and repeats the process to correct errors. A single task can use 10 to 50 times more tokens than a basic chat prompt.",
+            "tag": "RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261108-19",
+            "source": "arXiv Preprint",
+            "date": "2026-11-05",
+            "headline": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+            "summary": "LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for each round and must repeat this generation many times to maintain population diversity. We present SwarmEvolve, a framework in which hundreds of low-cost agents per round work in swarms, reason in latent space without decoding to text, and share information by passing KV caches.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.08483v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261108-20",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-03",
+            "headline": "How “reverse game theory” could keep AI agents in check",
+            "summary": "A new approach known as “reverse game theory” aims to control powerful AI models by designing systems that incentivize them to stick to the rules. As AI models become more capable, safety researchers are scrambling to ensure they are “aligned” with human desires—to make sure, in other words, that rogue agents don’t break the law,….",
+            "tag": "REASONING",
+            "url": "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261108-7",
+            "source": "The Verge AI",
+            "date": "2026-11-06",
+            "headline": "OpenAI valued at $1.25 trillion, as rival Anthropic nears its IPO",
+            "summary": "OpenAI is now valued at $1.25 trillion in a new round of funding that has raised another $11 billion, according to Bloomberg. That would make it one of the world's most valuable companies, not long after raising $122 billion from investors in March at a valuation of $852 billion. Echoing FT and Wall Street Journal […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 9.5,
+              "total": 7.7
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261108-11",
+            "source": "The Verge AI",
+            "date": "2026-11-07",
+            "headline": "The US let Nvidia sell chips to an empty office in China",
+            "summary": "Concerns are being raised that neither the Commerce Department nor Nvidia are doing their due diligence when it comes to vetting Chinese firms cleared to handle the company's H200 AI chips. According to The New York Times, New Matrix is on the list of approved firms, yet its offices are empty, \"a hollow gray shell […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261108-13",
+            "source": "The Verge AI",
+            "date": "2026-11-06",
+            "headline": "China reportedly recruited AI exec to spy on Jensen Huang",
+            "summary": "China's intelligence agency recruited Megaspeed executive Alice Huang to spy on Nvidia CEO Jensen Huang, according to The New York Times. The Ministry of State Security (MSS) enlisted her to glean information about American AI chips and \"potentially influence the company to push for its most advanced chips to be made available to China.\" Megaspeed […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261108-21",
+            "source": "The Verge AI",
+            "date": "2026-11-07",
+            "headline": "Why a new report on Anthropic automating AI development is alarming researchers",
+            "summary": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thursday by the AI safety research organization METR, following an 11-week investigation […].",
+            "tag": "REGULATORY",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261108-22",
+            "source": "The Verge AI",
+            "date": "2026-11-06",
+            "headline": "Meta’s Muse AI can create custom ‘spaces’ for the version of the app you need right now",
+            "summary": "Meta will now allow you to build customized, app-like experiences within Muse. The new feature, called \"spaces,\" allows its AI assistant to build things like a shopping hub, school dashboard, music tracker, trivia game, and more, which you can interact with directly in the Muse app. Meta says you can create a new space by […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261108-1",
+            "source": "FTC Press",
+            "date": "2026-11-06",
+            "headline": "Progress Residential Pays $49.75 Million to Settle FTC Deceptive Rental Pricing Charges",
+            "summary": "Progress Residential and owner Pretium Partners will pay $49.75 million to settle charges brought by the Federal Trade Commission and four states regarding deceptive rental pricing practices. The proposed order requires the companies to advertise true rental prices, disclose fees clearly, and stop improperly withholding security deposits.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/progress-residential-owner-pretium-partners-pay-4975-million-settle-ftc-states-charges-over",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 9,
+              "total": 8.5
+            }
+          },
+          {
+            "id": "politics-regulatory-20261108-3",
+            "source": "FTC Press",
+            "date": "2026-11-05",
+            "headline": "FTC and 22 States Unseal Details on Amazon Search Ad Scheme",
+            "summary": "The Federal Trade Commission and 22 states filed an updated complaint containing unredacted details about Amazon's search advertising auctions. The unredacted material alleges Amazon used deceptive and unfair practices to secretly inflate prices and manipulate auction results to meet corporate financial targets.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/new-details-emerge-amazon-ads-auction-rigging-case",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261108-4",
+            "source": "FTC Press",
+            "date": "2026-11-02",
+            "headline": "Riverside Payments Pays $600,000 to Settle FTC and Washington Deception Charges",
+            "summary": "Riverside Payments Inc., Cascade Equipment Leasing LLC, and their operators agreed to pay $600,000 to resolve FTC and Washington state allegations. Regulators charged that the firms deceived small businesses with false promises of savings while concealing hidden fees and auto-renewing contracts. Additionally, the complaint alleged the companies made cancellation nearly impossible despite promoting risk-free terms.",
+            "tag": "FTC_ACTION",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 7.9
+            }
+          }
+        ],
+        "global": [],
+        "voices": [
+          {
+            "id": "politics-voices-20261108-28",
+            "source": "Foreign Policy",
+            "date": "2026-11-06",
+            "headline": "A German Movie Previews Its Far-Right Future",
+            "summary": "The country’s cinema has recently taken a very dark turn.",
+            "tag": "POLICY",
+            "url": "https://foreignpolicy.com/2026/11/06/germany-movies-prosecution-film-far-right-afd/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "voices",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261108-16",
+            "source": "MarketWatch Top",
+            "date": "2026-11-08",
+            "headline": "This market signal called the tech selloff. Now it’s sending another warning.",
+            "summary": "Correlations between individual stocks recently hit a record low, and a reversion to the mean may not be a good thing for the market.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/this-market-signal-called-the-tech-selloff-now-its-sending-another-warning-f7f8eb9b?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261108-8",
+            "source": "ScienceDaily",
+            "date": "2026-11-07",
+            "headline": "A hidden limit of space and time could unlock electronics 100,000 times faster",
+            "summary": "Scientists have discovered a surprising quantum limit that prevents electrons from being tracked with unlimited precision in both space and time. The breakthrough could pave the way for manipulating chemical reactions and developing electronics hundreds of thousands of times faster than today's technology.",
+            "tag": "PHYSICS",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 7.4
+            }
+          },
+          {
+            "id": "science-frontier-20261108-12",
+            "source": "arXiv Preprint",
+            "date": "2026-11-05",
+            "headline": "Quantum Knowledge Distillation: State-of-the-art, Applications and Open Problems",
+            "summary": "Knowledge distillation transfers predictions, representations, or other supervisory information between learning models and is increasingly investigated in quantum machine learning. Its applications extend beyond compression to cross-architecture transfer, circuit approximation, distributed learning, and classical deployment of models trained using quantum-derived supervision. This survey reviews these approaches using two complementary classification axes: teacher-student configuration and the role of quantum resources in the distillation process.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.08461v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "science-frontier-20261108-26",
+            "source": "arXiv Preprint",
+            "date": "2026-11-05",
+            "headline": "DiffSequence-Q: Diffusion Design with Quantum Assistance for Biologically Active Proteins",
+            "summary": "Designing protein sequences that satisfy both secondary structure requirements and solubility targets remains challenging. We present DiffSequence-Q, a hybrid multinomial diffusion model conditioned on secondary structure at each residue and a continuous solubility target. To introduce quantum auxiliary supervision during training, we employ a quantum neural network (QNN) or quantum Kolmogorov-Arnold network (QKAN) as an auxiliary solubility prediction head over shared Transformer representations.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.08434v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.1
+            }
+          },
+          {
+            "id": "science-frontier-20261108-27",
+            "source": "arXiv Preprint",
+            "date": "2026-11-05",
+            "headline": "Disorder-blind Mpemba acceleration of quantum state preparation",
+            "summary": "Using the strong Mpemba effect to accelerate relaxation by initial-state design requires suppressing the slowest mode, which typically needs prior knowledge of the system. However, in disordered systems, this mode is sample-dependent, so a fixed preparation generally retains a slow-mode overlap. We show that a ``blind'' preparation, designed from the clean chain without knowledge of the disorder realisation or its distribution, can start farther from stationarity yet overtake a reference in typical samples of a dephased disordered XX chain.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.08424v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261108-23",
+            "source": "Wired Culture",
+            "date": "2026-11-06",
+            "headline": "Horny Grandmas Are Having a Moment",
+            "summary": "Creators in their sixties, seventies, and eighties have flooded adult platforms as the demand for mature content has skyrocketed, with some turning to online sex work as a retirement lifeline.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/horny-grandmas-are-having-a-moment/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261108-24",
+            "source": "Wired Culture",
+            "date": "2026-11-05",
+            "headline": "Area Man Feels Joy Online for First Time in Years",
+            "summary": "A day after the US midterm elections gave Democrats control of Congress, Onion CEO Ben Collins and comedian Patti Harrison spoke to WIRED about the salve of satire during politically fraught times.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/wired-world-fair-2026-ben-collins-the-onion/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261108-25",
+            "source": "Ars Technica",
+            "date": "2026-11-06",
+            "headline": "Nvidia hardware worth $11.4M vanished between Oakland and Texas",
+            "summary": "6 pallets of hardware vanished en route to Texas, with no arrests 2 months later.",
+            "tag": "REPORT",
+            "url": "https://arstechnica.com/gadgets/2026/11/nvidia-hardware-worth-11-4m-vanished-between-oakland-and-texas/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 6.5,
+              "relevance": 7.8,
+              "total": 6.1
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261108-2",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-05",
+            "headline": "California Governor Gavin Newsom Commutes Sentences for 548 Death Row Prisoners",
+            "summary": "California Governor Gavin Newsom announced the commutation of all 548 death-row sentences, potentially lowering the national death-row population by 27 percent. The decision highlights a national divide between states ending capital punishment and a small group of red states intensifying executions. Despite regional pushes for executions, overall national support and jury-issued death sentences continue to decline.",
+            "tag": "DEATH_PENALTY",
+            "url": "https://www.theatlantic.com/ideas/2026/11/death-row-commutation-california-newsom/689304/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 9.2,
+              "relevance": 9,
+              "total": 8.3
+            }
+          },
+          {
+            "id": "culture-voices-20261108-9",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-05",
+            "headline": "Chuck Schumer’s Revenge",
+            "summary": "This article was featured in the One Story to Read Today newsletter. This story was updated on November 5, 2026 at 11:00 am EST. Over the past two grim years, Chuck Schumer emerged as the symbol of everything that Democrats despised about themselves: the last aging Boomer who wouldn’t let go, the centrist without the steel to brawl with President Trump, a messenger forever mangling the message.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/midterms-democrats-mississippi-senate/689301/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9,
+              "relevance": 6.5,
+              "total": 7.3
+            }
+          },
+          {
+            "id": "culture-voices-20261108-10",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-06",
+            "headline": "In Front of Their Noses",
+            "summary": "Truncheon-wielding, balaclava-wearing ICE agents did not swarm the polling stations. The Insurrection Act was not invoked, nor did the president order the 82nd Airborne to lock up Democratic officials. The men in leather trench coats did not slip out of black limousines at midnight to seize the editors of publications that are unfriendly to MAGA and all of its works.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/democrats-midterms-trump-maga/689315/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 2.5,
+              "relevance": 7.8,
+              "total": 7
+            }
+          },
+          {
+            "id": "culture-voices-20261108-17",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-05",
+            "headline": "Democrats Have No Coherent Plan for AI",
+            "summary": "Among the many gifts that Donald Trump bequeathed to Democrats ahead of the midterms was allowing them the exclusive political use of the AI backlash. Now that Democrats have decisively won control of Congress, voters will expect them to follow through on their rhetoric. The problem is that Democrats don’t actually have a plan to regulate AI.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/democrats-ai-midterms-regulation/689320/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "culture-voices-20261108-18",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-06",
+            "headline": "The Pope Confronts One of His Toughest Political Challenges",
+            "summary": "Less than a month after losing part of a lung, Pope Leo XIV set out this morning on one of the longest and most ambitious trips of his pontificate. Over the course of 11 days and 12 flights, Leo will travel from South America’s Southern Cone to the high Andes and the Amazon Rainforest. Much of the Catholic world will be focused on how its 71-year-old leader, just a few weeks removed from cancer surgery, bears the physical challenge that the trip presents.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/pope-leo-south-america-right-wing/689316/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.5
+            }
+          }
+        ]
+      }
+    }
+  }
+}
