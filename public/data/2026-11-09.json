@@ -1,0 +1,696 @@
+{
+  "date": "2026-11-09",
+  "label": "Today",
+  "lastUpdated": "2026-11-09T14:38:08.580Z",
+  "agentLog": [
+    {
+      "timestamp": "14:37:21",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 08b9ab9: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:37:21",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:37:27",
+      "module": "SCOUT",
+      "message": "Scouted 119 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:37:27",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:37:27",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 73 off-beat/redundant wires. 46 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:37:27",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:37:27",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:38:08",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 29 items (15 via LLM, 14 via deterministic synthesis; top 15 LLM quota applied, 1 dropped for thin context). Tokens: 9373. Est cost: $0.00213.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:38:08",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:38:08",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (29 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:38:08",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-09 live (29 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261109-5",
+            "source": "TechCrunch AI",
+            "date": "2026-11-06",
+            "headline": "OpenAI reportedly raises $11 billion in ongoing funding round",
+            "summary": "OpenAI has reportedly secured an additional $11 billion as part of an ongoing funding round. The round has not yet closed but is anticipated to conclude in the coming weeks.",
+            "tag": "AI-VENTURE",
+            "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 9.5,
+              "total": 7.7
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261109-12",
+            "source": "arXiv Preprint",
+            "date": "2026-11-06",
+            "headline": "FlowMoP introduces conditional flow matching for stochastic multi-person motion prediction",
+            "summary": "FlowMoP is a new conditional flow matching framework that jointly generates diverse future motions for multiple agents, modeling global trajectories and root-relative poses. By using a B-spline reparameterization and a dual-stream transformer, the method achieves state-of-the-art performance on CMU-Mocap, 3DPW, and WorldPose datasets while capturing predictive uncertainty.",
+            "tag": "MOTION_PREDICT",
+            "url": "http://arxiv.org/abs/2611.09882v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261109-13",
+            "source": "arXiv Preprint",
+            "date": "2026-11-06",
+            "headline": "Generalist AI models control robot manipulators more reliably than specialist policies",
+            "summary": "Recent research demonstrates that agentic manipulation policies, powered by generalist AI models commanding manipulators directly, outperform specialist vision-language-action and world-action models. The reference harness AMP1 achieves state-of-the-art results zero-shot across benchmarks without requiring demonstrations or task-specific training. Furthermore, adding a persistent memory store enables the agent to learn from experience and further reduce failure rates on bimanual tasks.",
+            "tag": "ROBOTICS",
+            "url": "http://arxiv.org/abs/2611.09892v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261109-14",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-02",
+            "headline": "AI Agents Multiply Token Usage Through Iterative Tasks",
+            "summary": "AI coding agents consume 10 to 50 times more tokens than basic chat prompts by planning, generating code, running tests, and correcting errors. As these autonomous agents become more useful, their frequency of calls and overall token consumption increases correspondingly.",
+            "tag": "AI_AGENTS",
+            "url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "ai-venture-research-20261109-19",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-09",
+            "headline": "Innovating with AI in the special chemicals industry",
+            "summary": "As companies look to accelerate innovation with artificial intelligence, cloud computing, and advanced modeling, the primary challenge is connecting new technologies to reliable data, scientific expertise, and the practical realities of bringing products to market. For specialty chemicals manufacturer Lubrizol, digital transformation is all about giving researchers the tools to test ideas faster, make better-informed….",
+            "tag": "REASONING",
+            "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261109-18",
+            "source": "arXiv Preprint",
+            "date": "2026-11-06",
+            "headline": "On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning",
+            "summary": "Test-time reinforcement learning (TTRL) adapts pretrained language models to unlabeled target-domain data using self-generated pseudo-labels, whose reliability remains poorly understood. We analyze majority-vote supervision for TTRL with online Direct Preference Optimization (DPO) and decompose its error into population-majority bias and prompt-dependent finite-rollout variation. Because population-majority bias is generally unidentifiable without external supervision, we focus on mitigating the downstream effects of finite-rollout variation.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.09872v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.4
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261109-10",
+            "source": "The Verge AI",
+            "date": "2026-11-07",
+            "headline": "US and Nvidia face scrutiny over vetting of Chinese chip buyers",
+            "summary": "Concerns are rising that the Commerce Department and Nvidia failed to conduct adequate due diligence regarding Chinese firms cleared to purchase H200 AI chips. Investigations revealed that an approved company, New Matrix, maintains an empty office. This situation highlights potential gaps in the oversight of AI chip distribution.",
+            "tag": "AI_VENTURE",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 9,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261109-16",
+            "source": "The Verge AI",
+            "date": "2026-11-08",
+            "headline": "Apple is racing to make Siri more agentic",
+            "summary": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI on an incredibly short timeline, the company has no illusions that it's […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261109-17",
+            "source": "The Verge AI",
+            "date": "2026-11-08",
+            "headline": "Nvidia is investigating Jensen Huang’s relationship with an alleged Chinese spy",
+            "summary": "Nvidia has announced that it is opening an investigation into CEO Jensen Huang and his relationship with Megaspeed executive Alice Huang, who was reportedly recruited by China's Ministry of State Security to spy on the company. A statement posted by the board of directors reads: The NVIDIA Board is initiating an independent investigation in light […].",
+            "tag": "REGULATORY",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261109-22",
+            "source": "The Verge AI",
+            "date": "2026-11-08",
+            "headline": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+            "summary": "On Sunday, Nvidia announced it was launching an investigation into CEO Jensen Huang's relationship with Alice Huang, an AI executive and agent of the Chinese government. In addition to the Board of Directors announcing the investigation, Huang sent a memo to Nvidia employees acknowledging the affair. You can read the full text below.",
+            "tag": "REGULATORY",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261109-1",
+            "source": "FTC Press",
+            "date": "2026-11-06",
+            "headline": "Progress Residential and Pretium Partners Settle FTC Charges for $49.75 Million",
+            "summary": "Progress Residential and owner Pretium Partners will pay $49.75 million to settle charges by the FTC and four states regarding deceptive rental pricing practices and unlawful conduct. The proposed order requires the companies to advertise true rental prices, clearly disclose fees, and cease improperly withholding security deposits.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/progress-residential-owner-pretium-partners-pay-4975-million-settle-ftc-states-charges-over",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 9.5,
+              "total": 8.5
+            }
+          },
+          {
+            "id": "politics-regulatory-20261109-2",
+            "source": "FTC Press",
+            "date": "2026-11-05",
+            "headline": "New Details Emerge in Amazon Ads Auction-Rigging Case",
+            "summary": "Newly unredacted material from the FTC and 22 states reveals allegations that Amazon manipulated search advertising auctions. The updated complaint claims Amazon used deceptive practices to secretly inflate prices and meet corporate financial targets.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/new-details-emerge-amazon-ads-auction-rigging-case",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 8.1
+            }
+          },
+          {
+            "id": "politics-regulatory-20261109-3",
+            "source": "FTC Press",
+            "date": "2026-11-02",
+            "headline": "FTC and Washington Penalize Riverside Payments $600,000 for Deception",
+            "summary": "Riverside Payments Inc., its affiliate Cascade Equipment Leasing LLC, and their operators will pay $600,000 to settle allegations brought by the FTC and Washington state. The complaint states the firms deceived small businesses by falsely promising savings on payment-processing services while hiding fees and auto-renewing contracts. Additionally, the defendants made cancellation nearly impossible despite promoting a risk-free cancellation policy.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 8.1
+            }
+          }
+        ],
+        "global": [],
+        "voices": [
+          {
+            "id": "politics-voices-20261109-27",
+            "source": "Foreign Policy",
+            "date": "2026-11-06",
+            "headline": "A German Movie Previews Its Far-Right Future",
+            "summary": "The country’s cinema has recently taken a very dark turn.",
+            "tag": "POLICY",
+            "url": "https://foreignpolicy.com/2026/11/06/germany-movies-prosecution-film-far-right-afd/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "voices",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261109-28",
+            "source": "MarketWatch Top",
+            "date": "2026-11-09",
+            "headline": "As AI trade falters, Goldman Sachs says this lagging region is now positioned to outperform",
+            "summary": "Precisely because it has long been hamstrung by rigid labor markets and overregulation, European stocks may paradoxically be bigger beneficiaries of the AI revolution in terms of enhanced productivity and cost-cutting than its U.S.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/as-ai-trade-falters-goldman-sachs-says-this-lagging-region-is-now-positioned-to-outperform-589805c6?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          },
+          {
+            "id": "markets-macro-20261109-29",
+            "source": "MarketWatch Top",
+            "date": "2026-11-09",
+            "headline": "Corporate America’s profit numbers are just barely beating Wall Street’s expectations",
+            "summary": "S&P 500 companies’ earnings are mostly topping analysts’ estimates — but by the narrowest margin in roughly four years.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/corporate-americas-profit-numbers-are-just-barely-beating-wall-streets-expectations-eaa67fe2?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261109-6",
+            "source": "ScienceDaily",
+            "date": "2026-11-09",
+            "headline": "Caltech robot autonomously builds structural component in space",
+            "summary": "A robot has successfully built part of a structure in space for the first time. This breakthrough technology could enable the future construction of enormous telescopes, communications antennas, and solar power stations in orbit.",
+            "tag": "SPACE_ROBOT",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261109-7",
+            "source": "ScienceDaily",
+            "date": "2026-11-07",
+            "headline": "Scientists discover a quantum limit on tracking electrons",
+            "summary": "Researchers have found a surprising quantum limit preventing unlimited precision when tracking electrons in space and time. This breakthrough could potentially enable the development of electronics hundreds of thousands of times faster than current technology and help manipulate chemical reactions.",
+            "tag": "QUANTUM",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261109-4",
+            "source": "arXiv Preprint",
+            "date": "2026-11-06",
+            "headline": "Researchers observe Zeno crossover in monitored quantum arrival-time distributions",
+            "summary": "Physicists studied the long-standing quantum arrival-time problem using periodically monitored spin chains and quantum circuits. Using superconducting quantum hardware, they measured arrival-time distributions that resolve both the quantum Zeno and low-monitoring regimes for single and interacting particles. The results demonstrate that these two regimes and Zeno suppression are generic features of monitored propagation.",
+            "tag": "QUANTUM",
+            "url": "http://arxiv.org/abs/2611.09814v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261109-8",
+            "source": "Nature News",
+            "date": "2026-11-09",
+            "headline": "Carlo Rovelli Argues Fundamental Physics is Overrated",
+            "summary": "Physicist Carlo Rovelli suggests that fundamental physics holds an overrated status within the scientific community. The perspective challenges traditional hierarchies of scientific disciplines based on a Nature News report.",
+            "tag": "PHYSICS",
+            "url": "https://www.nature.com/articles/d41586-026-03626-7",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 9.8,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 7.5
+            }
+          },
+          {
+            "id": "science-frontier-20261109-11",
+            "source": "arXiv Preprint",
+            "date": "2026-11-06",
+            "headline": "AI agents discover formally verified quantum programs beyond classical evaluation limits",
+            "summary": "Large language model agents utilizing a quantum program library in the Lean theorem prover have automatically synthesized novel quantum programs and verified their correctness. This system achieves order-of-magnitude improvements on scientific applications, including quantum arithmetic, parallel search, and simulations for fusion, photochemistry, and drug metabolism. Combining artificial intelligence with mathematical proof under rigorous verification shortens the path to practical quantum computation.",
+            "tag": "QUANTUM_AI",
+            "url": "http://arxiv.org/abs/2611.09822v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261109-23",
+            "source": "Wired Culture",
+            "date": "2026-11-09",
+            "headline": "Authors Can Defend Against AI Allegations With ‘Paper Trail’ Tools. Is It Enough?",
+            "summary": "As the publishing industry wrestles with paranoia over the provenance of manuscripts, writers are caught in an impossible bind.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/authors-can-defend-against-ai-allegations-with-paper-trail-tools/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261109-24",
+            "source": "Wired Culture",
+            "date": "2026-11-06",
+            "headline": "Horny Grandmas Are Having a Moment",
+            "summary": "Creators in their sixties, seventies, and eighties have flooded adult platforms as the demand for mature content has skyrocketed, with some turning to online sex work as a retirement lifeline.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/horny-grandmas-are-having-a-moment/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261109-25",
+            "source": "Wired Culture",
+            "date": "2026-11-05",
+            "headline": "Area Man Feels Joy Online for First Time in Years",
+            "summary": "A day after the US midterm elections gave Democrats control of Congress, Onion CEO Ben Collins and comedian Patti Harrison spoke to WIRED about the salve of satire during politically fraught times.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/wired-world-fair-2026-ben-collins-the-onion/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261109-9",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-06",
+            "headline": "Republicans suffer major electoral defeat as peaceful midterm elections defy apocalyptic predictions.",
+            "summary": "Recent peaceful elections resulted in a major defeat for Republicans, challenging years of commentary predicting the end of American democracy. Intellectuals and politicians failed to anticipate the outcome due to class-based disdain for average Americans and an underestimation of the decentralized political system. Democrats now face challenges regarding policy management, avoiding overreach, and understanding the persistent appeal of Donald Trump.",
+            "tag": "POLITICS",
+            "url": "https://www.theatlantic.com/ideas/2026/11/democrats-midterms-trump-maga/689315/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 2.5,
+              "relevance": 8.5,
+              "total": 7.2
+            }
+          },
+          {
+            "id": "culture-voices-20261109-15",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-06",
+            "headline": "Pope Leo XIV Faces Major Political Challenges on Latin American Tour",
+            "summary": "Pope Leo XIV has embarked on an 11-day trip across South America, confronting significant political challenges posed by the rise of right-wing populism and regional security crises. The pontiff must balance addressing the Catholic Church's disagreements with populist leaders over security tactics and austerity with his commitment to human rights and the rule of law.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/pope-leo-south-america-right-wing/689316/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "culture-voices-20261109-20",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-06",
+            "headline": "LeBron James, Philadelphian",
+            "summary": "When LeBron James chose the Philadelphia 76ers as his new team this summer, he might have imagined a lengthy honeymoon phase befitting the arrival of a king, but his new fans didn’t even wait until halftime of the Sixers’ home opener, on October 22, to give him a dose of Philly reality. The boos began at the 3:23 mark of the second quarter, after an alley-oop dunk by the Cleveland Cavaliers put the Sixers down an unacceptable 27. The boos returned when they fell behind by 29 with just over a minute remaining, and again as the buzzer sounded for halftime.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/lebron-james-sixers-philadelphia/689324/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "culture-voices-20261109-21",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-05",
+            "headline": "Democrats Have No Coherent Plan for AI",
+            "summary": "Among the many gifts that Donald Trump bequeathed to Democrats ahead of the midterms was allowing them the exclusive political use of the AI backlash. Now that Democrats have decisively won control of Congress, voters will expect them to follow through on their rhetoric. The problem is that Democrats don’t actually have a plan to regulate AI.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/democrats-ai-midterms-regulation/689320/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "culture-voices-20261109-26",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-08",
+            "headline": "When Writers Lose Faith in Free Speech",
+            "summary": "On Thursday, the Atlantic staff writer George Packer delivered the Newark Public Library’s annual Philip Roth Lecture. This article is adapted from his remarks. P hilip Roth’s chosen vocation was the novel, and he practiced it almost nonstop for six decades with a monkish devotion.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/philip-roth-political-novelists/689337/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 2.4,
+              "magnitude": 2.5,
+              "relevance": 8.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    }
+  }
+}
