@@ -17,7 +17,7 @@ export function filterSavedByBeat(
   beat: BeatId | null,
 ): DigestItem[] {
   if (!beat) return [...savedItems];
-  return savedItems.filter((item) => item.beat === beat);
+  return savedItems.filter((item) => item.beat !== undefined);
 }
 
 /**
