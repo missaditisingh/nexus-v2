@@ -1,0 +1,715 @@
+{
+  "date": "2026-11-10",
+  "label": "Today",
+  "lastUpdated": "2026-11-10T13:56:47.713Z",
+  "agentLog": [
+    {
+      "timestamp": "13:54:36",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 30c07c6: \"Add beat filter to saved dispatches view (#1)\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:54:36",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:54:41",
+      "module": "SCOUT",
+      "message": "Scouted 107 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:54:41",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:54:41",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 69 off-beat/redundant wires. 38 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:54:41",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:54:41",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:56:47",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 30 items (15 via LLM, 15 via deterministic synthesis; top 15 LLM quota applied, 0 dropped for thin context). Tokens: 17132. Est cost: $0.00327.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:56:47",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:56:47",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (30 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:56:47",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-10 live (30 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261110-25",
+            "source": "TechCrunch AI",
+            "date": "2026-11-10",
+            "headline": "Anthropic reportedly plans to move forward with IPO plans",
+            "summary": "The AI company is expected to set its valuation range this week, the Wall Street Journal reported.",
+            "tag": "IPO",
+            "url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261110-11",
+            "source": "arXiv Preprint",
+            "date": "2026-11-09",
+            "headline": "Vendi Anomaly Score introduces diversity-based paradigm for machine learning",
+            "summary": "Researchers have introduced the Vendi Anomaly Score (VAS), a new paradigm for anomaly detection that quantifies how much a sample changes dataset diversity when removed. VAS requires no hyperparameter tuning, scales linearly with dataset size, and achieves state-of-the-art performance across multiple benchmark datasets and ImageNet experiments.",
+            "tag": "AI_RESEARCH",
+            "url": "http://arxiv.org/abs/2611.12871v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "ai-venture-research-20261110-16",
+            "source": "arXiv Preprint",
+            "date": "2026-11-09",
+            "headline": "Kolmogorov-Chapman Maps: Trajectory-Free Learning for Simulating Molecular Dynamics",
+            "summary": "Stochastic differential equations (SDEs) describe stochastic processes across a wide range of scientific domains, including physics, biology, and finance. Although individual numerical integration steps are inexpensive, observing meaningful events or transitions can require millions of sequential steps, resulting in substantial wall-clock simulation time and poor hardware utilization. Deep learning offers an alternative by amortizing many integration steps into a single neural network forward pass, potentially enabling much faster simulation.",
+            "tag": "ARCHITECTURE",
+            "url": "http://arxiv.org/abs/2611.12880v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261110-17",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-09",
+            "headline": "Innovating with AI in the special chemicals industry",
+            "summary": "As companies look to accelerate innovation with artificial intelligence, cloud computing, and advanced modeling, the primary challenge is connecting new technologies to reliable data, scientific expertise, and the practical realities of bringing products to market. For specialty chemicals manufacturer Lubrizol, digital transformation is all about giving researchers the tools to test ideas faster, make better-informed….",
+            "tag": "REASONING",
+            "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261110-18",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-03",
+            "headline": "How “reverse game theory” could keep AI agents in check",
+            "summary": "A new approach known as “reverse game theory” aims to control powerful AI models by designing systems that incentivize them to stick to the rules. As AI models become more capable, safety researchers are scrambling to ensure they are “aligned” with human desires—to make sure, in other words, that rogue agents don’t break the law,….",
+            "tag": "REASONING",
+            "url": "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261110-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-09",
+            "headline": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
+            "summary": "As multimodal agents accumulate increasingly long interaction histories, effectively retrieving and utilizing past information becomes critical for long-term interaction. Existing memory systems typically rely on semantic retrieval over compressed memories and expose predefined representations, which may miss relevant memories and overlook heterogeneous evidence needs across queries. We introduce \\textbf{\\hivemem}, a multimodal memory framework that interleaves \\textbf{\\textsc{H}}or\\textbf{\\textsc{i}}zontal Memory Expansion with \\textbf{\\textsc{Ve}}rtical Evidence Composition.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.12872v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 4.4,
+              "magnitude": 6,
+              "relevance": 8.8,
+              "total": 6.1
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261110-9",
+            "source": "The Verge AI",
+            "date": "2026-11-09",
+            "headline": "Anthropic Launches Claude Fable 5.2 and Mythos 5.2 Models",
+            "summary": "Anthropic announced the release of Claude Fable 5.2 and Claude Mythos 5.2, designed to handle daunting technical challenges. The company claims these new models offer improvements in coding, reasoning, and vision, along with faster output generation compared to version 5.1.",
+            "tag": "AI-VENTURE",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 7.8,
+              "magnitude": 6,
+              "relevance": 9.5,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261110-12",
+            "source": "The Verge AI",
+            "date": "2026-11-09",
+            "headline": "Nvidia's chips serve as the bedrock for advanced US artificial intelligence technology",
+            "summary": "Nvidia maintains immense power in the current artificial intelligence landscape, with its chips forming the foundation of advanced US AI tech. Demand for these chips has consistently outpaced supply for years, and the company has invested in numerous emerging AI startups.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 9,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261110-13",
+            "source": "The Verge AI",
+            "date": "2026-11-09",
+            "headline": "Nvidia Investigates CEO Jensen Huang Following Acknowledged Affair Scandal",
+            "summary": "Nvidia CEO Jensen Huang has acknowledged an affair with Megaspeed executive Alice Huang, prompting an internal company investigation. Recent reporting also revealed that US intelligence reports had previously identified Alice Huang as an executive for an AI compute company renting access.",
+            "tag": "AI-VENTURE",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261110-20",
+            "source": "The Verge AI",
+            "date": "2026-11-09",
+            "headline": "Apple’s $50 Intelligence Usage Packs extend access to some AI features",
+            "summary": "After publishing a support article in early September outlining usage limits for some Apple Intelligence features, the company has updated Logic Pro with an option to \"Buy More Usage\" for a one-time purchase price of $49.99, as spotted by 9to5Mac. It has a built-in AI assistant to do things like \"start a new song, set […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261110-26",
+            "source": "The Verge AI",
+            "date": "2026-11-09",
+            "headline": "Here’s what Trump said he knew about Jensen Huang",
+            "summary": "President Trump held a White House press briefing earlier today and responded to several questions about his knowledge of Nvidia CEO Jensen Huang's affair with an alleged Chinese spy. Huang said this weekend that he had been \"​​unfaithful\" to his wife, and the company has opened an investigation into Huang. Recent articles from The New […].",
+            "tag": "REGULATORY",
+            "url": "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261110-1",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "FTC Secures Settlement With Stream Auto Outlet Over Deceptive Pricing",
+            "summary": "The Federal Trade Commission announced a settlement agreement with Long Island, New York-based Stream Auto Outlet. The resolution addresses allegations that the dealership group misled consumers by advertising vehicle prices significantly lower than the final amounts charged.",
+            "tag": "FTC_SETTLEMENT",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-secures-settlement-stream-auto-outlet-advancing-price-transparency-auto-buying-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.8,
+              "relevance": 8.5,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261110-3",
+            "source": "FTC Press",
+            "date": "2026-11-06",
+            "headline": "Progress Residential and Pretium Partners Settle FTC Charges for $49.75 Million",
+            "summary": "Progress Residential and owner Pretium Partners will pay $49.75 million to settle charges by the FTC and four states regarding deceptive rental pricing practices and unlawful conduct. The proposed order requires the companies to advertise true rental prices, clearly disclose fees, and cease improperly withholding security deposits.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/progress-residential-owner-pretium-partners-pay-4975-million-settle-ftc-states-charges-over",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 9.5,
+              "total": 8.5
+            }
+          },
+          {
+            "id": "politics-regulatory-20261110-2",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "Federal Court Halts Phantom Debt Collection Operation Following FTC Complaint",
+            "summary": "At the Federal Trade Commission's request, a federal court temporarily halted a debt collection operation and froze its assets. The complaint alleges the scheme used false threats and unlawful tactics to collect over $20 million in often-fictitious debts. The operators pressured consumers into paying debts that they frequently did not owe.",
+            "tag": "REGULATORY_FTC",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-action-results-court-issuing-temporary-restraining-order-halting-phantom-debt-collection",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 8.5,
+              "total": 8.4
+            }
+          },
+          {
+            "id": "politics-regulatory-20261110-6",
+            "source": "FTC Press",
+            "date": "2026-11-05",
+            "headline": "New Details Emerge in Amazon Ads Auction-Rigging Case",
+            "summary": "Newly unredacted material from the FTC and 22 states sheds light on Amazon's alleged scheme to manipulate auction results. The updated complaint outlines deceptive practices used to secretly inflate prices in its online search advertising auction to meet corporate financial targets.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/new-details-emerge-amazon-ads-auction-rigging-case",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261110-27",
+            "source": "MarketWatch Top",
+            "date": "2026-11-10",
+            "headline": "Nvidia couldn’t derail the stock market’s rally. Hot inflation might.",
+            "summary": "A Fed official raises the prospect of a half-a-percentage-point rate hike. Plus, fresh valuation focus on Anthropic’s blockbuster IPO.",
+            "tag": "MACRO",
+            "url": "https://www.marketwatch.com/story/nvidia-couldnt-derail-the-stock-markets-rally-hot-inflation-might-8a572024?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "markets-macro-20261110-28",
+            "source": "MarketWatch Top",
+            "date": "2026-11-10",
+            "headline": "Fed’s Waller puts half-point rate hike into the mix for December",
+            "summary": "central bank official had put a half-point discussion into the mix ahead of Labor Department data, which came in as hot as he feared.",
+            "tag": "MACRO",
+            "url": "https://www.marketwatch.com/story/feds-waller-puts-half-point-rate-hike-into-the-mix-for-december-1bebdffc?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 5.9
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261110-7",
+            "source": "ScienceDaily",
+            "date": "2026-11-10",
+            "headline": "CERN discovers extremely rare particle decay after 40 years",
+            "summary": "CERN scientists have found evidence of a particle decay that occurs only once in roughly 10 billion decays, concluding a search lasting over four decades. This breakthrough could aid physicists in uncovering hidden particles and forces beyond the capabilities of current accelerators.",
+            "tag": "PARTICLEPHYSICS",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261108233047.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261110-8",
+            "source": "ScienceDaily",
+            "date": "2026-11-09",
+            "headline": "Caltech robot autonomously builds the first space structure",
+            "summary": "For the first time, a robot has autonomously constructed part of a structure in space. This breakthrough could enable scientists to build enormous telescopes, communications antennas, and solar power stations in orbit that exceed today's rocket size limits.",
+            "tag": "SPACE_ROBOTICS",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261110-10",
+            "source": "Nature News",
+            "date": "2026-11-10",
+            "headline": "Why your physics project needs an anthropologist",
+            "summary": "Physics projects can benefit from incorporating anthropologists into their research teams. This interdisciplinary approach bridges distinct academic fields to address complex scientific challenges.",
+            "tag": "FRONTIER",
+            "url": "https://www.nature.com/articles/d41586-026-03623-w",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 9.8,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 7.4
+            }
+          },
+          {
+            "id": "science-frontier-20261110-14",
+            "source": "ScienceDaily",
+            "date": "2026-11-10",
+            "headline": "Alzheimer's genetic mutations disrupt nerve-to-muscle connections outside the brain",
+            "summary": "Scientists utilizing miniature human cell laboratory systems discovered that inherited Alzheimer's genetic mutations can disrupt nerve-to-muscle connections independently of the brain or spinal cord. This finding may explain early changes in balance, walking, and coordination occurring before memory decline.",
+            "tag": "NEUROSCIENCE",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261108233103.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "science-frontier-20261110-30",
+            "source": "Phys.org",
+            "date": "2026-11-10",
+            "headline": "Student team develops innovative 'Trojan horse' in the fight against the Asian hornet",
+            "summary": "An interdisciplinary team of students from the Vrije Universiteit Brussel (VUB) is taking part in iGEM, the international synthetic biology competition in Paris (Nov. Using a clever combination of artificial intelligence, a mechanical trap and protein nanofibers, they are presenting a targeted method to efficiently control populations of the Asian hornet.",
+            "tag": "SCIENCE",
+            "url": "https://phys.org/news/2026-11-student-team-trojan-horse-asian.html",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.5
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261110-21",
+            "source": "Wired Culture",
+            "date": "2026-11-09",
+            "headline": "Authors Can Defend Against AI Allegations With ‘Paper Trail’ Tools. Is It Enough?",
+            "summary": "As the publishing industry wrestles with paranoia over the provenance of manuscripts, writers are caught in an impossible bind.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/authors-can-defend-against-ai-allegations-with-paper-trail-tools/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261110-22",
+            "source": "Wired Culture",
+            "date": "2026-11-06",
+            "headline": "Horny Grandmas Are Having a Moment",
+            "summary": "Creators in their sixties, seventies, and eighties have flooded adult platforms as the demand for mature content has skyrocketed, with some turning to online sex work as a retirement lifeline.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/horny-grandmas-are-having-a-moment/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261110-23",
+            "source": "Wired Culture",
+            "date": "2026-11-05",
+            "headline": "Area Man Feels Joy Online for First Time in Years",
+            "summary": "A day after the US midterm elections gave Democrats control of Congress, Onion CEO Ben Collins and comedian Patti Harrison spoke to WIRED about the salve of satire during politically fraught times.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/wired-world-fair-2026-ben-collins-the-onion/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261110-4",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-09",
+            "headline": "The US Border Crisis Persists Due to Flawed Asylum Incentives",
+            "summary": "A former White House and DHS official argues that progressive policies and the exploitation of the U.S. asylum system drive illegal immigration. The author contends that economic migrants make dangerous journeys because they believe they will be allowed to stay, and that effective border management requires strict enforcement rather than sole reliance on addressing root causes.",
+            "tag": "IMMIGRATION",
+            "url": "https://www.theatlantic.com/ideas/2026/11/immigration-trump-border-asylum/689318/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 9.5,
+              "relevance": 9.2,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "culture-voices-20261110-5",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-10",
+            "headline": "Exploring Aquaterra, the Submerged Continental Shelf Containing Ancient Human History",
+            "summary": "Geographers and marine archaeologists are increasingly studying Aquaterra, a massive global zone of coastal shelves and lowlands that flooded as ice ages ended and sea levels rose over the last 20,000 years. Submerged sites around the world have yielded prehistoric tools, structural ruins, and fossils, revealing that many human cultural developments and migrations occurred in these now-underwater regions.",
+            "tag": "ARCHAEOLOGY",
+            "url": "https://www.theatlantic.com/magazine/2026/12/aquaterra-ancient-human-migration/689029/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 7.8,
+              "relevance": 9.2,
+              "total": 8.3
+            }
+          },
+          {
+            "id": "culture-voices-20261110-15",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-09",
+            "headline": "Pete Hegseth delivers grievance-filled speech at the Naval War College",
+            "summary": "Defense Secretary Pete Hegseth delivered a speech at the Naval War College criticizing academics, term papers, and military education for lacking a focus on victory. According to former professor Eliot A. Cohen, Hegseth's speech reflected a lack of understanding regarding war college curricula and a desire to incorporate personal political vendettas into coursework.",
+            "tag": "MILITARY_ED",
+            "url": "https://www.theatlantic.com/ideas/2026/11/hegseth-war-college-curriculum/689351/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "culture-voices-20261110-19",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-06",
+            "headline": "LeBron James, Philadelphian",
+            "summary": "When LeBron James chose the Philadelphia 76ers as his new team this summer, he might have imagined a lengthy honeymoon phase befitting the arrival of a king, but his new fans didn’t even wait until halftime of the Sixers’ home opener, on October 22, to give him a dose of Philly reality. The boos began at the 3:23 mark of the second quarter, after an alley-oop dunk by the Cleveland Cavaliers put the Sixers down an unacceptable 27. The boos returned when they fell behind by 29 with just over a minute remaining, and again as the buzzer sounded for halftime.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/lebron-james-sixers-philadelphia/689324/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "culture-voices-20261110-29",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-08",
+            "headline": "When Writers Lose Faith in Free Speech",
+            "summary": "On Thursday, the Atlantic staff writer George Packer delivered the Newark Public Library’s annual Philip Roth Lecture. This article is adapted from his remarks. P hilip Roth’s chosen vocation was the novel, and he practiced it almost nonstop for six decades with a monkish devotion.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/philip-roth-political-novelists/689337/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 2.4,
+              "magnitude": 2.5,
+              "relevance": 8.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    }
+  }
+}
