@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { BeatId, BEAT_DEFINITIONS, DayDigest, DigestItem as DigestItemType } from '../../lib/nexus/types';
+import { beatsForFilter, filterSavedByBeat, savedCountByBeat } from '../../lib/nexus/savedFilter';
 import { DigestColumn } from './DigestColumn';
 import { DigestItem } from './DigestItem';
 
@@ -41,31 +42,19 @@ export const DigestGrid: React.FC<DigestGridProps> = ({
     return cols;
   }, [digest, selectedBeats]);
 
-  // Which beats get a filter chip: the reader's own beats, plus any beat they have
-  // a saved dispatch from (so items saved before a beat change stay reachable).
-  const savedFilterBeats = useMemo(() => {
-    const present = new Set<BeatId>(selectedBeats);
-    for (const item of savedItems) {
-      if (item.beat) present.add(item.beat);
-    }
-    return (Object.keys(BEAT_DEFINITIONS) as BeatId[]).filter((beatId) => present.has(beatId));
-  }, [selectedBeats, savedItems]);
+  // The filter rule itself lives in lib/nexus/savedFilter.ts so it can be tested
+  // without rendering anything. This component only decides how to draw it.
+  const savedFilterBeats = useMemo(
+    () => beatsForFilter(selectedBeats, savedItems),
+    [selectedBeats, savedItems],
+  );
 
-  // Saved count per beat, used for the chip labels.
-  const savedCountByBeat = useMemo(() => {
-    const counts: Partial<Record<BeatId, number>> = {};
-    for (const item of savedItems) {
-      if (item.beat) {
-        counts[item.beat] = (counts[item.beat] || 0) + 1;
-      }
-    }
-    return counts;
-  }, [savedItems]);
+  const countByBeat = useMemo(() => savedCountByBeat(savedItems), [savedItems]);
 
-  const visibleSavedItems = useMemo(() => {
-    if (!savedBeatFilter) return savedItems;
-    return savedItems.filter((item) => item.beat === savedBeatFilter);
-  }, [savedItems, savedBeatFilter]);
+  const visibleSavedItems = useMemo(
+    () => filterSavedByBeat(savedItems, savedBeatFilter),
+    [savedItems, savedBeatFilter],
+  );
 
   // Leaving the saved view clears the filter, so reopening SAVED always starts on "all".
   useEffect(() => {
@@ -132,7 +121,7 @@ export const DigestGrid: React.FC<DigestGridProps> = ({
 
             {savedFilterBeats.map((beatId) => {
               const isActive = savedBeatFilter === beatId;
-              const count = savedCountByBeat[beatId] || 0;
+              const count = countByBeat[beatId] || 0;
               return (
                 <button
                   key={beatId}
