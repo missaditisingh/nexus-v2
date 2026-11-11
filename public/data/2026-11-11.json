@@ -1,0 +1,795 @@
+{
+  "date": "2026-11-11",
+  "label": "Today",
+  "lastUpdated": "2026-11-11T13:08:59.785Z",
+  "agentLog": [
+    {
+      "timestamp": "13:08:00",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 0e9f74d: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:00",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:07",
+      "module": "SCOUT",
+      "message": "Scouted 117 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:07",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:07",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 67 off-beat/redundant wires. 50 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:07",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:08",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:59",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 34 items (3 via LLM, 31 via deterministic synthesis; top 15 LLM quota applied, 1 dropped for thin context). Tokens: 1144. Est cost: $0.00032.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:59",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:59",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (34 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:08:59",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-11 live (34 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261111-12",
+            "source": "TechCrunch AI",
+            "date": "2026-11-10",
+            "headline": "Oura to acquire AI-native primary care startup Counsel Health for $625M",
+            "summary": "The deal comes a few weeks after Oura postponed its up to $2.2 billion IPO indefinitely, citing “uncertainty in the IPO market.”.",
+            "tag": "IPO",
+            "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.5,
+              "relevance": 7.8,
+              "total": 7.4
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261111-13",
+            "source": "TechCrunch AI",
+            "date": "2026-11-10",
+            "headline": "All 7 Anthropic founders will each cash out about $250M in IPO",
+            "summary": "Each of the seven co-founders plans to sell exactly the same number of shares in the IPO, which would bring each of them about $250 million in cash at the midpoint of the price range while leaving the group in control of the company.",
+            "tag": "IPO",
+            "url": "https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 8.2,
+              "relevance": 7.8,
+              "total": 7.1
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261111-19",
+            "source": "TechCrunch AI",
+            "date": "2026-11-10",
+            "headline": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+            "summary": "OpenAI has not yet said what its plans are for the future of travel. But Sonder founder Francis Davidson is a well-known figure in the travel industry.",
+            "tag": "M&A",
+            "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.6
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261111-14",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Emergent Biological Capabilities in a Foundation Model for Molecular Interactions",
+            "summary": "Foundation models trained on large unlabeled corpora develop emergent capabilities, tasks that go beyond the training objective. We extend this paradigm to multimodal biology with Bonbon, a foundation model for molecular interactions trained on approximately 3.2 trillion tokens of paired protein-ligand sequences. From a single representation space, Bonbon exhibits three zero-shot emergent capabilities at hierarchical levels of resolution: functional (mechanism of action), residue (binding site localization, including orthosteric/allosteric discrimination), and bond (covalent versus non-covalent engagement).",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.14504v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261111-15",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Toward Foundation Detection Models via Example-Based Grounding in EM-DETR",
+            "summary": "DeepLearning (DL)-based Computer-Aided Diagnostic (CAD) systems have shown great promise in supporting clinicians, but their performance heavily depends on the availability of large, well-annotated datasets. In medical lesion detection, the scarcity of comprehensive, stan dardized annotations and the heterogeneity of existing datasets limit the development of robust foundation models. In this work, we introduce a novel approach to building a multi-domain foundation model for le sion detection by integrating diverse medical image datasets annotated for both anatomical structures and abnormalities.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.14518v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261111-21",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Pyrite: Building and Benchmarking Protein-Ligand Pose Ranking Agents",
+            "summary": "Predicting how a ligand binds to its target is central to small-molecule drug discovery. Modern cofolding models can generate diverse candidate poses, but reliably ranking these candidates remains challenging. We introduce Pyrite, a pairwise pose-ranking benchmark comprising 1,500 pose pairs across diverse protein-ligand complexes.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.14511v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-research-20261111-23",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-09",
+            "headline": "Innovating with AI in the special chemicals industry",
+            "summary": "As companies look to accelerate innovation with artificial intelligence, cloud computing, and advanced modeling, the primary challenge is connecting new technologies to reliable data, scientific expertise, and the practical realities of bringing products to market. For specialty chemicals manufacturer Lubrizol, digital transformation is all about giving researchers the tools to test ideas faster, make better-informed….",
+            "tag": "REASONING",
+            "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261111-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "When Does the Real Wiring Win? Testing connectome structure-function claims against unmeasured physiology",
+            "summary": "Connectome-constrained models are often used to argue that a measured wiring diagram outperforms shuffled or rewired wiring, and hence that structure shapes function. Such comparisons can confound wiring with how the models are tuned: a connectome fixes who connects to whom, not the excitability, gains or plasticity rates the model also needs, and modellers often tune these until the real-wiring model works. We separate three estimands: physiology tuned on the real wiring and transferred to nulls (P1), each wiring tuned on its own (P2), and P2 restricted to physiology consistent with independent data (P3).",
+            "tag": "RESEARCH",
+            "url": "http://arxiv.org/abs/2611.14508v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261111-16",
+            "source": "The Verge AI",
+            "date": "2026-11-10",
+            "headline": "Google releases Gemini 4 Carbon with agent ‘swarm’ feature",
+            "summary": "Google is rolling out its latest AI model, Gemini 4 Carbon, to the general public after releasing it to a select group of \"cybersecurity defenders\" two weeks ago. Google claims Carbon is its \"strongest model\" yet, and capable of competing with the very best systems from Anthropic and OpenAI. Google says Gemini 4 Carbon \"pushes […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261111-22",
+            "source": "The Verge AI",
+            "date": "2026-11-10",
+            "headline": "Anthropic has its own AI-powered office suite now",
+            "summary": "For years, Anthropic has been known for its focus on enterprise and coding tools that attract high-flying corporate clients, inspiring competing frontier labs - like OpenAI, SpaceXSI, and Meta - to copy its strategies. Earlier this year, Claude Code went through its own particular hype cycle. And now, Anthropic is trying to expand its footprint […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261111-25",
+            "source": "The Verge AI",
+            "date": "2026-11-10",
+            "headline": "Anthropic targets $1.4 trillion IPO",
+            "summary": "Anthropic confirmed on Tuesday that its IPO could be one of the biggest ever, even while falling short of previous expectations. Its IPO price is expected to be between $70.00 and $78.00 per share, which would put its valuation as high as $1.4 trillion, according to the The New York Times. The Wall Street Journal […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261111-29",
+            "source": "The Verge AI",
+            "date": "2026-11-10",
+            "headline": "The US is winning the AI race. Jensen Huang could have blown it",
+            "summary": "As espionage targets go, Jensen Huang is perhaps one of the least surprising on Earth. The Nvidia CEO runs one of the world's most valuable companies, controls the in-demand technology fueling the AI boom, and is cozy with presidents, CEOs, and all manner of important people. He also wears a cool leather jacket.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261111-30",
+            "source": "The Verge AI",
+            "date": "2026-11-10",
+            "headline": "eBay appears to have shut the door on third-party AI agents",
+            "summary": "eBay appears to have blocked AI agents, including Meta's Muse, from browsing on the platform - the latest speed bump in the AI agent race. A reader tells The Verge that for several weeks he's had his Muse agent browse and curate a daily digest of watches for sale on platforms like eBay, including a […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261111-1",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "FTC Settles With Stream Auto Outlet Over Deceptive Pricing Allegations",
+            "summary": "The Federal Trade Commission announced an agreement with Stream Auto Outlet to resolve deceptive advertising claims. The Long Island, New York-based dealership group allegedly advertised vehicle prices far lower than what consumers ultimately had to pay.",
+            "tag": "REGULATION",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-secures-settlement-stream-auto-outlet-advancing-price-transparency-auto-buying-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.8,
+              "relevance": 8.5,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261111-2",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "Federal Court Halts Phantom Debt Scheme Following FTC Action",
+            "summary": "A federal court temporarily halted a debt collection operation and froze its assets at the Federal Trade Commission's request. The complaint alleges the operators used false threats to collect over $20 million in often-fictitious debts from consumers. Deceptive and unlawful tactics were allegedly used to pressure individuals into paying debts they frequently did not owe.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-action-results-court-issuing-temporary-restraining-order-halting-phantom-debt-collection",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 8.8,
+              "total": 8.4
+            }
+          },
+          {
+            "id": "politics-regulatory-20261111-3",
+            "source": "FTC Press",
+            "date": "2026-11-06",
+            "headline": "Progress Residential and Pretium Partners Pay $49.75 Million to Settle FTC Charges",
+            "summary": "Progress Residential and owner Pretium Partners agreed to pay $49.75 million to settle charges brought by the FTC and four states over deceptive rental pricing practices. The proposed order requires the companies to advertise true rental prices, disclose all fees clearly, and stop improperly withholding security deposits. The settlement resolves allegations that the nation's largest single-family rental property manager misled consumers.",
+            "tag": "FTC_SETTLEMENT",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/progress-residential-owner-pretium-partners-pay-4975-million-settle-ftc-states-charges-over",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 8.8,
+              "total": 8.4
+            }
+          },
+          {
+            "id": "politics-regulatory-20261111-7",
+            "source": "FTC Press",
+            "date": "2026-11-10",
+            "headline": "Five States Join FTC Lawsuit Alleging Hims and Hers Engaged in Deceptive and Unlawful Privacy Practices",
+            "summary": "The Federal Trade Commission filed an amended complaint adding five states as co-plaintiffs in its lawsuit alleging that telehealth provider Hims and Hers shared consumers’ sensitive health information with third-party advertising platforms, despite claiming its services maintain consumers’ privacy, and it deceived users about its billing and cancellation practices.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/five-states-join-ftc-lawsuit-alleging-hims-hers-engaged-deceptive-unlawful-privacy-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261111-8",
+            "source": "FTC Press",
+            "date": "2026-11-05",
+            "headline": "New Details Emerge in Amazon Ads Auction-Rigging Case",
+            "summary": "Newly unredacted material sheds light on Amazon’s alleged scheme to manipulate auction results to meet corporate financial targets The Federal Trade Commission and 22 states recently filed an updated version of their complaint against Amazon with unredacted details about Amazon’s alleged use of deceptive and unfair practices to secretly inflate prices in its online search advertising auction.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/new-details-emerge-amazon-ads-auction-rigging-case",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261111-31",
+            "source": "MarketWatch Top",
+            "date": "2026-11-11",
+            "headline": "Market angst is driving investors into low-volatility stocks as AI trade stumbles",
+            "summary": "stock market has surged amid a sharp selloff in artificial intelligence names and stubbornly high bond yields.",
+            "tag": "MACRO",
+            "url": "https://www.marketwatch.com/story/market-angst-is-driving-investors-into-low-volatility-stocks-as-ai-trade-stumbles-23d905e9?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 5.9
+            }
+          },
+          {
+            "id": "markets-macro-20261111-32",
+            "source": "MarketWatch Top",
+            "date": "2026-11-11",
+            "headline": "Why Goldman Sachs is now changing its Federal Reserve interest-rate forecast",
+            "summary": "Following Tuesday’s hot CPI data , Goldman Sachs is now pencilling in additional Fed tightening.",
+            "tag": "MACRO",
+            "url": "https://www.marketwatch.com/story/why-goldman-sachs-is-now-changing-its-federal-reserve-interest-rate-forecast-3753f968?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 5.9
+            }
+          },
+          {
+            "id": "markets-macro-20261111-33",
+            "source": "MarketWatch Top",
+            "date": "2026-11-11",
+            "headline": "22 stocks of companies with tremendous sales growth",
+            "summary": "These S&P 500 companies have also shown improving profit margins and free cash flow this earnings season.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/22-stocks-of-companies-with-tremendous-sales-growth-78c3f750?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          },
+          {
+            "id": "markets-macro-20261111-34",
+            "source": "MarketWatch Top",
+            "date": "2026-11-11",
+            "headline": "Nvidia’s valuation tumbles to a 15-year low. A bargain or a falling knife?",
+            "summary": "The AI giant now trades at a discount to the S&P 500, by one measure. Plus, CoreWeave’s answer to its debt problem and a Veterans Day breather for bonds.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/nvidias-valuation-tumbles-to-a-15-year-low-a-bargain-or-a-falling-knife-2ebf6085?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261111-5",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Nonperturbative string dynamics in a (2+1)D lattice gauge theory on a superconducting quantum processor",
+            "summary": "Electric flux strings underpin confinement in gauge theories. In two spatial dimensions, their evolution involves competing processes of charge motion, pair creation, and transverse deformation. Accessing these dynamics beyond perturbative limits challenges classical approaches, as entanglement growth restricts the times accessible to tensor-network simulations.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.14484v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261111-9",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "The energetic cost of loading classical data in quantum computers",
+            "summary": "Quantum algorithms for machine learning, chemistry, and cryptanalysis often assume coherent access to classical data at negligible physical cost. We instead treat data loading as a hardware process and quantify the dynamic energetic cost of a quantum random access memory (QRAM) query on a superconducting processor. Using the metric-noise-resource framework, we relate query fidelity and power to gate duration, relative two-qubit drive strength, and the distribution of attenuation across a multi-stage refrigerator, while accounting for thermal photons and gate errors.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.14422v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 8.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "science-frontier-20261111-10",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Implementing rapid reset of superconducting qubits with on-chip dissipation",
+            "summary": "Rapid and high-fidelity qubit reset is essential for quantum state initialization and quantum error correction. Conventional reset protocols for superconducting qubits often rely on dissipative elements connected to external circuitry, exposing qubits to thermal noise from higher-temperature environments. Here, we experimentally demonstrate a scalable approach to qubit reset and leakage removal over multiple transmon qubits using dedicated dissipation units comprising resonators coupled to on-chip resistive loads.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.14391v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 8.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "science-frontier-20261111-18",
+            "source": "ScienceDaily",
+            "date": "2026-11-10",
+            "headline": "Alzheimer’s may have early warning signs outside the brain",
+            "summary": "A surprising discovery suggests that some early signs of Alzheimer’s disease may begin outside the brain. Using miniature laboratory systems made from human cells, scientists found that genetic mutations associated with inherited Alzheimer’s can disrupt nerve-to-muscle connections without any involvement from the brain or spinal cord. This could help explain why some patients experience changes in balance, walking, and coordination long before memory problems develop.",
+            "tag": "BIOTECH",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261108233103.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.6
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261111-26",
+            "source": "Wired Culture",
+            "date": "2026-11-09",
+            "headline": "Authors Can Defend Against AI Allegations With ‘Paper Trail’ Tools. Is It Enough?",
+            "summary": "As the publishing industry wrestles with paranoia over the provenance of manuscripts, writers are caught in an impossible bind.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/authors-can-defend-against-ai-allegations-with-paper-trail-tools/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261111-27",
+            "source": "Wired Culture",
+            "date": "2026-11-06",
+            "headline": "Horny Grandmas Are Having a Moment",
+            "summary": "Creators in their sixties, seventies, and eighties have flooded adult platforms as the demand for mature content has skyrocketed, with some turning to online sex work as a retirement lifeline.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/horny-grandmas-are-having-a-moment/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261111-28",
+            "source": "Wired Culture",
+            "date": "2026-11-05",
+            "headline": "Area Man Feels Joy Online for First Time in Years",
+            "summary": "A day after the US midterm elections gave Democrats control of Congress, Onion CEO Ben Collins and comedian Patti Harrison spoke to WIRED about the salve of satire during politically fraught times.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/wired-world-fair-2026-ben-collins-the-onion/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261111-4",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-09",
+            "headline": "The Inconvenient Truth at the Center of the Immigration Debate",
+            "summary": "Have liberals learned anything from the border crisis that helped return Donald Trump to office two years ago? Many have not, if a recent report from the American Civil Liberties Union is any indication. The group claims to offer a “way forward” for the country’s asylum system, which has become a back door for economic migrants.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/immigration-trump-border-asylum/689318/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 9.5,
+              "relevance": 6.5,
+              "total": 8.3
+            }
+          },
+          {
+            "id": "culture-voices-20261111-6",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-10",
+            "headline": "The Lost World of Aquaterra",
+            "summary": "Illustrations by Owen Pomery Imagine a planet that’s home not only to the seven continents you know but also to an immense feature you’ve never heard of, continental in scale. Extending along the world’s coastal shelves from the tropics almost to the poles, this place is roughly equivalent in size to South America, with a total area of more than 6.6 million square miles. During the last Ice Age, it consisted almost entirely of lowland ecosystems: cold grasslands and tundras in the far north, grazed by woolly mammoths and steppe bison; temperate woodlands and open country in the middle latitudes, home to aurochs, horses, and giant elk; tropical forests, grasslands, and mangrove swamps near the equator, inhabited by Stegodons, Asian hippos, and Komodo dragons; and dry scrub in the far south, roamed by marsupial lions, giant flightless birds, and lizards the size of crocodiles.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/magazine/2026/12/aquaterra-ancient-human-migration/689029/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 7.8,
+              "relevance": 6.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "culture-voices-20261111-11",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-11",
+            "headline": "The Left’s Election Denial",
+            "summary": "B ernie Sanders and his acolytes have spent the past decade insisting that Democrats would command national majorities if only they embraced his left-wing policies. After last week’s election, the movement claimed vindication. The results proved that “we can win over millions of Republicans and independents who are struggling economically if we focus on the issues that are important,” Sanders told Politico .",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/moderates-midterms-success-progressives/689371/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 7.5
+            }
+          },
+          {
+            "id": "culture-voices-20261111-17",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-10",
+            "headline": "Getting Too Close to Trump Was a Mistake",
+            "summary": "O ver the past week , following MAGA’s significant losses in the midterms, I have been asked the same questions again and again: How could Silicon Valley have gotten it so wrong? Why did tech leaders not anticipate the consequences of joining themselves at the hip to MAGA straight after Donald Trump won reelection in 2024? What follows is not a critique of the individual tech leaders themselves—some were more restrained than others—nor is it a personal commentary on Mark Zuckerberg, my former boss.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/silicon-valley-trump-administration/689360/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "culture-voices-20261111-20",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-09",
+            "headline": "Pete Hegseth Lashes Out",
+            "summary": "Pete Hegseth was in my neighborhood today. I live just up the road from the Naval War College, where I taught for 25 years, and where Hegseth gave a speech this morning about the future of military education. But “speech” may be too generous.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/hegseth-war-college-curriculum/689351/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.5
+            }
+          }
+        ]
+      }
+    }
+  }
+}
