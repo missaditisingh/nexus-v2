@@ -1,0 +1,655 @@
+{
+  "date": "2026-11-12",
+  "label": "Today",
+  "lastUpdated": "2026-11-12T14:11:47.490Z",
+  "agentLog": [
+    {
+      "timestamp": "14:10:55",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 6deace4: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:10:55",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:11:00",
+      "module": "SCOUT",
+      "message": "Scouted 116 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:11:00",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:11:00",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 67 off-beat/redundant wires. 49 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:11:00",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:11:01",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:11:47",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 27 items (6 via LLM, 21 via deterministic synthesis; top 15 LLM quota applied, 3 dropped for thin context). Tokens: 9778. Est cost: $0.00178.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:11:47",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:11:47",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (27 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:11:47",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-12 live (27 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261112-20",
+            "source": "TechCrunch AI",
+            "date": "2026-11-12",
+            "headline": "Nine Korean startups vie for a spot in Disrupt 2027’s Startup Battlefield 200 competition",
+            "summary": "The startups work across the deep tech sector, including healthcare, fintech, energy, semiconductors, and AI. All nine are looking to enter the US.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/12/nine-korean-startups-vie-for-a-spot-in-disrupt-2027s-startup-battlefield-200-competition/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261112-25",
+            "source": "TechCrunch AI",
+            "date": "2026-11-11",
+            "headline": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
+            "summary": "As soon as Wednesday evening, Nvidia's board could decide to remove its founder and CEO of 33 years.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261112-12",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Emergent Biological Capabilities in a Foundation Model for Molecular Interactions",
+            "summary": "Foundation models trained on large unlabeled corpora develop emergent capabilities, tasks that go beyond the training objective. We extend this paradigm to multimodal biology with Bonbon, a foundation model for molecular interactions trained on approximately 3.2 trillion tokens of paired protein-ligand sequences. From a single representation space, Bonbon exhibits three zero-shot emergent capabilities at hierarchical levels of resolution: functional (mechanism of action), residue (binding site localization, including orthosteric/allosteric discrimination), and bond (covalent versus non-covalent engagement).",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.14504v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261112-13",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Toward Foundation Detection Models via Example-Based Grounding in EM-DETR",
+            "summary": "DeepLearning (DL)-based Computer-Aided Diagnostic (CAD) systems have shown great promise in supporting clinicians, but their performance heavily depends on the availability of large, well-annotated datasets. In medical lesion detection, the scarcity of comprehensive, stan dardized annotations and the heterogeneity of existing datasets limit the development of robust foundation models. In this work, we introduce a novel approach to building a multi-domain foundation model for le sion detection by integrating diverse medical image datasets annotated for both anatomical structures and abnormalities.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.14518v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261112-18",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Pyrite: Building and Benchmarking Protein-Ligand Pose Ranking Agents",
+            "summary": "Predicting how a ligand binds to its target is central to small-molecule drug discovery. Modern cofolding models can generate diverse candidate poses, but reliably ranking these candidates remains challenging. We introduce Pyrite, a pairwise pose-ranking benchmark comprising 1,500 pose pairs across diverse protein-ligand complexes.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.14511v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-research-20261112-19",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-09",
+            "headline": "Innovating with AI in the special chemicals industry",
+            "summary": "As companies look to accelerate innovation with artificial intelligence, cloud computing, and advanced modeling, the primary challenge is connecting new technologies to reliable data, scientific expertise, and the practical realities of bringing products to market. For specialty chemicals manufacturer Lubrizol, digital transformation is all about giving researchers the tools to test ideas faster, make better-informed….",
+            "tag": "REASONING",
+            "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261112-21",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "When Does the Real Wiring Win? Testing connectome structure-function claims against unmeasured physiology",
+            "summary": "Connectome-constrained models are often used to argue that a measured wiring diagram outperforms shuffled or rewired wiring, and hence that structure shapes function. Such comparisons can confound wiring with how the models are tuned: a connectome fixes who connects to whom, not the excitability, gains or plasticity rates the model also needs, and modellers often tune these until the real-wiring model works. We separate three estimands: physiology tuned on the real wiring and transferred to nulls (P1), each wiring tuned on its own (P2), and P2 restricted to physiology consistent with independent data (P3).",
+            "tag": "RESEARCH",
+            "url": "http://arxiv.org/abs/2611.14508v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261112-16",
+            "source": "The Verge AI",
+            "date": "2026-11-11",
+            "headline": "Nvidia is reportedly preparing to fire Jensen Huang",
+            "summary": "Nvidia's board is preparing to dismiss CEO Jensen Huang following a report from The New York Times about a second alleged extramarital affair, just days after he admitted to a separate affair with a woman alleged to be a Chinese spy, The Wall Street Journal reports. The second alleged affair was with an executive who […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 8.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261112-22",
+            "source": "The Verge AI",
+            "date": "2026-11-10",
+            "headline": "The US is winning the AI race. Jensen Huang could have blown it",
+            "summary": "As espionage targets go, Jensen Huang is perhaps one of the least surprising on Earth. The Nvidia CEO runs one of the world's most valuable companies, controls the in-demand technology fueling the AI boom, and is cozy with presidents, CEOs, and all manner of important people. He also wears a cool leather jacket.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261112-26",
+            "source": "The Verge AI",
+            "date": "2026-11-11",
+            "headline": "Google’s AlphaGenome 2 zooms in on the cellular roots of disease",
+            "summary": "Researchers at Google DeepMind have unveiled a new AI model designed to unravel how changes in our DNA affect different cells, giving scientists a more detailed view of a notoriously difficult problem that could hold important clues to the causes of disease - and point the way to new treatments. AlphaGenome 2 is the successor […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261112-1",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "FTC Settles With Stream Auto Outlet Over Deceptive Pricing Claims",
+            "summary": "The Federal Trade Commission reached an agreement with Long Island-based Stream Auto Outlet to resolve deceptive advertising claims. The dealership group allegedly advertised prices far lower than the actual amounts consumers ultimately had to pay. The agreement aims to advance price transparency for auto-buying consumers.",
+            "tag": "FTC_SETTLEMENT",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-secures-settlement-stream-auto-outlet-advancing-price-transparency-auto-buying-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.8,
+              "relevance": 8.5,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261112-2",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "Federal Court Halts Phantom Debt Collection Operation Following FTC Request",
+            "summary": "A federal court has temporarily halted a debt collection operation and frozen its assets at the request of the Federal Trade Commission. The FTC complaint alleges the operators used false threats and deceptive tactics to pressure consumers into paying debts they frequently did not owe. The scheme reportedly collected over $20 million in often-fictitious debts.",
+            "tag": "FTC_ACTION",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-action-results-court-issuing-temporary-restraining-order-halting-phantom-debt-collection",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 8.5,
+              "total": 8.4
+            }
+          },
+          {
+            "id": "politics-regulatory-20261112-3",
+            "source": "FTC Press",
+            "date": "2026-11-06",
+            "headline": "Progress Residential and Pretium Partners Pay $49.75 Million to Settle FTC Charges",
+            "summary": "Progress Residential and its owner Pretium Partners will pay $49.75 million to settle charges brought by the Federal Trade Commission and four states over deceptive rental pricing practices. Under the proposed order, the companies must advertise true rental prices, disclose fees clearly, and stop improperly withholding security deposits.",
+            "tag": "REGULATION",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/progress-residential-owner-pretium-partners-pay-4975-million-settle-ftc-states-charges-over",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 8.8,
+              "total": 8.4
+            }
+          },
+          {
+            "id": "politics-regulatory-20261112-6",
+            "source": "FTC Press",
+            "date": "2026-11-10",
+            "headline": "Five States Join FTC Lawsuit Against Telehealth Provider Hims and Hers",
+            "summary": "The Federal Trade Commission filed an amended complaint adding five states as co-plaintiffs in its lawsuit against Hims and Hers. The suit alleges the telehealth provider shared sensitive health data with advertising platforms despite privacy claims, and deceived users regarding billing and cancellation practices.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/five-states-join-ftc-lawsuit-alleging-hims-hers-engaged-deceptive-unlawful-privacy-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261112-7",
+            "source": "FTC Press",
+            "date": "2026-11-05",
+            "headline": "New Details Emerge in Amazon Ads Auction-Rigging Case",
+            "summary": "Newly unredacted material sheds light on Amazon’s alleged scheme to manipulate auction results to meet corporate financial targets The Federal Trade Commission and 22 states recently filed an updated version of their complaint against Amazon with unredacted details about Amazon’s alleged use of deceptive and unfair practices to secretly inflate prices in its online search advertising auction.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/new-details-emerge-amazon-ads-auction-rigging-case",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261112-27",
+            "source": "MarketWatch Top",
+            "date": "2026-11-12",
+            "headline": "Nvidia’s Jensen Huang crisis tests how much of the AI industry depends on one man",
+            "summary": "Huang’s exit could fray tight bonds among AI businesses. Plus, Oracle’s potential AI catalyst, a $1.5 trillion Social Security stock proposal and what the oil-yield split may mean for inflation.",
+            "tag": "MACRO",
+            "url": "https://www.marketwatch.com/story/nvidias-jensen-huang-dilemma-is-a-test-of-the-ai-industrys-dependence-on-one-flawed-man-a9a1d99c?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261112-4",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Superconducting Quantum Processor Simulates Nonperturbative String Dynamics in Gauge Theory",
+            "summary": "Researchers utilized a 63-qubit superconducting quantum processor to simulate nonperturbative string dynamics in a (2+1)D Z2 lattice gauge theory. Spatially resolved measurements revealed rapid charge and flux spreading in deconfined regimes alongside suppressed spreading under strong electric fields. The team leveraged local Gauss-law constraints and ancilla checks for error detection across circuits reaching 15 Trotter steps.",
+            "tag": "QUANTUM_SIM",
+            "url": "http://arxiv.org/abs/2611.14484v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.3,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261112-8",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "The energetic cost of loading classical data in quantum computers",
+            "summary": "Quantum algorithms for machine learning, chemistry, and cryptanalysis often assume coherent access to classical data at negligible physical cost. We instead treat data loading as a hardware process and quantify the dynamic energetic cost of a quantum random access memory (QRAM) query on a superconducting processor. Using the metric-noise-resource framework, we relate query fidelity and power to gate duration, relative two-qubit drive strength, and the distribution of attenuation across a multi-stage refrigerator, while accounting for thermal photons and gate errors.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.14422v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 8.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "science-frontier-20261112-9",
+            "source": "arXiv Preprint",
+            "date": "2026-11-10",
+            "headline": "Implementing rapid reset of superconducting qubits with on-chip dissipation",
+            "summary": "Rapid and high-fidelity qubit reset is essential for quantum state initialization and quantum error correction. Conventional reset protocols for superconducting qubits often rely on dissipative elements connected to external circuitry, exposing qubits to thermal noise from higher-temperature environments. Here, we experimentally demonstrate a scalable approach to qubit reset and leakage removal over multiple transmon qubits using dedicated dissipation units comprising resonators coupled to on-chip resistive loads.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.14391v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 8.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "science-frontier-20261112-17",
+            "source": "ScienceDaily",
+            "date": "2026-11-12",
+            "headline": "Common forever chemicals linked to nearly double the rate of aggressive breast cancer",
+            "summary": "An NIH study found that women with high levels of two common “forever chemicals” had up to 93% higher rates of an aggressive form of breast cancer. The discovery raises concerns about the potential health effects of persistent chemicals found in everyday products.",
+            "tag": "SCIENCE",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261112025527.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.6
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261112-23",
+            "source": "Wired Culture",
+            "date": "2026-11-09",
+            "headline": "Authors Can Defend Against AI Allegations With ‘Paper Trail’ Tools. Is It Enough?",
+            "summary": "As the publishing industry wrestles with paranoia over the provenance of manuscripts, writers are caught in an impossible bind.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/authors-can-defend-against-ai-allegations-with-paper-trail-tools/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261112-24",
+            "source": "Wired Culture",
+            "date": "2026-11-06",
+            "headline": "Horny Grandmas Are Having a Moment",
+            "summary": "Creators in their sixties, seventies, and eighties have flooded adult platforms as the demand for mature content has skyrocketed, with some turning to online sex work as a retirement lifeline.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/horny-grandmas-are-having-a-moment/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261112-5",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-10",
+            "headline": "Researchers Uncover Submerged Landscapes across Aquaterra to Trace Early Human History",
+            "summary": "Scientists and underwater archaeologists are investigating Aquaterra, a vast coastal landmass equal to the size of South America that was submerged as ice sheets melted thousands of years ago. Recent offshore discoveries of Stone Age artifacts, ancient structures, and drowned settlements indicate that key developments in human culture and sea-based migration occurred on these lost coastal lowlands. Exploring these underwater sites offers researchers a way to reconstruct a more complete record of deep human history.",
+            "tag": "AQUATERRA",
+            "url": "https://www.theatlantic.com/magazine/2026/12/aquaterra-ancient-human-migration/689029/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 7.8,
+              "relevance": 8.8,
+              "total": 8.3
+            }
+          },
+          {
+            "id": "culture-voices-20261112-10",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-11",
+            "headline": "The Left’s Election Denial",
+            "summary": "B ernie Sanders and his acolytes have spent the past decade insisting that Democrats would command national majorities if only they embraced his left-wing policies. After last week’s election, the movement claimed vindication. The results proved that “we can win over millions of Republicans and independents who are struggling economically if we focus on the issues that are important,” Sanders told Politico .",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/moderates-midterms-success-progressives/689371/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 7.5
+            }
+          },
+          {
+            "id": "culture-voices-20261112-11",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-11",
+            "headline": "Democrats Should Cut a Deal With Trump",
+            "summary": "On Election Night, Representative Robert Garcia, the incoming chair of the House Oversight Committee, described one agenda that congressional Democrats could pursue over the next two years: investigating the “Trump Crime Family,” as his office put it in a statement. His message was, “Lawyer up.” This tack would be a mistake. The new Democratic majorities should instead take advantage of the fissures now emerging between President Trump and his party to pursue their own legislative goals.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/democrats-trump-deal-not-investigation/689368/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.2,
+              "relevance": 6.5,
+              "total": 7.4
+            }
+          },
+          {
+            "id": "culture-voices-20261112-14",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-12",
+            "headline": "The Last Trumpist Standing",
+            "summary": "Does Donald Trump mean anything? The question could be asked about the president’s promises, which he usually fails to keep, and his podium remarks, which are devoted to free association. But for conservative politicians, policy makers, and intellectuals, the question has a wider bearing.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/stephen-miller-trump-chief-of-staff/689385/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 4.4,
+              "magnitude": 6,
+              "relevance": 7.8,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "culture-voices-20261112-15",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-10",
+            "headline": "Getting Too Close to Trump Was a Mistake",
+            "summary": "O ver the past week , following MAGA’s significant losses in the midterms, I have been asked the same questions again and again: How could Silicon Valley have gotten it so wrong? Why did tech leaders not anticipate the consequences of joining themselves at the hip to MAGA straight after Donald Trump won reelection in 2024? What follows is not a critique of the individual tech leaders themselves—some were more restrained than others—nor is it a personal commentary on Mark Zuckerberg, my former boss.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/silicon-valley-trump-administration/689360/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.7
+            }
+          }
+        ]
+      }
+    }
+  }
+}
