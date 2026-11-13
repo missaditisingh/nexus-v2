@@ -1,0 +1,696 @@
+{
+  "date": "2026-11-13",
+  "label": "Today",
+  "lastUpdated": "2026-11-13T13:35:56.822Z",
+  "agentLog": [
+    {
+      "timestamp": "13:35:10",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit ae60b39: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:10",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:15",
+      "module": "SCOUT",
+      "message": "Scouted 117 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:15",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:15",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 69 off-beat/redundant wires. 48 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:15",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:15",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:56",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 29 items (12 via LLM, 17 via deterministic synthesis; top 15 LLM quota applied, 2 dropped for thin context). Tokens: 10487. Est cost: $0.00212.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:56",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:56",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (29 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:35:56",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-13 live (29 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261113-12",
+            "source": "TechCrunch AI",
+            "date": "2026-11-12",
+            "headline": "Nebius plans $40 billion AI infrastructure expansion",
+            "summary": "Nebius intends to fund its $40 billion AI infrastructure expansion using customer prepayments and loans. However, ongoing delays at a Microsoft data center have raised questions regarding the viability of this financing model.",
+            "tag": "AI-VENTURE",
+            "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 4.4,
+              "magnitude": 9.8,
+              "relevance": 9,
+              "total": 7.4
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261113-21",
+            "source": "TechCrunch AI",
+            "date": "2026-11-13",
+            "headline": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
+            "summary": "Given Nvidia’s stronghold on AI and its importance in Israel, many in the country's startup ecosystem are worried about the impact of his departure.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261113-18",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-09",
+            "headline": "Innovating with AI in the special chemicals industry",
+            "summary": "As companies look to accelerate innovation with artificial intelligence, cloud computing, and advanced modeling, the primary challenge is connecting new technologies to reliable data, scientific expertise, and the practical realities of bringing products to market. For specialty chemicals manufacturer Lubrizol, digital transformation is all about giving researchers the tools to test ideas faster, make better-informed….",
+            "tag": "REASONING",
+            "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261113-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Unbundling Multimodal Vision Encoding",
+            "summary": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e., before the multimodal backbone).",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.17334v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261113-25",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
+            "summary": "Model architecture shapes the scaling behavior, training efficiency, and inference cost of LLMs, making it a central focus of both industry and academia. In industry, teams such as those behind DeepSeek, Qwen, and Kimi routinely introduce architectural innovations, yet public reports rarely document which ideas succeeded, which were abandoned, and why. In academia, limited compute and inconsistent baselines often restrict evaluations to small-scale, single-point comparisons, making it difficult to establish whether improvements hold at larger scales or translate into broader impact.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.17332v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261113-26",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Learning When Diffusion Language Models Should Regenerate",
+            "summary": "Remasking allows diffusion language models to revisit generated text, but effective correction requires knowing when and what to revise. Our diagnosis on Sudoku reveals two gaps. Hidden states contain error information that token confidence does not reliably expose, and remasking an isolated error usually reproduces it when the surrounding context remains fixed.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.17320v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261113-27",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Sketching Language Models for Context Attribution",
+            "summary": "Context attribution asks how removing parts of a prompt changes a language model's output. We study leave-one-out (LOO) attribution for a prompt of $n$ tokens and a fixed measurement function. Computing all LOO values directly requires $n$ model evaluations.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.17313v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261113-19",
+            "source": "The Verge AI",
+            "date": "2026-11-12",
+            "headline": "The Jensen Huang scandal is hardly over",
+            "summary": "I was certain, until the story of Jensen Huang's second affair hit, that Huang was bulletproof. After all, why wouldn't he be? He's placed himself indispensably at the center of the AI industry and famously had no succession plan at Nvidia.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261113-22",
+            "source": "The Verge AI",
+            "date": "2026-11-13",
+            "headline": "Let’s talk about Jensen Huang’s many affairs!",
+            "summary": "Usually, we'd be offering to answer your questions about a news event, but honestly we don't really have any answers about what the hell is going on over at Nvidia. I can't speak for Nilay but at the rate Jensen Huang's new mistresses are dropping, I am concerned we are approaching an affair Singularity.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261113-23",
+            "source": "The Verge AI",
+            "date": "2026-11-12",
+            "headline": "Jensen Huang is out. What did China want from him?",
+            "summary": "Today, we’re talking about the Jensen Huang scandal at Nvidia, which is developing so quickly that we had to do an emergency update of this intro minutes before publishing this episode. Huang just resigned from his position as CEO of Nvidia as news of his affairs, including with an alleged Chinese spy, threatened to engulf […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/podcast/1031260/nvidia-jensen-huang-resign-china-spy-scandal-ai-chips-trump",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261113-2",
+            "source": "FTC Press",
+            "date": "2026-11-12",
+            "headline": "FTC and States Secure $63 Million Settlement with Family Dollar",
+            "summary": "Family Dollar agreed to pay $63 million to settle allegations from the Federal Trade Commission and 17 states. The lawsuit claimed the company routinely charged customers higher prices at the register than the rates displayed on shelves and advertisements.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-17-states-secure-63-million-settlement-family-dollar-stores-price-transparency-win-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.4,
+              "relevance": 9.5,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261113-1",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "FTC Settles Deceptive Pricing Claims with Stream Auto Outlet",
+            "summary": "The Federal Trade Commission reached an agreement with Stream Auto Outlet to resolve claims that the New York dealership group deceived consumers. The dealership allegedly advertised prices that were significantly lower than the final amounts consumers were required to pay.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-secures-settlement-stream-auto-outlet-advancing-price-transparency-auto-buying-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.8,
+              "relevance": 9,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261113-3",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "Federal Court Halts and Freezes Assets of Phantom Debt Collection Operation",
+            "summary": "A federal court has issued a temporary restraining order and frozen the assets of a debt collection operation at the FTC's request. The complaint alleges the operators used false threats to collect over $20 million in often-fictitious debts from consumers through deceptive and unlawful tactics.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-action-results-court-issuing-temporary-restraining-order-halting-phantom-debt-collection",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 9,
+              "total": 8.5
+            }
+          },
+          {
+            "id": "politics-regulatory-20261113-4",
+            "source": "FTC Press",
+            "date": "2026-11-06",
+            "headline": "Progress Residential and Pretium Partners Settle FTC Charges for $49.75 Million",
+            "summary": "Progress Residential and Pretium Partners will pay $49.75 million to settle FTC and state charges regarding deceptive rental pricing practices and improperly withheld security deposits. The proposed order requires the companies to advertise true rental prices and clearly disclose fees.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/progress-residential-owner-pretium-partners-pay-4975-million-settle-ftc-states-charges-over",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 9.5,
+              "total": 8.5
+            }
+          },
+          {
+            "id": "politics-regulatory-20261113-5",
+            "source": "FTC Press",
+            "date": "2026-11-10",
+            "headline": "Five States Join FTC Lawsuit Against Telehealth Provider Hims and Hers",
+            "summary": "Five states have joined an amended FTC complaint alleging that telehealth provider Hims and Hers unlawfully shared sensitive consumer health information with third-party advertisers. The lawsuit also claims the company deceived users regarding its privacy policies, billing procedures, and cancellation practices.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/five-states-join-ftc-lawsuit-alleging-hims-hers-engaged-deceptive-unlawful-privacy-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 8
+            }
+          }
+        ],
+        "global": [],
+        "voices": [
+          {
+            "id": "politics-voices-20261113-29",
+            "source": "Foreign Policy",
+            "date": "2026-11-12",
+            "headline": "Hegseth’s Troubles Are Far From Over",
+            "summary": "The Pentagon chief dodged impeachment, but his future remains uncertain.",
+            "tag": "POLICY",
+            "url": "https://foreignpolicy.com/2026/11/12/hegseth-impeachment-congress-democrats-trump/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "voices",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          }
+        ]
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261113-16",
+            "source": "MarketWatch Top",
+            "date": "2026-11-13",
+            "headline": "Nvidia has shed nearly $500 billion in market value this week. It’s still a $4 trillion AI behemoth.",
+            "summary": "Can Nvidia keep its lead in AI chips without Jensen Huang? Plus, what investors are watching on inflation.",
+            "tag": "MACRO",
+            "url": "https://www.marketwatch.com/story/nvidia-has-shed-nearly-500-billion-in-market-value-this-week-its-still-a-4-trillion-ai-behemoth-2ca6eba7?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 6.5,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "markets-macro-20261113-28",
+            "source": "MarketWatch Top",
+            "date": "2026-11-13",
+            "headline": "Profit surprises are normalizing — and that may signal a healthier stock market, say Citi strategists",
+            "summary": "Although the majority of S&P 500 companies reported earnings above analysts’ expectations, the beats were significantly lower than in more recent quarters.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/profit-surprises-are-normalizing-and-that-may-signal-a-healthier-stock-market-say-citi-strategists-d8cce7c2?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 5.9
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261113-6",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Superconducting circuits simulate cosmological particle creation in early universe",
+            "summary": "Researchers demonstrate theoretically that superconducting transmission lines loaded with dc-SQUIDs can simulate scalar fields in a radiation-dominated FRW universe. The circuit's mode equation reduces to the Weber equation, yielding an exponentially suppressed particle spectrum. Analysis confirms that dissipation does not erase the cosmological signal and anomalous moments witness Bogoliubov mixing.",
+            "tag": "FRONTIER",
+            "url": "http://arxiv.org/abs/2611.17295v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.2,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261113-7",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Researchers experimentally demonstrate genuine multi-time quantum memory in superconducting qubits",
+            "summary": "Scientists show that quantum memory can remain hidden from pairwise tests and become detectable only when three or more times are considered jointly. By deriving an analytical three-time witness, they certified quantum memory in a minimal qubit example where every time pair has a classical-memory explanation. This hierarchy of quantum memory effects was experimentally demonstrated using a time-continuous realization on a superconducting-qubit platform.",
+            "tag": "QUANTUM",
+            "url": "http://arxiv.org/abs/2611.17268v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261113-10",
+            "source": "Nature News",
+            "date": "2026-11-12",
+            "headline": "Protein discovered that drives ageing without triggering inflammation",
+            "summary": "Researchers have identified a specific protein that drives the ageing process without unleashing inflammation. This finding highlights a newly understood mechanism in biological ageing pathways. The discovery provides distinct insight into how organisms age independent of inflammatory responses.",
+            "tag": "SCIENCE",
+            "url": "https://www.nature.com/articles/d41586-026-03638-3",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 9.8,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 7.5
+            }
+          },
+          {
+            "id": "science-frontier-20261113-14",
+            "source": "ScienceDaily",
+            "date": "2026-11-13",
+            "headline": "Without this protein, damaged muscle fills with fat and scar tissue",
+            "summary": "Researchers have uncovered a surprising hidden function of a protein that may hold the key to repairing damaged muscles and treating muscular dystrophy. Known for protecting chromosomes, TRF2 also helps muscle stem cells maintain their identity and regenerate injured tissue. When scientists removed the protein in mice, muscles struggled to repair themselves, and muscular dystrophy progressed dramatically faster.",
+            "tag": "BIOTECH",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261111221643.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "science-frontier-20261113-17",
+            "source": "ScienceDaily",
+            "date": "2026-11-12",
+            "headline": "Common forever chemicals linked to nearly double the rate of aggressive breast cancer",
+            "summary": "An NIH study found that women with high levels of two common “forever chemicals” had up to 93% higher rates of an aggressive form of breast cancer. The discovery raises concerns about the potential health effects of persistent chemicals found in everyday products.",
+            "tag": "SCIENCE",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261112025527.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.6
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261113-20",
+            "source": "Wired Culture",
+            "date": "2026-11-13",
+            "headline": "This Startup Is Betting on AI Microdramas to Get More Black Stories in Hollywood",
+            "summary": "Mansa says its AI microdramas can serve as proofs of concept for what Black audiences want. Critics say the studio is selling out.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/black-roles-are-disappearing-in-hollywood-this-startup-is-using-ai-microdramas-to-fight-back/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261113-9",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-11",
+            "headline": "Democrats should cut legislative deals with Donald Trump instead of investigating him.",
+            "summary": "Incoming congressional Democrats should leverage emerging fissures between President Trump and his party to secure durable policy gains rather than focusing on investigations. By appealing to Trump's ego and transactional nature, Democrats could pass significant reforms in areas like health care and energy. In exchange, Democrats would curb investigations into Trump's family and associates.",
+            "tag": "POLITICS",
+            "url": "https://www.theatlantic.com/ideas/2026/11/democrats-trump-deal-not-investigation/689368/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.2,
+              "relevance": 9.2,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "culture-voices-20261113-11",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-13",
+            "headline": "Video games like The Legend of Zelda recreate childhood perpetually",
+            "summary": "Video games have reached middle age, with franchises like The Legend of Zelda turning 40. Rather than maturing into sophisticated adult entertainment, video games became a medium to reproduce childhood forever, keeping games and their players frozen in the past.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/new-zelda-review-nostalgia/689420/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "culture-voices-20261113-8",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-11",
+            "headline": "Election data shows progressive candidates underperformed compared to moderate Democrats",
+            "summary": "Data from the recent election reveals that left-wing candidates backed by Bernie Sanders largely underperformed compared to mainstream and moderate Democrats. Despite claims from progressive activists that left-wing policies carry no electoral penalty, empirical evidence suggests ideological moderation continues to provide a distinct advantage in elections. Ignoring these electoral trade-offs could pose significant risks for the Democratic Party in future, more competitive cycles.",
+            "tag": "POLITICS",
+            "url": "https://www.theatlantic.com/ideas/2026/11/moderates-midterms-success-progressives/689371/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "culture-voices-20261113-13",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-12",
+            "headline": "Scott Colom Is Mississippi’s First Black Senator in 150 Years",
+            "summary": "This article was featured in the One Story to Read Today newsletter. One fall afternoon in Liberty, Mississippi, in 1961, a white Democratic former congressman and state legislator named E. Hurst shot Herbert Lee in the head.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/scott-colom-us-senate-democrats/689395/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 2.4,
+              "magnitude": 9.2,
+              "relevance": 6.5,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "culture-voices-20261113-15",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-12",
+            "headline": "The Last Trumpist Standing",
+            "summary": "Does Donald Trump mean anything? The question could be asked about the president’s promises, which he usually fails to keep, and his podium remarks, which are devoted to free association. But for conservative politicians, policy makers, and intellectuals, the question has a wider bearing.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/stephen-miller-trump-chief-of-staff/689385/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 4.4,
+              "magnitude": 6,
+              "relevance": 7.8,
+              "total": 6.8
+            }
+          }
+        ]
+      }
+    }
+  }
+}
