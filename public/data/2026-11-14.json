@@ -1,0 +1,674 @@
+{
+  "date": "2026-11-14",
+  "label": "Today",
+  "lastUpdated": "2026-11-14T12:41:29.597Z",
+  "agentLog": [
+    {
+      "timestamp": "12:40:05",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit bcc474c: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:40:05",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:40:11",
+      "module": "SCOUT",
+      "message": "Scouted 114 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:40:11",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:40:11",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 72 off-beat/redundant wires. 42 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:40:11",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:40:11",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:41:29",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 28 items (15 via LLM, 13 via deterministic synthesis; top 15 LLM quota applied, 0 dropped for thin context). Tokens: 12012. Est cost: $0.00252.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:41:29",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:41:29",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (28 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "12:41:29",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-14 live (28 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261114-8",
+            "source": "TechCrunch AI",
+            "date": "2026-11-13",
+            "headline": "AI agent startup LangChain reaches three billion dollar valuation",
+            "summary": "AI agent startup LangChain has achieved a valuation of three billion dollars. The company currently reports seven thousand customers utilizing its model and platform agnostic agent management tool, LangSmith.",
+            "tag": "AI-VENTURE",
+            "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.5,
+              "relevance": 9.5,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261114-14",
+            "source": "TechCrunch AI",
+            "date": "2026-11-13",
+            "headline": "Jensen Huang's departure creates significant funding gap for AI startups",
+            "summary": "Nvidia previously invested tens of billions into artificial intelligence startups under Jensen Huang's leadership. Industry founders and venture capitalists now anticipate smaller funding checks and lower valuations following his departure.",
+            "tag": "AI-VENTURE",
+            "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261114-20",
+            "source": "TechCrunch AI",
+            "date": "2026-11-13",
+            "headline": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
+            "summary": "Given Nvidia’s stronghold on AI and its importance in Israel, many in the country's startup ecosystem are worried about the impact of his departure.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261114-16",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-09",
+            "headline": "Innovating with AI in the special chemicals industry",
+            "summary": "As companies look to accelerate innovation with artificial intelligence, cloud computing, and advanced modeling, the primary challenge is connecting new technologies to reliable data, scientific expertise, and the practical realities of bringing products to market. For specialty chemicals manufacturer Lubrizol, digital transformation is all about giving researchers the tools to test ideas faster, make better-informed….",
+            "tag": "REASONING",
+            "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261114-23",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Unbundling Multimodal Vision Encoding",
+            "summary": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e., before the multimodal backbone).",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.17334v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261114-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
+            "summary": "Model architecture shapes the scaling behavior, training efficiency, and inference cost of LLMs, making it a central focus of both industry and academia. In industry, teams such as those behind DeepSeek, Qwen, and Kimi routinely introduce architectural innovations, yet public reports rarely document which ideas succeeded, which were abandoned, and why. In academia, limited compute and inconsistent baselines often restrict evaluations to small-scale, single-point comparisons, making it difficult to establish whether improvements hold at larger scales or translate into broader impact.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.17332v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261114-25",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Learning When Diffusion Language Models Should Regenerate",
+            "summary": "Remasking allows diffusion language models to revisit generated text, but effective correction requires knowing when and what to revise. Our diagnosis on Sudoku reveals two gaps. Hidden states contain error information that token confidence does not reliably expose, and remasking an isolated error usually reproduces it when the surrounding context remains fixed.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.17320v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261114-26",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Sketching Language Models for Context Attribution",
+            "summary": "Context attribution asks how removing parts of a prompt changes a language model's output. We study leave-one-out (LOO) attribution for a prompt of $n$ tokens and a fixed measurement function. Computing all LOO values directly requires $n$ model evaluations.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.17313v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261114-15",
+            "source": "The Verge AI",
+            "date": "2026-11-13",
+            "headline": "OpenAI Launches ChatGPT Wallet for AI Agents",
+            "summary": "OpenAI is rolling out the ChatGPT Wallet for its Dots AI agents platform starting today. The feature is available to US ChatGPT Pro subscribers aged 18 and older who have an eligible US-issued card and billing address. This enables the AI agents to make purchases on behalf of users.",
+            "tag": "AI-VENTURE",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261114-17",
+            "source": "The Verge AI",
+            "date": "2026-11-13",
+            "headline": "What’s really at stake in the Jensen Huang saga",
+            "summary": "One part of the saga surrounding Nvidia CEO Jensen Huang ended on Thursday, when Huang resigned from his position at the top of AI's most important company. But in the coming weeks and months, a much bigger story may be about to unfold. A story about Nvidia's dealings in China, about the US government's willingness […].",
+            "tag": "PARTNERSHIP",
+            "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261114-18",
+            "source": "The Verge AI",
+            "date": "2026-11-13",
+            "headline": "Amazon has a plan to index the world’s online shopping data",
+            "summary": "Amazon has plans to build a vault of data on every product sold anywhere on the internet, even products Amazon doesn't sell, and make the information available through its own site, according to Reuters. The project, called the \"World Product Graph,\" is meant to make it less likely that shoppers leave Amazon to do their […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261114-21",
+            "source": "The Verge AI",
+            "date": "2026-11-14",
+            "headline": "Jensen Huang and the decline of the visionary showman founder CEO",
+            "summary": "On January 6th, 2025, Nvidia CEO Jensen Huang got his rockstar moment at last. He strode triumphantly onstage, hand raised in the air, to the claps and cheers of a 14,000-person arena absolutely packed with influencers and fans, their faces awash in blue glow, as he made his entrance in a black leather jacket that […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261114-22",
+            "source": "The Verge AI",
+            "date": "2026-11-13",
+            "headline": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+            "summary": "Normally, the products I test don't offer to help me write up my experience with them. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don't write code. It's been an interesting couple […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261114-1",
+            "source": "FTC Press",
+            "date": "2026-11-13",
+            "headline": "FTC Sues to Block Covetrus's $3.5 Billion Acquisition of Competitor MWI",
+            "summary": "The Federal Trade Commission sued to block Covetrus Inc. and its owners from acquiring rival distributor MWI Veterinary Supply Inc. from parent company Cencora Inc. for $3.5 billion. The FTC alleges combining the two largest veterinary product distributors will raise costs and drive up prices for clinics and pet owners.",
+            "tag": "ANTITRUST",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-sues-block-veterinary-supplies-distributor-covetruss-35-billion-acquisition-rival-mwi",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 9.5,
+              "relevance": 9.2,
+              "total": 9.1
+            }
+          },
+          {
+            "id": "politics-regulatory-20261114-2",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "FTC Settles Deceptive Pricing Claims With Stream Auto Outlet",
+            "summary": "The Federal Trade Commission announced a settlement with Long Island-based dealership group Stream Auto Outlet to resolve deceptive pricing allegations. The dealership allegedly advertised vehicle prices significantly lower than the amounts consumers were ultimately charged. The agreement aims to advance price transparency for auto-buying consumers.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-secures-settlement-stream-auto-outlet-advancing-price-transparency-auto-buying-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.8,
+              "relevance": 8.5,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261114-3",
+            "source": "FTC Press",
+            "date": "2026-11-12",
+            "headline": "FTC and 17 States Secure $63 Million Family Dollar Settlement",
+            "summary": "The FTC and 17 states secured a $63 million settlement with Family Dollar Stores over allegations that the company routinely overcharged customers at the register. Regulators alleged the retailer charged higher amounts than prices displayed on shelves, price tags, and advertisements. The practice generated millions of dollars for Family Dollar while costing consumers millions.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-17-states-secure-63-million-settlement-family-dollar-stores-price-transparency-win-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.4,
+              "relevance": 8.8,
+              "total": 8.6
+            }
+          },
+          {
+            "id": "politics-regulatory-20261114-4",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "Federal Court Halts Phantom Debt Operation Following FTC Request",
+            "summary": "A federal court temporarily halted a debt collection operation and froze its assets following a request by the Federal Trade Commission. The FTC complaint alleges the operators collected over $20 million in often-fictitious debts using false threats and deceptive tactics.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-action-results-court-issuing-temporary-restraining-order-halting-phantom-debt-collection",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 8.5,
+              "total": 8.4
+            }
+          },
+          {
+            "id": "politics-regulatory-20261114-5",
+            "source": "FTC Press",
+            "date": "2026-11-10",
+            "headline": "Five States Join FTC Lawsuit Alleging Hims and Hers Deceptively Shared Data",
+            "summary": "The Federal Trade Commission filed an amended complaint adding five states as co-plaintiffs in its lawsuit against Hims and Hers. The lawsuit alleges the telehealth provider shared consumers' sensitive health information with third-party advertising platforms despite promising privacy. It also claims the company deceived users regarding its billing and cancellation practices.",
+            "tag": "REGULATION",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/five-states-join-ftc-lawsuit-alleging-hims-hers-engaged-deceptive-unlawful-privacy-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 7.9
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261114-6",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Superconducting circuits simulate cosmological particle creation through transmission-line analogues",
+            "summary": "Researchers demonstrate theoretically that superconducting circuits using dc-SQUIDs can simulate scalar fields in a radiation-dominated FRW universe. The circuit's mode equation maps to the Weber equation, yielding an exponentially suppressed particle spectrum. Analysis shows that dissipation does not erase the cosmological signal, and anomalous moments can witness Bogoliubov mixing and state purity.",
+            "tag": "FRONTIER",
+            "url": "http://arxiv.org/abs/2611.17295v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.2,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261114-7",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Researchers Demonstrate Genuine Multi-Time Quantum Memory in Superconducting Qubit",
+            "summary": "Physicists have shown that quantum memory can remain hidden from standard pairwise tests and only become detectable when three or more times are considered jointly. By deriving an analytical three-time witness, the team certified quantum memory in a minimal qubit system where every pair of times had a classical-memory explanation. This hierarchy of quantum memory effects was experimentally demonstrated using a time-continuous realization on a superconducting-qubit platform.",
+            "tag": "QUANTUM_MEMORY",
+            "url": "http://arxiv.org/abs/2611.17268v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261114-9",
+            "source": "Nature News",
+            "date": "2026-11-12",
+            "headline": "Protein discovered that drives ageing without triggering inflammation",
+            "summary": "Researchers have identified a specific protein that drives the ageing process without unleashing inflammation. This finding highlights a newly understood mechanism in biological ageing. The discovery provides a distinct target for future scientific study in the field.",
+            "tag": "SCIENCE",
+            "url": "https://www.nature.com/articles/d41586-026-03638-3",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 9.8,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "science-frontier-20261114-13",
+            "source": "ScienceDaily",
+            "date": "2026-11-12",
+            "headline": "Forever chemicals linked to doubled rate of aggressive breast cancer",
+            "summary": "An NIH study discovered that women with high levels of two common forever chemicals experienced up to 93 percent higher rates of an aggressive breast cancer form. This finding raises significant health concerns regarding persistent chemicals present in everyday consumer products.",
+            "tag": "SCIENCE",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261112025527.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7
+            }
+          },
+          {
+            "id": "science-frontier-20261114-27",
+            "source": "arXiv Preprint",
+            "date": "2026-11-12",
+            "headline": "Ensemble phase transitions in measurement-unitary hybrid quantum circuits",
+            "summary": "The universal properties of state ensembles generated by quantum dynamics provide a refined lens into Hilbert-space ergodicity and deep thermalisation, or lack thereof. We investigate deep-ergodicity breaking transitions of an ancillary qubit entangled with a system undergoing dynamics via hybrid quantum circuits, where unitary evolution is interspersed with projective measurements. Specifically, we analyse the statistical properties of two distinct state ensembles: the trajectory ensemble (TE) conditioned on the measurement outcomes of the hybrid circuit, and the projected ensemble (PE) generated by further projective measurements of the system at the final temporal boundary.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.17322v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261114-19",
+            "source": "Wired Culture",
+            "date": "2026-11-13",
+            "headline": "This Startup Is Betting on AI Microdramas to Get More Black Stories in Hollywood",
+            "summary": "Mansa says its AI microdramas can serve as proofs of concept for what Black audiences want. Critics say the studio is selling out.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/black-roles-are-disappearing-in-hollywood-this-startup-is-using-ai-microdramas-to-fight-back/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261114-10",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-13",
+            "headline": "Video games like The Legend of Zelda provide a space to reproduce childhood forever",
+            "summary": "As video games like The Legend of Zelda reach middle age, they continue to offer players a way to revisit their youth rather than evolving into sophisticated adult entertainment. A recent remake of The Ocarina of Time demonstrates that these virtual worlds remain identical to their original iterations, allowing aging players to reexperience past comforts.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/new-zelda-review-nostalgia/689420/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 7.5
+            }
+          },
+          {
+            "id": "culture-voices-20261114-11",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-12",
+            "headline": "Scott Colom Becomes Mississippi’s First Black U.S. Senator in 150 Years",
+            "summary": "Democrat Scott Colom defeated Cindy Hyde-Smith to become Mississippi's first Black U.S. senator since Reconstruction. This victory follows a historical context of Jim Crow-era terror, disenfranchisement, and modern political struggles over voting rights. Colom's election contributes to a historic national milestone, with the upcoming Congress featuring seven Black U.S. senators.",
+            "tag": "POLITICS",
+            "url": "https://www.theatlantic.com/ideas/2026/11/scott-colom-us-senate-democrats/689395/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 2.4,
+              "magnitude": 9.2,
+              "relevance": 9.5,
+              "total": 7.2
+            }
+          },
+          {
+            "id": "culture-voices-20261114-12",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-14",
+            "headline": "Harvard Psychoanalyst Walter Langer Compiled Hitler's Psychological Profile for OSS",
+            "summary": "In 1943, OSS chief William J. Donovan commissioned Harvard psychoanalyst Walter C. Langer to create a psychological profile of Adolf Hitler to predict his behavior amid military reversals. Langer and a team of analysts reviewed Hitler's writings, interviewed exiled associates, and concluded that Hitler would likely react to ultimate defeat through suicide or extreme intransigence.",
+            "tag": "HISTORY",
+            "url": "https://www.theatlantic.com/ideas/2026/11/hitler-langer-cia-psychoanalysis/689434/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "culture-voices-20261114-28",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-12",
+            "headline": "Investigating Michel Houellebecq Is a Dangerous Mistake",
+            "summary": "An assault on free speech is unfolding in France. On Tuesday, a judge placed Michel Houellebecq, one of the country’s most significant living writers, under investigation for his alleged “complicity in incitement to discrimination, hatred or violence,” an accusation that stems from comments he made about Muslims several years ago. Houellebecq’s remarks were controversial and insensitive, but defending his freedom to speak does not require finding his words unobjectionable.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/michel-houellebecq-investigation-france/689415/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 2.4,
+              "magnitude": 2.5,
+              "relevance": 7.8,
+              "total": 5.7
+            }
+          }
+        ]
+      }
+    }
+  }
+}
