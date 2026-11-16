@@ -1,0 +1,655 @@
+{
+  "date": "2026-11-16",
+  "label": "Today",
+  "lastUpdated": "2026-11-16T14:13:08.949Z",
+  "agentLog": [
+    {
+      "timestamp": "14:12:05",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit f073447: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:12:05",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:12:18",
+      "module": "SCOUT",
+      "message": "Scouted 103 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:12:18",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:12:18",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 69 off-beat/redundant wires. 34 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:12:18",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:12:18",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:13:08",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 27 items (11 via LLM, 16 via deterministic synthesis; top 15 LLM quota applied, 0 dropped for thin context). Tokens: 7742. Est cost: $0.00168.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:13:08",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:13:08",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (27 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:13:08",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-16 live (27 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261116-11",
+            "source": "TechCrunch AI",
+            "date": "2026-11-15",
+            "headline": "Indian chip startup Bharat Semi secures $24 million seed round",
+            "summary": "Indian semiconductor startup Bharat Semi has raised a $24 million seed funding round to target the global AI sensor market. The company has already secured design wins for its AI-enabled sensor technology with notable firms, including General Atomics.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6.5,
+              "relevance": 9.2,
+              "total": 7
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261116-12",
+            "source": "TechCrunch AI",
+            "date": "2026-11-16",
+            "headline": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
+            "summary": "Dreamteam has signed up more than 100 customers across 13 countries, with some businesses switching from established CRMs.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 7.4,
+              "relevance": 7.8,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261116-19",
+            "source": "TechCrunch AI",
+            "date": "2026-11-14",
+            "headline": "The AI graveyard: a running list of projects and startups that didn’t make it",
+            "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261116-6",
+            "source": "arXiv Preprint",
+            "date": "2026-11-13",
+            "headline": "Open-Weight Reasoning Model Learns Native Robot Control via Simulation Reinforcement Learning",
+            "summary": "Researchers trained an open-weight 27B reasoning model using robot-use reinforcement learning in simulation to natively control real robots without demonstrations. The resulting model transfers successfully to the real world, an unseen robot, and novel instructions while maintaining its general capabilities across nine benchmarks.",
+            "tag": "ROBOTICS",
+            "url": "http://arxiv.org/abs/2611.18562v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261116-7",
+            "source": "arXiv Preprint",
+            "date": "2026-11-13",
+            "headline": "WeightBench evaluates large language models as weight-space programmers",
+            "summary": "Researchers introduce WeightBench, a benchmark featuring 42 tasks across five tracks to evaluate language models operating directly on neural network parameters without gradient descent. While frontier agents can read small networks and write control policies without running them, they currently struggle to patch language models, compress them without data, or identify impossible edits. GPT-6.1-sol achieved the highest macro score among tested models on its applicable tasks.",
+            "tag": "AI_RESEARCH",
+            "url": "http://arxiv.org/abs/2611.18553v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.2,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261116-17",
+            "source": "arXiv Preprint",
+            "date": "2026-11-13",
+            "headline": "FETTUCCINE: Fast and efficient brain-to-text decoding on mobile devices",
+            "summary": "Recent advances in speech neuroprostheses have enabled new communication avenues for people who have lost the ability to speak due to neurological illness or injury. These systems can decode neural activity during attempted speech into text by relying on language priors to achieve high decoding accuracy. This performance currently comes at the cost of using a compute-intensive language modeling stack, presenting a major bottleneck for real-world use.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.18561v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-research-20261116-18",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-09",
+            "headline": "Innovating with AI in the special chemicals industry",
+            "summary": "As companies look to accelerate innovation with artificial intelligence, cloud computing, and advanced modeling, the primary challenge is connecting new technologies to reliable data, scientific expertise, and the practical realities of bringing products to market. For specialty chemicals manufacturer Lubrizol, digital transformation is all about giving researchers the tools to test ideas faster, make better-informed….",
+            "tag": "REASONING",
+            "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261116-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-13",
+            "headline": "BAL: Bidirectional Autoregression in Latent Space for Learning Human Movement Representations",
+            "summary": "Learning semantically meaningful human movement representations from 3D pose sequences is essential for human behavior modeling. Existing self-supervised methods derive supervision from artificial assumptions, e.g., invariance to augmentation within a certain range or recoverability of masked regions at a certain temporal scale, introducing heuristic hyperparameters that make the learned semantics sensitive to their settings. We propose BAL, a self-supervised framework that instead exploits supervision intrinsic to human movement: the natural ordering structure of everyday behavior.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.18559v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261116-13",
+            "source": "The Verge AI",
+            "date": "2026-11-15",
+            "headline": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
+            "summary": "Unsurprisingly, following the scandal involving now-former Nvidia CEO Jensen Huang and a suspected Chinese spy, Congress is looking to further restrict exports of AI chips. Both Democrats and Republicans have voiced support for various measures and bills that would tighten rules and have demanded that Huang and other Nvidia leaders testify before Congress.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261116-14",
+            "source": "The Verge AI",
+            "date": "2026-11-16",
+            "headline": "The Nvidia scandal isn’t slowing down",
+            "summary": "For years, Jensen Huang has had an almost unprecedented power to shape AI's advancement as Nvidia's CEO, cofounder, and president. As The Verge wrote last week, Nvidia's chips are \"the bedrock upon which advanced AI technology in the US is being built.\" Ever-increasing demand has consistently outpaced supply, leading AI CEOs to essentially bow at […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1031740/jensen-huang-nvidia-scandal-isnt-slowing-down",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 8.8,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261116-20",
+            "source": "The Verge AI",
+            "date": "2026-11-16",
+            "headline": "Apple’s new study looks to improve the effectiveness of AI health tools",
+            "summary": "Apple announced a new study today with the goal of better understanding how people interact with conversational AI health tools and how useful their responses actually are. The company is conducting the Apple Health AI Usage Study in collaboration with OpenEvidence, a clinical AI platform used by healthcare professionals that generates answers based on medical […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261116-21",
+            "source": "The Verge AI",
+            "date": "2026-11-15",
+            "headline": "Jensen Huang might be plotting a return and more of the latest Nvidia drama",
+            "summary": "The drama around Nvidia co-founder and former CEO Jensen Huang is evolving quickly. The latest edition of our Stepback newsletter should get you up to speed, but there have already been a number of new developments since this morning. That includes rumors that Jensen Huang might be trying to find a path back to CEO, […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261116-22",
+            "source": "The Verge AI",
+            "date": "2026-11-14",
+            "headline": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
+            "summary": "Today, I’m talking with Helen Toner, the executive director of the Center for Security and Emerging Technology at Georgetown University. This episode is part two of our series on AI in real life. Helen is a well-known figure in the AI safety and policy community, though she is perhaps best known for having served on […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261116-1",
+            "source": "FTC Press",
+            "date": "2026-11-13",
+            "headline": "FTC Sues to Block Covetrus's $3.5 Billion Acquisition of MWI",
+            "summary": "The Federal Trade Commission filed a lawsuit to block Covetrus Inc. from acquiring its closest competitor, MWI Veterinary Supply Inc., for $3.5 billion. The FTC alleges the merger of the two largest veterinary product distributors will increase costs and raise prices for clinics and pet owners.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-sues-block-veterinary-supplies-distributor-covetruss-35-billion-acquisition-rival-mwi",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 9.5,
+              "relevance": 9.5,
+              "total": 9.2
+            }
+          },
+          {
+            "id": "politics-regulatory-20261116-3",
+            "source": "FTC Press",
+            "date": "2026-11-12",
+            "headline": "FTC and States Secure $63 Million Settlement with Family Dollar",
+            "summary": "Family Dollar will pay $63 million to settle allegations from the FTC and 17 states that the company routinely charged customers more at the register than advertised prices. The enforcement action resolves claims that the pricing discrepancies cost consumers millions of dollars.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-17-states-secure-63-million-settlement-family-dollar-stores-price-transparency-win-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.4,
+              "relevance": 9.2,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261116-2",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "FTC Settles Deceptive Pricing Claims with Stream Auto Outlet",
+            "summary": "The Federal Trade Commission reached an agreement with Stream Auto Outlet to resolve claims that the dealership group deceived consumers. The Long Island-based company allegedly advertised prices that were significantly lower than the amounts consumers were ultimately required to pay.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-secures-settlement-stream-auto-outlet-advancing-price-transparency-auto-buying-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.8,
+              "relevance": 9,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261116-4",
+            "source": "FTC Press",
+            "date": "2026-11-09",
+            "headline": "Federal Court Halts Alleged Phantom Debt Collection Operation",
+            "summary": "A federal court has issued a temporary restraining order and frozen the assets of a debt collection operation at the FTC's request. The complaint alleges the operators used false threats to extract over $20 million from consumers for often-fictitious debts.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-action-results-court-issuing-temporary-restraining-order-halting-phantom-debt-collection",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 6.5,
+              "relevance": 9.2,
+              "total": 8.5
+            }
+          },
+          {
+            "id": "politics-regulatory-20261116-8",
+            "source": "FTC Press",
+            "date": "2026-11-10",
+            "headline": "Five States Join FTC Lawsuit Against Telehealth Provider Hims and Hers",
+            "summary": "Five states have joined an amended FTC complaint alleging that telehealth provider Hims and Hers unlawfully shared sensitive consumer health data with third-party advertisers. The lawsuit also claims the company deceived users regarding its privacy commitments, billing practices, and cancellation procedures.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/five-states-join-ftc-lawsuit-alleging-hims-hers-engaged-deceptive-unlawful-privacy-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261116-25",
+            "source": "MarketWatch Top",
+            "date": "2026-11-16",
+            "headline": "Why this 40-year market veteran is making a lonely bet on a 40% stock-market crash — and $500 oil",
+            "summary": "Ulf Lindahl says a storm is brewing for investors in the U.S. stock market, who will also be facing $500 oil in a few years. Here is where he’d shelter.",
+            "tag": "COMMODITIES",
+            "url": "https://www.marketwatch.com/story/why-this-40-year-market-veteran-is-making-a-lonely-bet-on-a-40-stock-market-crash-and-500-oil-c62aefdb?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261116-9",
+            "source": "ScienceDaily",
+            "date": "2026-11-16",
+            "headline": "MIT scientists use pink noise to boost brain nighttime cleaning",
+            "summary": "MIT researchers discovered that timed bursts of gentle pink noise during sleep strengthen the brain's natural cleaning waves. This breakthrough flushes harmful waste and could lead to new treatments improving sleep, memory, and reducing Alzheimer's-linked protein buildup.",
+            "tag": "NEUROSCIENCE",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261115085533.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261116-10",
+            "source": "ScienceDaily",
+            "date": "2026-11-16",
+            "headline": "Physicists control single-atom magnetic spin using radio waves",
+            "summary": "Scientists unexpectedly discovered how to control the magnetic spin inside a single atom's nucleus using radio waves, overturning previous assumptions about atomic behavior. This breakthrough could enable more reliable quantum memory, though researchers are still investigating the underlying mechanism.",
+            "tag": "QUANTUM",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261114202232.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "science-frontier-20261116-26",
+            "source": "Phys.org",
+            "date": "2026-11-16",
+            "headline": "Quantum teleportation method uses weaker entanglement to transfer encoded information",
+            "summary": "Over the past several decades, researchers have demonstrated quantum teleportation, the transfer of one quantum system's state to another, in a range of systems. However, many quantum computers encode logical qubits (units of quantum information) across groups of physical qubits, which makes teleporting the encoded state without losing information more challenging.",
+            "tag": "PHYSICS",
+            "url": "https://phys.org/news/2026-11-quantum-teleportation-method-weaker-entanglement.html",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.5
+            }
+          },
+          {
+            "id": "science-frontier-20261116-27",
+            "source": "Phys.org",
+            "date": "2026-11-16",
+            "headline": "AI is set to change the graduate job market. Here's how universities can respond",
+            "summary": "Globally, there have been concerns about the likelihood of artificial intelligence (AI) taking people's jobs and reducing job opportunities for college graduates.",
+            "tag": "SCIENCE",
+            "url": "https://phys.org/news/2026-11-ai-job-universities.html",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.4
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261116-23",
+            "source": "Wired Culture",
+            "date": "2026-11-13",
+            "headline": "This Startup Is Betting on AI Microdramas to Get More Black Stories in Hollywood",
+            "summary": "Mansa says its AI microdramas can serve as proofs of concept for what Black audiences want. Critics say the studio is selling out.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/black-roles-are-disappearing-in-hollywood-this-startup-is-using-ai-microdramas-to-fight-back/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261116-5",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-15",
+            "headline": "Traditional Journalistic Standards Mask Financial Motives in Documentaries",
+            "summary": "The documentary 'You Can See Everything,' created by Nathan Fielder and Lance Oppenheim, focuses on Elizabeth Holmes and her partner Billy Evans before she reports to federal prison. The film heavily interrogates Evans's financial motive for participating, though standard industry practices routinely funnel money to other entities while denying compensation to documentary subjects. This dynamic highlights how purported journalistic standards are often used to manipulate audience perceptions of integrity rather than eliminate financial influence.",
+            "tag": "VOICES",
+            "url": "https://www.theatlantic.com/ideas/2026/11/holmes-documentary-journalistic-ethics/689350/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 6.5,
+              "relevance": 8.8,
+              "total": 8
+            }
+          },
+          {
+            "id": "culture-voices-20261116-15",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-14",
+            "headline": "The Mind of a Megalomaniac",
+            "summary": "I n the spring of 1943, Walter C. Langer, a psychoanalyst at Harvard, received a query from William J. Donovan, the head of the U.S.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/hitler-langer-cia-psychoanalysis/689434/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "culture-voices-20261116-16",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-14",
+            "headline": "Don’t Be So Surprised That Mississippi Turned Blue",
+            "summary": "ET on November 15, 2026 Scott Colom, the first Black U.S. senator ever elected by Mississippians, traces his lineage in the state back seven generations, to when the nation was forging its foundation on the backs of stolen Black people. He waged a campaign set on showing that “Mississippi matters,” which many registered more as a question than a declaration, doubting whether a Black man and a Democrat could win the seat.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/scott-colom-mississippi-democrats/689443/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 5.2,
+              "relevance": 6.5,
+              "total": 6.6
+            }
+          }
+        ]
+      }
+    }
+  }
+}
