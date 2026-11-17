@@ -1,0 +1,614 @@
+{
+  "date": "2026-11-17",
+  "label": "Today",
+  "lastUpdated": "2026-11-17T15:06:03.108Z",
+  "agentLog": [
+    {
+      "timestamp": "15:05:09",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 6dca06a: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:05:09",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:05:16",
+      "module": "SCOUT",
+      "message": "Scouted 111 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:05:16",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:05:16",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 74 off-beat/redundant wires. 37 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:05:16",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:05:16",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:06:03",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 25 items (1 via LLM, 24 via deterministic synthesis; top 15 LLM quota applied, 0 dropped for thin context). Tokens: 403. Est cost: $0.00011.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:06:03",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:06:03",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (25 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:06:03",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-17 live (25 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261117-8",
+            "source": "TechCrunch AI",
+            "date": "2026-11-17",
+            "headline": "Isomorphic Labs raises $5B as it looks to take drug candidates to clinical trials",
+            "summary": "Isomorphic Labs, the AI drug-discovery platform that was spun out of Google’s DeepMind in 2021, has raised $5 Billion in a Series C funding round.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.5,
+              "relevance": 9.5,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261117-9",
+            "source": "TechCrunch AI",
+            "date": "2026-11-17",
+            "headline": "Science Corporation’s brain tech is worth $3.5 billion after new funding",
+            "summary": "Science Corp raised a $400 million Series D to scale up its anti-blindness business.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.5,
+              "relevance": 9.5,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261117-10",
+            "source": "TechCrunch AI",
+            "date": "2026-11-16",
+            "headline": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
+            "summary": "Three months since introducing its product, AI cybersecurity startup Corba has raised a $125 million Series A at a $1 billion valuation led by NEA.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9,
+              "relevance": 9.5,
+              "total": 7.5
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261117-4",
+            "source": "arXiv Preprint",
+            "date": "2026-11-16",
+            "headline": "ViRA: Toward Ultra-High-Resolution Visual Agents via Cross-Input Relative Policy Optimization",
+            "summary": "Visual agents answer questions about ultra-high-resolution photos by zooming into the relevant regions. However, existing agents often answer from common sense instead of reading the evidence. Reinforcement learning (RL) on the final answer cannot correct this, because a guess earns the same reward as reading.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.21605v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261117-7",
+            "source": "arXiv Preprint",
+            "date": "2026-11-16",
+            "headline": "Beyond Job Titles: Interpreting Early-Career Job Advertisements with Sparse Autoencoders and Semantic Clustering",
+            "summary": "Job titles and job descriptions alone provide limited insight into how technical roles differ in a changing job market. To assess how such roles differ in their work and industry applications, we design and compare two methods based on deep learning and transformer representations using 36,081 early-career job postings collected from LinkedIn in the United States between December 2025 and October 2026. We first apply PERC, short for Preprocessing (P), Embedding (E), Dimensionality Reduction (R) and Clustering (C).",
+            "tag": "REASONING",
+            "url": "http://arxiv.org/abs/2611.21586v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 8.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "ai-venture-research-20261117-17",
+            "source": "arXiv Preprint",
+            "date": "2026-11-16",
+            "headline": "Hyperlyve: Parallelized Enumeration and Exact Lyapunov Stability Certification for Deep ReLU Networks",
+            "summary": "We introduce Hyperlyve (Hyperplane Partitioned Lyapunov Verification and Enumeration), a framework for proving the asymptotic stability of nonlinear dynamical systems, including those with neural network controllers. Hyperlyve learns and formally certifies continuous piecewise-affine (CPA) neural Lyapunov functions within a counterexample-guided inductive synthesis (CEGIS) loop. Hyperlyve's key innovation is a parallel algorithm that enumerates the hyperplane arrangement formed by the ReLU activations of deep networks and certifies that Lyapunov conditions hold within each polyhedral region.",
+            "tag": "REASONING",
+            "url": "http://arxiv.org/abs/2611.21599v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261117-18",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-16",
+            "headline": "Building AI that can work across the enterprise",
+            "summary": "For years, enterprises have approached AI as a series of discrete experiments. Now, as AI agents begin to move into the workflows that run the business, that model is starting to look inadequate. Organizations moving from isolated pilots toward AI agents and autonomous workflows are confronting a deeper challenge: rethinking how data, business processes, governance,….",
+            "tag": "RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261117-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-16",
+            "headline": "Quantifying the added value of human forecaster discussions for tropical cyclone intensity prediction",
+            "summary": "The National Hurricane Center routinely releases Tropical Cyclone Discussions that offer insights into its tropical cyclone forecasts. This study examines the added value of these discussions for intensity forecasting beyond a set of numerical predictors. For 637 Atlantic and eastern North Pacific tropical cyclones from the 2002-2023 hurricane seasons, we analyze the discussion text and its combination with 13 hurricane environmental predictors from SHIPS and ERA5 10-meter wind fields, for forecasting intensity changes at lead times of 24 to 120 hours using three modeling methods.",
+            "tag": "RESEARCH",
+            "url": "http://arxiv.org/abs/2611.21602v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261117-19",
+            "source": "The Verge AI",
+            "date": "2026-11-16",
+            "headline": "Sam Altman says he wants everyone ‘to have a lot of RAM’",
+            "summary": "OpenAI CEO Sam Altman is once again addressing his controversial comments on PC RAM purchases. \"I want to be clear, I want people to have a lot of RAM, I think everybody should be able to buy a lot of RAM for their own computer,\" Altman said today. \"I think the home tinkering is great.\" […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1034787/sam-altman-ram-shortage-semafor",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261117-20",
+            "source": "The Verge AI",
+            "date": "2026-11-16",
+            "headline": "Apple is testing daily usage limits for more complex Siri AI interactions",
+            "summary": "Apple released betas of iOS 27.3, iPadOS 27.3, and macOS 27.3 today, and the company is using the update to test new per device daily usage limits for some Siri AI and Apple Intelligence features, according to MacRumors. Basic Siri commands and requests will remain free and unlimited, but more advanced features that rely on […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1034581/apple-intelligence-siri-ai-daily-usage-limits-icloud-subscription",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261117-21",
+            "source": "The Verge AI",
+            "date": "2026-11-16",
+            "headline": "OpenAI wants to stop deepfakes from overwhelming child abuse tiplines",
+            "summary": "OpenAI is announcing a tool that it says will help child sexual abuse investigators cut through the noise to find harmful material they can act on quickly. At a Monday press briefing in Washington, DC, OpenAI announced a classifier it says can better detect abusive imagery of kids, including whether it's AI-generated.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/policy/1034527/openai-csam-classifier",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261117-22",
+            "source": "The Verge AI",
+            "date": "2026-11-16",
+            "headline": "Nvidia’s board is reportedly ‘not considering’ hiring Jensen Huang back",
+            "summary": "Nvidia's board of directors \"isn't considering\" having Jensen Huang return as CEO, according to a report from CNBC. A source tells the outlet the board \"is focused on an investigation into Huang, and is not in discussions to bring him back.\" Since Huang's resignation last week, tech executives, along with current and former Nvidia employees, […].",
+            "tag": "REGULATORY",
+            "url": "https://www.theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261117-25",
+            "source": "The Verge AI",
+            "date": "2026-11-16",
+            "headline": "Tech leaders are convinced that Jensen Huang’s exit was a plot against him",
+            "summary": "Jensen Huang's stunning resignation from Nvidia after more than 33 years has sent shockwaves throughout the tech industry. Now prominent figures are calling for Huang's reinstatement, and many are also hopping on board with a theory spreading throughout Silicon Valley: that the scandal is the result of a plot against the former CEO.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1035027/tech-leaders-nvidia-jensen-huang-theories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261117-1",
+            "source": "FTC Press",
+            "date": "2026-11-13",
+            "headline": "FTC Sues to Block Covetrus Acquisition of MWI Veterinary Supply",
+            "summary": "The Federal Trade Commission filed a lawsuit to block Covetrus Inc. from acquiring its closest competitor, MWI Veterinary Supply Inc., in a $3.5 billion deal. The FTC alleges the merger of the two largest veterinary product distributors will increase costs and raise prices for clinics and pet owners.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-sues-block-veterinary-supplies-distributor-covetruss-35-billion-acquisition-rival-mwi",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 9.5,
+              "relevance": 9.2,
+              "total": 9.1
+            }
+          },
+          {
+            "id": "politics-regulatory-20261117-2",
+            "source": "FTC Press",
+            "date": "2026-11-12",
+            "headline": "FTC and 17 States Secure $63 Million Settlement with Family Dollar Stores in Price Transparency Win for Consumers",
+            "summary": "Family Dollar has generated millions of dollars by charging more at the register than the prices it advertises, the FTC and states allege Family Dollar will pay $63 million to settle Federal Trade Commission and state allegations that the company routinely charged customers more at the register than the prices displayed on shelves, price tags and advertisements, costing consumers millions of dollars.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-17-states-secure-63-million-settlement-family-dollar-stores-price-transparency-win-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.4,
+              "relevance": 9.5,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261117-5",
+            "source": "FTC Press",
+            "date": "2026-11-10",
+            "headline": "Five States Join FTC Lawsuit Alleging Hims and Hers Engaged in Deceptive and Unlawful Privacy Practices",
+            "summary": "The Federal Trade Commission filed an amended complaint adding five states as co-plaintiffs in its lawsuit alleging that telehealth provider Hims and Hers shared consumers’ sensitive health information with third-party advertising platforms, despite claiming its services maintain consumers’ privacy, and it deceived users about its billing and cancellation practices.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/five-states-join-ftc-lawsuit-alleging-hims-hers-engaged-deceptive-unlawful-privacy-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261117-6",
+            "source": "arXiv Preprint",
+            "date": "2026-11-16",
+            "headline": "Resolving and Suppressing Temporally Correlated Noise in Quantum Error Correction",
+            "summary": "Scaling fault-tolerant quantum error correction (QEC) requires suppressing errors in both space and time, yet standard logical memory experiments primarily probe spatial faults. Here, we use a 105-qubit Willow superconducting quantum processor to realize and scale the surface code stability experiment, which is alternatively sensitive to temporal error chains. Scaling from patch sizes of $3 \\times 3$ to $7 \\times 7$, we realize a timelike block suppression factor of $μ_T = 1.47 \\pm 0.25$, demonstrating the ability to maintain temporal error suppression as the number of qubits increases.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.21578v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 8.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "science-frontier-20261117-11",
+            "source": "ScienceDaily",
+            "date": "2026-11-17",
+            "headline": "A mysterious twist in the universe’s oldest light could reveal new physics",
+            "summary": "Scientists have spotted hints of a mysterious rotation in the universe’s oldest light that could reveal new physics and shed light on dark matter and dark energy. A new technique developed at UC San Diego could help rule out misleading telescope errors, bringing researchers closer to determining whether the strange signal is real.",
+            "tag": "PHYSICS",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261116023348.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "science-frontier-20261117-12",
+            "source": "arXiv Preprint",
+            "date": "2026-11-16",
+            "headline": "Exponential Quantum Memory Advantage for Late-Graph Smoothness and Spectral Estimation",
+            "summary": "Graph signal processing tests how smoothly the decisions of next-generation massive sensor networks with $N$ nodes vary over their neighbour graph. Memory becomes the bottleneck when the neighbour graph arrives only after data erasure, a late-graph setting motivated by dispersed sensor networks and telemetry. We analyse three collection scenarios, reliable rounds, continuous broadcast and ordered capture, and test the Dirichlet energy $\\mathcal E_G=\\mathbf z^{\\mathsf T}\\mathbf L\\mathbf z/N$ of the fused decision map $\\mathbf z\\in\\{\\pm1\\}^N$, with late-graph Laplacian $\\mathbf L$, against two thresholds.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.21500v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "science-frontier-20261117-15",
+            "source": "ScienceDaily",
+            "date": "2026-11-17",
+            "headline": "Cannabis addiction linked to 57% higher odds of suicidal thoughts",
+            "summary": "A massive study involving more than 415,000 Americans has uncovered a concerning connection between cannabis use disorder and suicidal thoughts. Researchers found that adults with the disorder had 57% higher odds of experiencing suicidal thoughts, with women and younger adults facing particularly elevated risks.",
+            "tag": "SCIENCE",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261116023342.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "science-frontier-20261117-14",
+            "source": "arXiv Preprint",
+            "date": "2026-11-16",
+            "headline": "Optimal Quantum Sensing Algorithms for Discrete-Frequency Spectroscopy",
+            "summary": "Spectroscopy is a versatile tool that drives scientific discovery and underpins modern technologies. Quantum sensing offers promising opportunities to advance spectroscopy through enhanced sensitivity and spectral and spatial resolution. However, existing approaches largely focus on improving general measurement capabilities, often overlooking the structure of specific sensing tasks and leaving potential performance gains untapped.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.21560v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261117-23",
+            "source": "Wired Culture",
+            "date": "2026-11-13",
+            "headline": "This Startup Is Betting on AI Microdramas to Get More Black Stories in Hollywood",
+            "summary": "Mansa says its AI microdramas can serve as proofs of concept for what Black audiences want. Critics say the studio is selling out.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/black-roles-are-disappearing-in-hollywood-this-startup-is-using-ai-microdramas-to-fight-back/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261117-3",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-15",
+            "headline": "The Only Thing Nathan Fielder Won’t Show",
+            "summary": "Y ou Can See Everything has given America a new villain: Billy Evans. The blockbuster documentary, created by Nathan Fielder and Lance Oppenheim, is about Elizabeth Holmes, the former CEO of the blood-test company Theranos, and the days before she reports to federal prison after being convicted of fraud. But Evans, her partner and the father of her two children, manages to come out of the film looking worse than she does—not because he committed any crime, but because he wanted to get paid for participating in the documentary.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/holmes-documentary-journalistic-ethics/689350/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 6.5,
+              "relevance": 9.5,
+              "total": 8.1
+            }
+          },
+          {
+            "id": "culture-voices-20261117-13",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-14",
+            "headline": "The Mind of a Megalomaniac",
+            "summary": "I n the spring of 1943, Walter C. Langer, a psychoanalyst at Harvard, received a query from William J. Donovan, the head of the U.S.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/hitler-langer-cia-psychoanalysis/689434/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "culture-voices-20261117-16",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-14",
+            "headline": "Don’t Be So Surprised That Mississippi Turned Blue",
+            "summary": "ET on November 16, 2026 Scott Colom, the first Black U.S. senator ever elected by Mississippians, traces his lineage in the state back seven generations, to when the nation was forging its foundation on the backs of stolen Black people. He waged a campaign set on showing that “Mississippi matters,” which many registered more as a question than a declaration, doubting whether a Black man and a Democrat could win the seat.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/scott-colom-mississippi-democrats/689443/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 5.2,
+              "relevance": 6.5,
+              "total": 6.6
+            }
+          }
+        ]
+      }
+    }
+  }
+}
