@@ -1,0 +1,615 @@
+{
+  "date": "2026-11-18",
+  "label": "Today",
+  "lastUpdated": "2026-11-18T14:46:21.192Z",
+  "agentLog": [
+    {
+      "timestamp": "14:44:30",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 67018ca: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:44:30",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:44:50",
+      "module": "SCOUT",
+      "message": "Scouted 99 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:44:50",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:44:50",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 66 off-beat/redundant wires. 33 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:44:50",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:44:50",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:46:21",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 25 items (15 via LLM, 10 via deterministic synthesis; top 15 LLM quota applied, 1 dropped for thin context). Tokens: 14849. Est cost: $0.00295.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:46:21",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:46:21",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (25 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:46:21",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-18 live (25 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261118-6",
+            "source": "TechCrunch AI",
+            "date": "2026-11-18",
+            "headline": "Nvidia private investment value surges to $65 billion",
+            "summary": "Nvidia's private investments nearly tripled in value over the past nine months, driven by Jensen Huang's aggressive dealmaking and rising portfolio valuations. However, Huang's upcoming exit places the future of these venture deals in doubt.",
+            "tag": "AI-VENTURE",
+            "url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 9.5,
+              "total": 7.7
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261118-8",
+            "source": "TechCrunch AI",
+            "date": "2026-11-18",
+            "headline": "Nvidia projects continued record-breaking revenue despite CEO departure",
+            "summary": "Nvidia has projected that its streak of record-breaking revenue will continue despite recent company turmoil. The uncertainty follows the departure of its founder and CEO, Jensen Huang.",
+            "tag": "AI-VENTURE",
+            "url": "https://techcrunch.com/2026/11/17/nvidia-promises-that-revenue-will-keep-soaring-for-now/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 7.2
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261118-9",
+            "source": "TechCrunch AI",
+            "date": "2026-11-18",
+            "headline": "Humyn Labs Raises $47M to Supply Robotics Data to U.S. Companies",
+            "summary": "Humyn Labs, founded in February, has raised $47 million to provide data for U.S. robotics companies. The startup generates about 90% of its revenue from the United States and competes with firms like Mecka AI and XDOF.",
+            "tag": "AI-VENTURE",
+            "url": "https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6.5,
+              "relevance": 9.2,
+              "total": 7
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261118-16",
+            "source": "TechCrunch AI",
+            "date": "2026-11-18",
+            "headline": "Felicis leads $7.5M bet on Unsiloed AI to make enterprise documents usable by AI agents",
+            "summary": "With a team of just seven, Unsiloed AI plans to compete with tech giants and specialized startups in the crowded AI document-processing market.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/18/felicis-leads-7-5m-bet-on-unsiloed-ai-to-make-enterprise-documents-usable-by-ai-agents/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 5.2,
+              "relevance": 6.5,
+              "total": 6.3
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261118-14",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-16",
+            "headline": "Enterprises shift from isolated AI pilots to autonomous workflows",
+            "summary": "Organizations are moving away from treating artificial intelligence as discrete experiments as AI agents enter core business workflows. This shift forces companies to confront deeper challenges regarding how they handle data, business processes, and governance.",
+            "tag": "AI_VENTURE",
+            "url": "https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "ai-venture-research-20261118-12",
+            "source": "arXiv Preprint",
+            "date": "2026-11-17",
+            "headline": "Ambient SFT uses temperature matching to prevent overfitting in language models",
+            "summary": "Collecting large post-training datasets is challenging, leading standard Supervised Fine-Tuning (SFT) to cause overfitting and catastrophic forgetting. Ambient SFT addresses this by using a frozen pre-trained model as a noisy teacher, requiring the fine-tuned model to match its high-temperature conditional distributions. This principled framework outperforms standard SFT across domain adaptation, instruction-tuning, and reasoning by up to 21 percent.",
+            "tag": "RESEARCH",
+            "url": "http://arxiv.org/abs/2611.23229v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-research-20261118-19",
+            "source": "arXiv Preprint",
+            "date": "2026-11-17",
+            "headline": "Spool: Low-Latency Streaming Inference for Hybrid Vision-Language Models",
+            "summary": "Applications such as visual accessibility agents and robotics require answering questions about recent video content promptly, over a bounded window of past frames (e.g., the last two minutes). Hybrid vision-language models (VLMs), which interleave attention with linear recurrent layers such as Gated DeltaNet (GDN), are attractive for this setting, but maintaining a sliding window is expensive. The reason is that recurrent layers combine all past frames into a shared state, so expiring old frames normally requires re-running the entire window through the model.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.23228v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261118-20",
+            "source": "arXiv Preprint",
+            "date": "2026-11-17",
+            "headline": "Higher-Scoring Coding Models Did Not Get More Work Done",
+            "summary": "New coding models advertise themselves on score improvements of coding benchmarks. Yet no study has tested if a model that scores higher on these benchmarks gets more real work done. export control directive banned access to Claude Fable 5 for 19 days, which forced users to switch to other models.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.23216v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261118-21",
+            "source": "arXiv Preprint",
+            "date": "2026-11-17",
+            "headline": "Multimodal Masked Diffusion Autoencoder for Modeling Impaired Driving",
+            "summary": "Human cognitive state (e.g., distraction, stress), gaze, and behavior interact with the driving environment in subtle ways that AI could use to assist drivers, but ground-truth labels for human cognitive state levels are costly to obtain at scale. We propose a multimodal masked-diffusion autoencoder, ID-MAE, that adds a self-supervised objective to impairment prediction: alongside predicting the impairment label as a masked token, it reconstructs masked gaze and trajectory. To probe the effects of different modalities and types of impairments on model inference, we introduce DIVERT, a driving-simulator dataset containing 103 hours of driving data (n = 109) with ten impairment inductions spanning cognitive, visual, and emotional states, recorded with gaze, vehicle state, and scene video.",
+            "tag": "ARCHITECTURE",
+            "url": "http://arxiv.org/abs/2611.23211v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261118-10",
+            "source": "The Verge AI",
+            "date": "2026-11-18",
+            "headline": "Nvidia halts advanced AI chip shipments to China",
+            "summary": "Nvidia has stopped sending its advanced AI chips to China despite receiving White House approval to do so in December. Interim CEO Colette Kress announced the decision during a Tuesday earnings call, marking a shift from the company's previous approach under former CEO Jensen Huang.",
+            "tag": "AI_VENTURE",
+            "url": "https://www.theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 9.5,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261118-13",
+            "source": "The Verge AI",
+            "date": "2026-11-17",
+            "headline": "DOJ and Commerce Departments confirm ongoing investigation into Megaspeed",
+            "summary": "The Justice and Commerce Departments have confirmed they are investigating Singapore-based data center company Megaspeed. The announcement follows reports suggesting a previous probe into the firm, which is intertwined with Nvidia CEO Jensen Huang's resignation, had been halted last year.",
+            "tag": "AI-VENTURE",
+            "url": "https://www.theverge.com/policy/1035410/doj-megaspeed-nvidia-investigation-update",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261118-17",
+            "source": "The Verge AI",
+            "date": "2026-11-17",
+            "headline": "Nvidia’s Q3 earnings hit the mark, without mentioning the whole Jensen Huang thing",
+            "summary": "Interim Nvidia CEO Colette Kress announced the company's Q3 earnings on Tuesday, without initially mentioning former CEO Jensen Huang or the details of his departure, or possible attempt at a return. On the earnings call accompanying the release, board chair Harvey Jones kicked things off by saying the board \"does not intend to reinstate Huang […].",
+            "tag": "EARNINGS",
+            "url": "https://www.theverge.com/tech/1036032/nvidia-q3-2027-jensen-huang",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261118-18",
+            "source": "The Verge AI",
+            "date": "2026-11-17",
+            "headline": "Not even Sam Altman is safe from AI deepfakes on Instagram",
+            "summary": "Instagram is filled with people posting deepfaked content - including, as of late, from one of Meta's most prominent executives. Earlier in November, Alexandr Wang, Meta's chief AI officer, shared a short clip to promote Muse, the company's consumer AI agent. In the AI-generated clip, Wang, Meta CEO Mark Zuckerberg, OpenAI CEO Sam Altman, and […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/news/1035957/meta-alexandr-wang-sam-altman-instagram-ai-deepfake",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261118-1",
+            "source": "FTC Press",
+            "date": "2026-11-13",
+            "headline": "FTC Sues to Block Covetrus Acquisition of MWI Veterinary Supply",
+            "summary": "The Federal Trade Commission has filed a lawsuit to block Covetrus Inc. from acquiring its closest rival, MWI Veterinary Supply Inc., in a $3.5 billion deal. The FTC alleges the merger of the two largest veterinary product distributors will drive up costs for clinics and pet owners.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-sues-block-veterinary-supplies-distributor-covetruss-35-billion-acquisition-rival-mwi",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 9.5,
+              "relevance": 9.5,
+              "total": 9.2
+            }
+          },
+          {
+            "id": "politics-regulatory-20261118-2",
+            "source": "FTC Press",
+            "date": "2026-11-12",
+            "headline": "FTC and States Secure $63 Million Settlement With Family Dollar",
+            "summary": "Family Dollar will pay $63 million to settle allegations from the FTC and 17 states that the company routinely charged customers more at the register than advertised prices. The enforcement action resolves claims that the retailer's deceptive pricing practices cost consumers millions of dollars.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-17-states-secure-63-million-settlement-family-dollar-stores-price-transparency-win-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.4,
+              "relevance": 9.5,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261118-4",
+            "source": "FTC Press",
+            "date": "2026-11-17",
+            "headline": "FTC Takes Enforcement Action Against Safety-Harness Manufacturer for False Claims",
+            "summary": "The Federal Trade Commission is taking enforcement action against Alabama-based safety-harness manufacturer Elk River Inc. for falsely claiming its products are Made in USA. A proposed order requires the company to halt deceptive claims and pay a monetary judgment.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-takes-enforcement-action-against-safety-harness-manufacturer-allegedly-false-made-usa-claims",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261118-22",
+            "source": "MarketWatch Top",
+            "date": "2026-11-18",
+            "headline": "How high must interest rates go to cool inflation? Possibly 100 basis points or more, Fed’s Waller says.",
+            "summary": "The central bank might have to be more aggressive in order to “shock” inflation out of the system, Federal Reserve governor Christopher Waller said Wednesday.",
+            "tag": "MACRO",
+            "url": "https://www.marketwatch.com/story/how-high-must-interest-rates-go-to-cool-inflation-possibly-100-basis-points-or-more-feds-waller-says-e7b41cf6?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "markets-macro-20261118-23",
+            "source": "MarketWatch Top",
+            "date": "2026-11-18",
+            "headline": "Want to earn 5% on shorter-term Treasurys again? Watch for this shift.",
+            "summary": "Don’t rule out a half-point interest-rate hike in December, BofA Global’s rates team said.",
+            "tag": "MACRO",
+            "url": "https://www.marketwatch.com/story/want-to-earn-5-on-shorter-term-treasurys-again-watch-for-this-shift-d6ff42f2?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 5.9
+            }
+          },
+          {
+            "id": "markets-macro-20261118-24",
+            "source": "MarketWatch Top",
+            "date": "2026-11-18",
+            "headline": "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025",
+            "summary": "Alphabet and Apple have approached artificial intelligence in ways that have resonated on Wall Street.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/only-two-magnificent-seven-stocks-have-managed-to-beat-the-s-p-500-since-the-start-of-2025-a3daa0f8?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261118-25",
+            "source": "Phys.org",
+            "date": "2026-11-18",
+            "headline": "Link between social media use and veterans' democracy concerns identified",
+            "summary": "Post-9/11 veterans who used minimally moderated, ideologically oriented social media platforms reported greater concern about the condition of U.S. democracy and less satisfaction with the end of the war in Afghanistan than veterans who used other social media platforms or no social media at all, according to a new study by Penn State researchers.",
+            "tag": "SCIENCE",
+            "url": "https://phys.org/news/2026-11-link-social-media-veterans-democracy.html",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.5
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261118-15",
+            "source": "Wired Culture",
+            "date": "2026-11-18",
+            "headline": "US Senators Slam Roblox Over Child Sex Abuse in Hearing",
+            "summary": "Senators Josh Hawley and Dick Durbin introduced legislation following a Senate hearing criticizing Roblox over child safety. The proposed bill aims to make it easier for families to sue the gaming platform if a child is harmed. The hearing highlighted serious concerns regarding predators on the platform.",
+            "tag": "CULTURE",
+            "url": "https://www.wired.com/story/the-predators-are-real-senate-hearing-slams-roblox-over-child-sex-abuse/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.6
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261118-5",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-17",
+            "headline": "Marco Rubio embraces aggressive rhetoric in recent foreign policy speeches",
+            "summary": "Secretary of State Marco Rubio has delivered speeches incorporating culture-war rhetoric, lawless power enthusiasm, and skepticism toward international law. In recent addresses to the Federalist Society and in Athens, Rubio utilized aggressive historical references and gendered language aligning with the style of the Trump administration. Observers note this rhetoric mirrors the political positioning of potential 2028 Republican presidential contenders.",
+            "tag": "DIPLOMACY",
+            "url": "https://www.theatlantic.com/ideas/2026/11/marco-rubio-federalist-society-speech/689473/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 8.5,
+              "relevance": 8.5,
+              "total": 8
+            }
+          },
+          {
+            "id": "culture-voices-20261118-3",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-15",
+            "headline": "The Hypocrisy Surrounding Financial Compensation in Documentary Filmmaking",
+            "summary": "The documentary \"You Can See Everything\" by Nathan Fielder and Lance Oppenheim heavily criticizes Elizabeth Holmes's partner, Billy Evans, for negotiating a profit share. Traditional journalistic standards argue that paying documentary subjects distorts objectivity and honesty. However, this standard often ensures that money flows to everyone involved except the actual subject of the story.",
+            "tag": "DOCUMENTARY",
+            "url": "https://www.theatlantic.com/ideas/2026/11/holmes-documentary-journalistic-ethics/689350/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 6.5,
+              "relevance": 9,
+              "total": 8
+            }
+          },
+          {
+            "id": "culture-voices-20261118-7",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-18",
+            "headline": "Black Politicians Break From Respectability Politics to Embrace Identity",
+            "summary": "Following recent midterm elections, a new wave of Black politicians is increasingly breaking with traditional expectations of decorum by openly embracing their Blackness and southern working-class roots. Figures such as Georgia's Keisha Lance Bottoms, Birmingham Mayor Randall Woodfin, and Mississippi's Scott Colom have utilized culturally resonant gestures, colloquial language, and social media to connect with voters. Observers note that this shift reflects a departure from past prototypes of political respectability, a change partly attributed to a broader cultural loosening of norms.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/democrats-midterms-black-politicians/689477/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "culture-voices-20261118-11",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-14",
+            "headline": "Scott Colom Becomes First Black U.S. Senator Elected by Mississippians",
+            "summary": "Scott Colom won a U.S. Senate seat in Mississippi, overcoming a well-funded incumbent and historical hurdles through grassroots organizing and a message focused on the state's potential. His victory marks the culmination of decades of local labor and challenges the long-standing perception of Mississippi as a guaranteed Republican stronghold.",
+            "tag": "POLITICS",
+            "url": "https://www.theatlantic.com/ideas/2026/11/scott-colom-mississippi-democrats/689443/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 5.2,
+              "relevance": 9.5,
+              "total": 7
+            }
+          }
+        ]
+      }
+    }
+  }
+}
