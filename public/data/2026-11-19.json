@@ -1,0 +1,633 @@
+{
+  "date": "2026-11-19",
+  "label": "Today",
+  "lastUpdated": "2026-11-19T14:52:31.582Z",
+  "agentLog": [
+    {
+      "timestamp": "14:51:51",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit cd02f2e: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:51:51",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:51:56",
+      "module": "SCOUT",
+      "message": "Scouted 113 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:51:56",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:51:56",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 75 off-beat/redundant wires. 38 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:51:56",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:51:56",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:52:31",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 26 items (1 via LLM, 25 via deterministic synthesis; top 15 LLM quota applied, 0 dropped for thin context). Tokens: 397. Est cost: $0.00011.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:52:31",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:52:31",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (26 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:52:31",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-19 live (26 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [],
+        "research": [
+          {
+            "id": "ai-venture-research-20261119-13",
+            "source": "arXiv Preprint",
+            "date": "2026-11-18",
+            "headline": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
+            "summary": "Jailbreak attempts and harmful prompts remain a challenge for the safe deployment of large language models. We study whether contrastively learned representations can support safety detection without training an additional downstream classifier. We propose Jailbreak Detection with Prototype Inference (JDPI), which uses binary safety labels to construct harmful and benign prototypes and makes predictions from relative prototype distances.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.24936v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-research-20261119-15",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-16",
+            "headline": "Building AI that can work across the enterprise",
+            "summary": "For years, enterprises have approached AI as a series of discrete experiments. Now, as AI agents begin to move into the workflows that run the business, that model is starting to look inadequate. Organizations moving from isolated pilots toward AI agents and autonomous workflows are confronting a deeper challenge: rethinking how data, business processes, governance,….",
+            "tag": "RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261119-21",
+            "source": "arXiv Preprint",
+            "date": "2026-11-18",
+            "headline": "Mapping the AI Supply Chain: Dependencies, Vulnerabilities, and Market Concentration in the AI Ecosystem",
+            "summary": "AI systems are built across many organizations that contribute models, data, compute, capital, talent, and other assets. While the layers of the AI stack are relatively well understood, the relationships between actors and components across layers remains sparsely documented. In this work, we focus on the organizations that make up the AI supply chain: the complex network of actors that contribute to the development and deployment of AI.",
+            "tag": "REASONING",
+            "url": "http://arxiv.org/abs/2611.24927v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 7.8,
+              "total": 6.1
+            }
+          },
+          {
+            "id": "ai-venture-research-20261119-23",
+            "source": "arXiv Preprint",
+            "date": "2026-11-18",
+            "headline": "Agentic Harness Engineering Beta: Requirement-Centered Evolution of Agent Harnesses",
+            "summary": "Real-world harness engineering is driven by explicit and implicit user requirements, which guide development and validation. However, existing harness evolution methods often overlook implicit requirements and interaction needs, while using a single evolution agent to modify the harness and benchmark scores to select changes. This process often produces narrow patches and leads to benchmark-specific local optima.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.24924v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261119-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-18",
+            "headline": "Decomposing SGD Dynamics in Neural Networks: Teacher-Induced Spikes and Variance Inflation",
+            "summary": "We study two-layer neural networks trained by stochastic gradient descent (SGD) on a multi-index teacher model, focusing on how first-layer parameters orthogonal to the teacher subspace affect generalization. We decompose the first-layer weights into a signal component aligned with the teacher and an orthogonal complement, and analyze their joint SGD dynamics together with the second layer in the proportional limit. We show that although SGD updates to the complement are initially isotropic, the training dynamics induce teacher-dependent spectral spikes in the complement Gram matrix.",
+            "tag": "RESEARCH",
+            "url": "http://arxiv.org/abs/2611.24908v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261119-3",
+            "source": "The Verge AI",
+            "date": "2026-11-19",
+            "headline": "With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line",
+            "summary": "Today is a new beginning for Anthropic: a years-in-the-making IPO that beat out SpaceX for most valuable of all time, having raised $81.3 billion and set an important precedent for the other public AI lab debuts to come. But it's not simply a financial milestone. Anthropic was founded on the idea that it prioritized safety […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 9.8,
+              "relevance": 7.8,
+              "total": 8.2
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261119-14",
+            "source": "The Verge AI",
+            "date": "2026-11-19",
+            "headline": "I let Apple’s always-listening AI summarize my life for two weeks",
+            "summary": "I've been asking myself this quite a bit over the last month or so while testing both the Amazon Bee Frontier and Siri Recap on the Apple Watch Ultra 4. Both enable a wearable to ambiently listen to your conversations and, using AI, summarize them for you.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1037100/apple-siri-recap-audio-intelligence-hands-on",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261119-18",
+            "source": "The Verge AI",
+            "date": "2026-11-18",
+            "headline": "Nvidia’s rise, visualized",
+            "summary": "If someone handed you $8,300 every second, what would you do? That's how much pure profit Nvidia now makes. By the time you finish reading this paragraph, Nvidia will likely have cleared $45,000 and change.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1035924/nvidia-visualized-revenue-profit-earnings-after-huang",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261119-19",
+            "source": "The Verge AI",
+            "date": "2026-11-18",
+            "headline": "What is Nvidia without AI’s sugar daddy in charge?",
+            "summary": "If the glorious AI revolution rests entirely on the well-being of one man, AI is perhaps not as robust a technology as I had previously been led to believe. Nonetheless, chunks of Silicon Valley are now insisting he is indispensable. For instance, if Elon Musk is telling the truth, then Jensen Huang (the former CEO […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1036776/nvidia-earnings-kress-jensen-huang-petition",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261119-22",
+            "source": "The Verge AI",
+            "date": "2026-11-18",
+            "headline": "Trump’s latest land grab is an AI hub in the Philippines",
+            "summary": "President Donald Trump was greeted by no less than five beauty queens when he landed in the Philippines on Tuesday, according to local news outlet Rappler. As he stepped onto the tarmac, a child handed him small US and Philippine flags. A band played \"YMCA,\" a staple at Trump rallies, as more girls in traditional […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/policy/1036749/trump-ai-chip-data-center-us-philippines-pax-silica",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261119-1",
+            "source": "FTC Press",
+            "date": "2026-11-13",
+            "headline": "FTC Sues to Block Covetrus Acquisition of MWI",
+            "summary": "The Federal Trade Commission sued to block Covetrus Inc. from acquiring its closest competitor, MWI Veterinary Supply Inc., in a $3.5 billion deal. The FTC alleges the combination of the two largest veterinary product distributors will drive up costs for clinics and pet owners.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-sues-block-veterinary-supplies-distributor-covetruss-35-billion-acquisition-rival-mwi",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 9.5,
+              "relevance": 9.5,
+              "total": 9.2
+            }
+          },
+          {
+            "id": "politics-regulatory-20261119-2",
+            "source": "FTC Press",
+            "date": "2026-11-12",
+            "headline": "FTC and 17 States Secure $63 Million Settlement with Family Dollar Stores in Price Transparency Win for Consumers",
+            "summary": "Family Dollar has generated millions of dollars by charging more at the register than the prices it advertises, the FTC and states allege Family Dollar will pay $63 million to settle Federal Trade Commission and state allegations that the company routinely charged customers more at the register than the prices displayed on shelves, price tags and advertisements, costing consumers millions of dollars.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-17-states-secure-63-million-settlement-family-dollar-stores-price-transparency-win-consumers",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 7.4,
+              "relevance": 9.5,
+              "total": 8.7
+            }
+          },
+          {
+            "id": "politics-regulatory-20261119-5",
+            "source": "FTC Press",
+            "date": "2026-11-17",
+            "headline": "FTC Takes Enforcement Action Against Safety-Harness Manufacturer for Allegedly False Made in the USA Claims",
+            "summary": "FTC’s proposed order requires the company to stop making deceptive claims and pay a monetary judgment The Federal Trade Commission is taking action against Elk River Inc., an Alabama-based manufacturer of safety harnesses and other fall protection equipment for workers, for falsely claiming that its harnesses are “Made in USA.”.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-takes-enforcement-action-against-safety-harness-manufacturer-allegedly-false-made-usa-claims",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261119-4",
+            "source": "arXiv Preprint",
+            "date": "2026-11-18",
+            "headline": "CREST: A Hardware-Aware GNN-Based Framework for High-Fidelity and Robust Superconducting Quantum Compilation",
+            "summary": "Quantum compilation on superconducting processors requires selecting a connected execution region whose topology and calibrated properties suit the input circuit. This choice constrains subsequent routing and influences the noise encountered during execution, yet aggregate hardware-quality metrics alone may not reliably predict the execution fidelity of a given circuit. Calibration updates can also change region suitability and trigger the rebuilding of calibration-dependent resource structures.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.24886v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261119-9",
+            "source": "ScienceDaily",
+            "date": "2026-11-19",
+            "headline": "Something strange is living beneath the skin of deep-sea pigs",
+            "summary": "Scientists have discovered a strange bacterium hiding beneath the skin of deep-sea creatures known as sea pigs, revealing an unexpected biological partnership. The microbe has an unusually tiny genome, yet more than a quarter of its DNA is devoted to making surface proteins, some of them exceptionally large. Researchers suspect it depends heavily on its host for survival, but what the sea pigs gain in return remains a mystery.",
+            "tag": "SCIENCE",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261118065512.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 4.4,
+              "magnitude": 6,
+              "relevance": 6.5,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "science-frontier-20261119-11",
+            "source": "ScienceDaily",
+            "date": "2026-11-19",
+            "headline": "Scientists tested 212 plant-based foods. Every single one contained fungal toxins",
+            "summary": "A new study has uncovered a surprising concern hiding in popular plant-based foods and drinks. Researchers tested 212 vegan and vegetarian products sold in the UK, including meat alternatives, oat milk, almond milk, and soy milk, and found that every single one contained at least one potentially harmful fungal toxin. Known as mycotoxins, these naturally occurring compounds can contaminate grains, legumes, and seeds during farming and storage.",
+            "tag": "SCIENCE",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261118073749.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "science-frontier-20261119-10",
+            "source": "arXiv Preprint",
+            "date": "2026-11-18",
+            "headline": "Quantum Simulation of First-Quantised Chemistry with a Sum-of-Squares Representation",
+            "summary": "Calculating molecular energies is expected to be an important application of quantum computers, but the most efficient algorithms to achieve this typically have significant space requirements. Scaling quantum processors to thousands of logical qubits is a daunting engineering challenge, so developing algorithms that run with reduced qubit requirements is of particular importance. Moreover, most algorithms are benchmarked on active spaces with about as many orbitals as electrons, missing dynamical correlation which is necessary to describe real chemistry.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.24885v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "science-frontier-20261119-25",
+            "source": "arXiv Preprint",
+            "date": "2026-11-18",
+            "headline": "A Nonsecular Quantum Master Equation with Detailed Balance and Second-order Error Bound",
+            "summary": "An effective theory of open quantum systems should preserve the detailed balance structure inherited from microscopic reversibility and remain accurate throughout relaxation. Meeting both requirements is particularly challenging in quantum many-body systems, where dense spectra can invalidate the secular approximation even at weak coupling. Here we construct a nonsecular quantum master equation that satisfies time-reversal Kubo-Martin-Schwinger (TR-KMS) detailed balance.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.24911v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261119-16",
+            "source": "Wired Culture",
+            "date": "2026-11-18",
+            "headline": "‘The Predators Are Real’: Senate Hearing Slams Roblox Over Child Sex Abuse",
+            "summary": "US Senators Josh Hawley and Dick Durbin have introduced legislation to make it easier for families to sue if their child has been harmed through the massive gaming platform.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/the-predators-are-real-senate-hearing-slams-roblox-over-child-sex-abuse/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "culture-industry-20261119-20",
+            "source": "Wired Culture",
+            "date": "2026-11-18",
+            "headline": "The ‘GTA 6’ Work Blackout Is Here",
+            "summary": "From taking sick days and vacation days to gaming at the office, many are going all out to embrace the franchise’s long-awaited release.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/13-years-of-anticipation-deserves-a-day-off-the-gta-vi-work-blackout-is-here/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          },
+          {
+            "id": "culture-industry-20261119-26",
+            "source": "Ars Technica",
+            "date": "2026-11-18",
+            "headline": "Ted Cruz-led committee approves Trump FCC nominee 15-0 as Democrats boycott vote",
+            "summary": "Democrats try to prevent quorum, say Thumann lied about not working on media issues.",
+            "tag": "REPORT",
+            "url": "https://arstechnica.com/tech-policy/2026/11/ted-cruz-led-committee-approves-trump-fcc-nominee-15-0-as-democrats-boycott-vote/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.5
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261119-6",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-17",
+            "headline": "Diplomacy, but Make It Obnoxious",
+            "summary": "Sign up for Inside the Trump Presidency , a newsletter featuring coverage of the second Trump term. Tyra Banks had a tip for how contestants on America’s Next Top Model should present themselves: “Ho, but make it fashion.” Secretary of State Marco Rubio’s recent speeches update the message with a twist: “Traditional American foreign policy, but make it obnoxious.” Twice in six weeks, Rubio has delivered addresses filled with classic conservative beliefs, but seasoned with the kind of racism, sexism, and enthusiasm for lawless power that has become common in the age of Trump. At a Federalist Society conference Friday evening, Rubio offered an explanation for the Trump administration’s decision last month to impose sanctions on what he called the “fake” International Criminal Court—a move apparently made in retaliation against the ICC’s investigation of alleged U.S.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/marco-rubio-federalist-society-speech/689473/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 8.5,
+              "relevance": 6.5,
+              "total": 7.7
+            }
+          },
+          {
+            "id": "culture-voices-20261119-7",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-18",
+            "headline": "‘No Take, Only Throw’ Politics",
+            "summary": "This month, fed-up, stressed-out Americans headed to the ballot box and tacked hard to the left, supporting the party that is promising to restore billions of dollars in federal spending and billions of dollars in federal tax revenue. Democrats won in blue states. They won in purple states, such as Georgia, Michigan, Maine, and North Carolina.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/no-take-only-throw-democrats-budget-taxes/689497/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 6.5,
+              "total": 7.5
+            }
+          },
+          {
+            "id": "culture-voices-20261119-8",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-18",
+            "headline": "Black Politicians Can Be Like This",
+            "summary": "When Keisha Lance Bottoms, the next governor of Georgia, announced her transition team, one name in particular stood out: Tyler Perry, the filmmaker most famous for playing Madea, a Black matriarch who puffs on cigarettes and disciplines smart-aleck children, and who can draw out a “hello” with so many southern syllables that it sounds like “hallelujah.” Perry’s movies may be frowned upon, especially by members of the Black elite. Some people thought Bottoms’s pick was in poor taste (or, as one New York magazine writer put it, “unserious” ). But others—myself included—were here for it.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/democrats-midterms-black-politicians/689477/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 7.2
+            }
+          },
+          {
+            "id": "culture-voices-20261119-12",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-18",
+            "headline": "Can Pope Leo Bridge the Church’s Demographic Divide?",
+            "summary": "Pope Leo XIV is leading the Catholic Church during a period of extraordinary demographic change. A century ago, Europeans dominated the Church, representing some two-thirds of the world’s Catholics. Today, Latin America and Africa together make up a majority.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/pope-leo-south-america-unity/689494/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "culture-voices-20261119-17",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-18",
+            "headline": "Election Denialism Is All but Dead",
+            "summary": "O ut of all the surprises of the 2026 midterm election, among the most heartening was Donald Trump’s willingness to accept the results. “We’ll probably work something out,” he told The New York Times of the incoming Democratic majority in Congress. The next day, he walked the press around the site of the planned White House ballroom, less interested in battling over the election than showing off his construction project.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/election-denialism-end-midterms/689495/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          }
+        ]
+      }
+    }
+  }
+}
