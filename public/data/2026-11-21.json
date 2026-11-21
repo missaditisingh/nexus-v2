@@ -1,0 +1,656 @@
+{
+  "date": "2026-11-21",
+  "label": "Today",
+  "lastUpdated": "2026-11-21T13:52:22.638Z",
+  "agentLog": [
+    {
+      "timestamp": "13:51:10",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 8abb3a9: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:51:10",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:51:16",
+      "module": "SCOUT",
+      "message": "Scouted 113 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:51:16",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:51:17",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 71 off-beat/redundant wires. 42 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:51:17",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:51:17",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:52:22",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 27 items (11 via LLM, 16 via deterministic synthesis; top 15 LLM quota applied, 0 dropped for thin context). Tokens: 13461. Est cost: $0.00256.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:52:22",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:52:22",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (27 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "13:52:22",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-21 live (27 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261121-1",
+            "source": "TechCrunch AI",
+            "date": "2026-11-20",
+            "headline": "Anthropic founders cash out nearly $2B in record-breaking $105B IPO",
+            "summary": "Anthropic secured nearly $105 billion in its record-breaking initial public offering at an upgraded price of $83 per share. Each of the company's seven founders pocketed $280 million from the transaction.",
+            "tag": "AI_IPO",
+            "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 9.5,
+              "relevance": 9.5,
+              "total": 8.5
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261121-14",
+            "source": "TechCrunch AI",
+            "date": "2026-11-20",
+            "headline": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
+            "summary": "Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here's what the startup is building.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.5
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261121-2",
+            "source": "arXiv Preprint",
+            "date": "2026-11-19",
+            "headline": "AgentRoboCritic Evaluates Frontier Agent Performance in Direct Robot Control",
+            "summary": "Researchers introduce AgentRoboCritic, an intent-grounded critique framework that performs action-level analysis on frontier multimodal language agents controlling robots. The analysis highlights capabilities like closed-loop recovery and semantic grounding alongside physical execution bottlenecks. Additionally, the project releases a fine-tuned open-source critic, Muse-Glimmer-30B, to enable low-cost action-level evaluation.",
+            "tag": "ROBOTICS",
+            "url": "http://arxiv.org/abs/2611.26613v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.2,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261121-12",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-20",
+            "headline": "The most misunderstood graph in AI just got a major update",
+            "summary": "A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding. The report is an update to the organization’s time horizon plot, which was widely….",
+            "tag": "BENCHMARK",
+            "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261121-16",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-16",
+            "headline": "Building AI that can work across the enterprise",
+            "summary": "For years, enterprises have approached AI as a series of discrete experiments. Now, as AI agents begin to move into the workflows that run the business, that model is starting to look inadequate. Organizations moving from isolated pilots toward AI agents and autonomous workflows are confronting a deeper challenge: rethinking how data, business processes, governance,….",
+            "tag": "RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261121-18",
+            "source": "arXiv Preprint",
+            "date": "2026-11-19",
+            "headline": "Active Feature Acquisition by Distilling an Oracle Teacher",
+            "summary": "Acquiring every feature of an instance is often costly: a measurement can carry a monetary price, a time delay, or a privacy cost. Active Feature Acquisition (AFA) addresses this by learning a policy that decides, per instance, which features to acquire under a budget. Existing AFA methods train this policy by optimizing a self-constructed utility target rather than distilling an explicit teacher.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.26598v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-research-20261121-22",
+            "source": "arXiv Preprint",
+            "date": "2026-11-19",
+            "headline": "PlayCraft: Designing Engaging Games from Agent Play Experience",
+            "summary": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play games and draws on its detailed play experience to revise them for mastery.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.26624v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261121-13",
+            "source": "The Verge AI",
+            "date": "2026-11-19",
+            "headline": "Apple is hiring engineers to build its own AI agent",
+            "summary": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a now-removed job listing spotted by Bloomberg, which said Apple is looking for an engineer to lead the creation of an agentic AI […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261121-19",
+            "source": "The Verge AI",
+            "date": "2026-11-20",
+            "headline": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+            "summary": "Anthropic mathematician Levent Alpöge claims he has proved the Riemann hypothesis, one of mathematics's most notoriously difficult problems, with the help of Claude, cracking a puzzle that has eluded some of the world's best mathematicians for decades. If verified, it would mark yet another seismic achievement for AI in mathematics and add to the upheaval […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261121-20",
+            "source": "The Verge AI",
+            "date": "2026-11-19",
+            "headline": "A brief history of Nvidia’s recent stock fluctuations",
+            "summary": "\"We've got this,\" Colette Kress, interim CEO of Nvidia, said Tuesday night as she closed out the embattled chip company's third quarter earnings call. By Thursday, the company's stock price was hovering at around $150 per share, a nearly 40 percent drop from its all-time high on October 6th, and wiping out a brief post-earnings […].",
+            "tag": "EARNINGS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261121-3",
+            "source": "FTC Press",
+            "date": "2026-11-20",
+            "headline": "Ten Additional States Join FTC Deceptive Pricing Lawsuit Against Dollar General",
+            "summary": "Ten new states have joined the Federal Trade Commission's amended complaint against Dollar General Corporation. The lawsuit alleges the company engaged in deceptive pricing by charging consumers more at the register than the advertised prices, costing millions.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ten-additional-states-join-ftc-lawsuit-alleging-dollar-general-charged-consumers-more-advertised",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261121-4",
+            "source": "FTC Press",
+            "date": "2026-11-17",
+            "headline": "FTC Takes Enforcement Action Against Safety-Harness Manufacturer Over False Claims",
+            "summary": "The Federal Trade Commission is taking enforcement action against Elk River Inc. for allegedly making false 'Made in USA' claims on safety harnesses. A proposed order requires the company to cease deceptive claims and pay a monetary judgment.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-takes-enforcement-action-against-safety-harness-manufacturer-allegedly-false-made-usa-claims",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 8
+            }
+          }
+        ],
+        "global": [],
+        "voices": [
+          {
+            "id": "politics-voices-20261121-27",
+            "source": "Foreign Policy",
+            "date": "2026-11-20",
+            "headline": "Bob Woodward Is Scared as Hell",
+            "summary": "In his new memoir, the legendary reporter asks why presidents keep starting dumb wars—and worries about the future.",
+            "tag": "POLICY",
+            "url": "https://foreignpolicy.com/2026/11/20/bob-woodward-memoir-secrets-review/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "voices",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          }
+        ]
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261121-23",
+            "source": "MarketWatch Top",
+            "date": "2026-11-20",
+            "headline": "Dow, S&P 500 enter correction as Nasdaq suffers worst week since 2020",
+            "summary": "All 11 S&P 500 sectors finished more than 1% lower this week for the first time since April 2025.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/dow-s-p-500-enter-correction-as-nasdaq-suffers-worst-week-since-2020-bd74dadf?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "markets-macro-20261121-25",
+            "source": "MarketWatch Top",
+            "date": "2026-11-21",
+            "headline": "Larry McDonald survived Lehman’s collapse. Now he warns the credit market is signaling a growth shock for stocks.",
+            "summary": "Bear Traps Report founder explains why he sees stagflation coming, how much artificial-intelligence risk sits in S&P 500 index funds and why he favors hard assets.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/larry-mcdonald-survived-lehmans-collapse-now-he-warns-the-credit-market-is-signaling-a-growth-shock-for-stocks-5c3a62ef?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          },
+          {
+            "id": "markets-macro-20261121-26",
+            "source": "MarketWatch Top",
+            "date": "2026-11-20",
+            "headline": "These stocks were crushed the most this week as the tech wreck accelerated",
+            "summary": "94% of stocks in the S&P 500 declined for the week, 11 of them by at least 20%. But for now, analysts still think you can make a lot of money if you buy them.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/these-stocks-were-crushed-the-most-this-week-as-the-tech-wreck-accelerated-8d6f7323?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261121-7",
+            "source": "ScienceDaily",
+            "date": "2026-11-20",
+            "headline": "CERN Scientists Detect Extremely Rare Particle Decay After 40-Year Search",
+            "summary": "CERN researchers have found the first evidence of a particle decay process expected to happen only once in every 10 billion beauty particles. This rare detection, achieved after more than 40 years of searching, could aid physicists in exploring a microscopic realm with hidden unknown particles and forces.",
+            "tag": "PHYSICS",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261119194530.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261121-10",
+            "source": "ScienceDaily",
+            "date": "2026-11-21",
+            "headline": "X-ray telescope captures first cosmic observations after eight years",
+            "summary": "After traveling 10 billion kilometers over eight years, an X-ray telescope heading to Mercury has successfully captured its first cosmic observations. The instrument is performing better than expected and may soon reveal Mercury's hidden chemical secrets and formation history.",
+            "tag": "ASTRONOMY",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261120075547.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 7
+            }
+          },
+          {
+            "id": "science-frontier-20261121-11",
+            "source": "arXiv Preprint",
+            "date": "2026-11-19",
+            "headline": "New quantum algorithms achieve subquadratic gate and sublinear ancilla counts for arithmetic operations",
+            "summary": "Researchers present novel in-place quantum algorithms for integer multiplication, modular multiplication, and modular inversion that operate efficiently with minimal space and gate count overheads. These operations achieve subquadratic gate counts and sublinear ancilla counts, with most requiring only enough memory to overwrite the input with the output. The multiplication algorithms are derived from a single unified theorem that could aid future quantum arithmetic applications.",
+            "tag": "QUANTUM",
+            "url": "http://arxiv.org/abs/2611.26605v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "science-frontier-20261121-15",
+            "source": "arXiv Preprint",
+            "date": "2026-11-19",
+            "headline": "Scalable Simulation of Strongly Correlated Fermions with Neural Gaussian Tensor Networks",
+            "summary": "Accurate simulations of strongly correlated electrons remain a central challenge in computational physics. We introduce neural-network Gaussian projected entangled-pair states (NN-GPEPS), which exploit the locally-entangled subspace of Gaussian states to give an architecture more compatible with modern neural networks and an exact contraction cost of $O(N^{3/2})$ on two-dimensional lattices. For the Hubbard model at $U/t=8$ and $1/8$ hole doping, we obtain state-of-the-art variational energies in large lattices of up to 1024 sites.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.26604v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "science-frontier-20261121-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-19",
+            "headline": "Query-Optimal Quantum Minimum Finding from Numerical Estimators",
+            "summary": "We propose a quantum minimum-finding algorithm for objectives accessed via numerical estimators that avoids the logarithmic query overhead of amplifying the confidence of estimates before the search. A coherent estimator that is $\\varepsilon$-accurate with probability at least $2/3$ on each of $N$ labels suffices to find a $2\\varepsilon$-optimal label using $O(\\sqrt N)$ base-estimator queries at constant confidence. The query bound and the additive-error constant are separately worst-case optimal.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.26606v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261121-21",
+            "source": "Wired Culture",
+            "date": "2026-11-18",
+            "headline": "The ‘GTA 6’ Work Blackout Is Here",
+            "summary": "From taking sick days and vacation days to gaming at the office, many are going all out to embrace the franchise’s long-awaited release.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/13-years-of-anticipation-deserves-a-day-off-the-gta-vi-work-blackout-is-here/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261121-9",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-18",
+            "headline": "Voters embrace 'no take, only throw' politics amidst cost-of-living crisis",
+            "summary": "Americans recently voted for both increased federal spending and reduced government taxation, reflecting a contradictory political demand. This fiscal approach exacerbates persistent inflation driven by large budget deficits, trade policies, and rising essential goods prices. Addressing the affordability crisis requires either new revenue sources or policy adjustments to curb inflation without worsening the national debt.",
+            "tag": "POLITICS",
+            "url": "https://www.theatlantic.com/ideas/2026/11/no-take-only-throw-democrats-budget-taxes/689497/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "culture-voices-20261121-6",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-21",
+            "headline": "Hollywood Must Embrace New Technologies and Creator Platforms to Survive",
+            "summary": "Hollywood risks losing its cultural monopoly as audiences increasingly turn to creator platforms like YouTube, Roblox, and TikTok. Although studios are adapting by acquiring creator properties, they must fundamentally shift toward developing stories with audience input and partnering with new studios proficient in emerging technologies and formats. Similar to the historic Disney-Pixar partnership, legacy studios need to collaborate with modern tech-driven creators while compensating artists fairly for AI training data.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/movies-pixar-animation-media/689535/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 4.4,
+              "magnitude": 9.8,
+              "relevance": 9.5,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "culture-voices-20261121-5",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-20",
+            "headline": "Republican gerrymanders still pose threats despite midterm failures",
+            "summary": "Analyses concluding that Republican gerrymanders failed because the GOP lost the midterms are incorrect, as the maps successfully limited damage and preserved lopsided majorities. Despite extraordinary voter turnout overcoming these attempts, the structures remain in place and will impact future elections.",
+            "tag": "REDISTRICTING",
+            "url": "https://www.theatlantic.com/ideas/2026/11/gerrymandering-redistricting-black-voters/689492/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.2,
+              "relevance": 9,
+              "total": 7.7
+            }
+          },
+          {
+            "id": "culture-voices-20261121-8",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-19",
+            "headline": "Grand Theft Auto VI Blurs the Line Between Simulation and Life",
+            "summary": "The massive scale and detailed simulation of Grand Theft Auto VI turn mundane tasks like feeding a pet snake and drinking coffee into game mechanics that mirror real-world tracking tools and daily labor. Playing the game evokes a sense of \"playbor,\" where virtual activities increasingly resemble the digital interfaces, menus, and quantified routines of modern daily life.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/grand-theft-auto-vi-review/689514/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9,
+              "relevance": 8.5,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "culture-voices-20261121-17",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-18",
+            "headline": "Election Denialism Is All but Dead",
+            "summary": "O ut of all the surprises of the 2026 midterm election, among the most heartening was Donald Trump’s willingness to accept the results. “We’ll probably work something out,” he told The New York Times of the incoming Democratic majority in Congress. The next day, he walked the press around the site of the planned White House ballroom, less interested in battling over the election than showing off his construction project.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/election-denialism-end-midterms/689495/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          }
+        ]
+      }
+    }
+  }
+}
