@@ -1,0 +1,636 @@
+{
+  "date": "2026-11-23",
+  "label": "Today",
+  "lastUpdated": "2026-11-23T16:46:17.592Z",
+  "agentLog": [
+    {
+      "timestamp": "16:45:25",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit f1d4eb0: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:45:25",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:45:31",
+      "module": "SCOUT",
+      "message": "Scouted 111 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:45:31",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:45:32",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 71 off-beat/redundant wires. 40 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:45:32",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:45:32",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:46:17",
+      "module": "SYNTH",
+      "message": "Deterministic synthesis (LLM temporarily unavailable, HTTP 503): 26 items via deterministic synthesis, 0 via LLM (1 dropped for thin context). Est cost: free tier.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:46:17",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:46:17",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (26 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:46:17",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-23 live (26 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261123-5",
+            "source": "TechCrunch AI",
+            "date": "2026-11-23",
+            "headline": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
+            "summary": "Enterprise customer experience company Sierra, co-founded by former Salesforce co-CEO Bret Taylor, said on Monday that it has raised $1.75 billion in a Series F round.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 9.5,
+              "total": 7.7
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261123-17",
+            "source": "TechCrunch AI",
+            "date": "2026-11-23",
+            "headline": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+            "summary": "Three significant backers share what gave them conviction to bet billions on Anthropic.",
+            "tag": "IPO",
+            "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261123-13",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-20",
+            "headline": "The most misunderstood graph in AI just got a major update",
+            "summary": "A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding. The report is an update to the organization’s time horizon plot, which was widely….",
+            "tag": "BENCHMARK",
+            "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261123-14",
+            "source": "arXiv Preprint",
+            "date": "2026-11-20",
+            "headline": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+            "summary": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and quadratic computational complexity as the context expands. In contrast, linear-time architectures compress history into fixed-size states, but struggle to retain fine-grained details.",
+            "tag": "ARCHITECTURE",
+            "url": "http://arxiv.org/abs/2611.27973v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-research-20261123-15",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-16",
+            "headline": "Building AI that can work across the enterprise",
+            "summary": "For years, enterprises have approached AI as a series of discrete experiments. Now, as AI agents begin to move into the workflows that run the business, that model is starting to look inadequate. Organizations moving from isolated pilots toward AI agents and autonomous workflows are confronting a deeper challenge: rethinking how data, business processes, governance,….",
+            "tag": "RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261123-22",
+            "source": "arXiv Preprint",
+            "date": "2026-11-20",
+            "headline": "A Methodologically Rigorous Benchmark of Linear Regression,RNN, and LSTM for S&P 500 Forecasting:Identifying Sources of Performance Inflation in Financial DeepLearning",
+            "summary": "This study examines one-day-ahead forecasting of the S&P 500 closing level using a 2006-2025 dataset that includes fundamental price data, macroeconomic indicators, and engineered technical features. We benchmark three model families, namely linear regression, vanilla recurrent neural networks (RNN), and long short-term memory networks (LSTM), within a unified preprocessing and chronological evaluation pipeline. A central contribution of this work is a methodological audit of common practices in the deep-learning-for-stock-prediction literature.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.27978v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261123-23",
+            "source": "arXiv Preprint",
+            "date": "2026-11-20",
+            "headline": "Non-penetrating World Models",
+            "summary": "We study a new problem of preventing object penetration in interactive video world models. To understand how existing models handle this, we introduce NoPeBench, a benchmark that evaluates how world models respond to physical obstacles. Our evaluation reveals that none of the open-source models can reliably prevent such failures.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.27963v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261123-10",
+            "source": "The Verge AI",
+            "date": "2026-11-23",
+            "headline": "Jensen Huang is back as Nvidia’s CEO",
+            "summary": "Nvidia has reinstated Jensen Huang as its CEO. The company announced on Monday morning that the board \"voted unanimously to reinstate Mr. Huang following a series of discussions and meetings with Mr.",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1039937/nvidia-ceo-jensen-huang-reinstated",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 9.8,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261123-18",
+            "source": "The Verge AI",
+            "date": "2026-11-23",
+            "headline": "Meta Muse can do your Black Friday shopping at Walmart",
+            "summary": "Walmart will now let Meta's Muse shop on your behalf, allowing the AI agent to find and purchase Black Friday deals via Walmart's Sparky AI assistant. The retail giant is rolling out a live implementation of the Agent Gateway it announced last month, which helps AI agents find relevant products for you without sharing your […].",
+            "tag": "PARTNERSHIP",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261123-19",
+            "source": "The Verge AI",
+            "date": "2026-11-21",
+            "headline": "Can Anthropic afford to put safety first?",
+            "summary": "Today, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the Anthropic IPO for the third and final episode in our series about AI in real life. The AI lab behind Claude went public on the Nasdaq last Thursday. The numbers are gigantic, but not really that important for this conversation, except to […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261123-21",
+            "source": "The Verge AI",
+            "date": "2026-11-22",
+            "headline": "Binding of Isaac developer removes AI music from Repentance Plus",
+            "summary": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section. They found several audio files with Suno metadata that pointed back to […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261123-2",
+            "source": "FTC Press",
+            "date": "2026-11-20",
+            "headline": "Ten Additional States Join FTC Lawsuit Alleging Dollar General Charged Consumers More than Advertised for Many Products",
+            "summary": "The Federal Trade Commission filed an amended complaint adding ten states as co-plaintiffs in a lawsuit alleging that Dollar General Corporation engaged in long-running deceptive pricing practices by routinely charging customers more at the register than the prices displayed on shelves, price tags and advertisements, costing consumers millions of dollars.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ten-additional-states-join-ftc-lawsuit-alleging-dollar-general-charged-consumers-more-advertised",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261123-3",
+            "source": "FTC Press",
+            "date": "2026-11-17",
+            "headline": "FTC Takes Enforcement Action Against Safety-Harness Manufacturer for Allegedly False Made in the USA Claims",
+            "summary": "FTC’s proposed order requires the company to stop making deceptive claims and pay a monetary judgment The Federal Trade Commission is taking action against Elk River Inc., an Alabama-based manufacturer of safety harnesses and other fall protection equipment for workers, for falsely claiming that its harnesses are “Made in USA.”.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-takes-enforcement-action-against-safety-harness-manufacturer-allegedly-false-made-usa-claims",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.8
+            }
+          }
+        ],
+        "global": [],
+        "voices": [
+          {
+            "id": "politics-voices-20261123-26",
+            "source": "Foreign Policy",
+            "date": "2026-11-20",
+            "headline": "Bob Woodward Is Scared as Hell",
+            "summary": "In his new memoir, the legendary reporter asks why presidents keep starting dumb wars—and worries about the future.",
+            "tag": "POLICY",
+            "url": "https://foreignpolicy.com/2026/11/20/bob-woodward-memoir-secrets-review/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "voices",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          }
+        ]
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261123-11",
+            "source": "MarketWatch Top",
+            "date": "2026-11-23",
+            "headline": "Jensen Huang is back at Nvidia, and the stock market is surging. Can it last?",
+            "summary": "What to watch in AI earnings this Thanksgiving week. Plus, why memory stocks look so cheap, how much less you’ll pay at the pump and a $100,000 pottery-studio dilemma.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/trump-wants-jensen-huang-back-at-nvidia-what-will-it-take-to-stop-the-tech-selloff-3f6b091f?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 8.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.8
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261123-4",
+            "source": "arXiv Preprint",
+            "date": "2026-11-20",
+            "headline": "Thermo-electric Response Bound on Fluctuations in Coherent Transport",
+            "summary": "We establish an accessible lower bound on current noise in coherent electron transport, expressed in terms of responses to reservoir temperatures and chemical potentials. Derived within the Floquet-Nambu scattering formalism using a Cramér-Rao-type inequality, it holds for arbitrary linear combinations of charge and heat currents in normal terminals, including those of hybrid superconducting systems, under static or periodic driving. The bound is tight in experimentally relevant regimes, notably in quantum point contacts with static or oscillating voltages and normal-superconductor junctions, often providing stronger constraints than thermodynamic uncertainty relations.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.27884v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 7.8,
+              "total": 7.7
+            }
+          },
+          {
+            "id": "science-frontier-20261123-12",
+            "source": "arXiv Preprint",
+            "date": "2026-11-20",
+            "headline": "Optimised 8th-Order Trotter-Suzuki Schemes for Quantum Simulation",
+            "summary": "Simulating quantum dynamics in many-body systems is one of the most promising applications of quantum computers. Product formulas are a natural choice for this task, since they map directly onto quantum gates, and increasing their order $n$ could lead to reduced gate depths, provided the parameters are chosen efficiently. So far, schemes beyond $6^{\\textrm{th}}$ order have only been built as compositions of second-order schemes, while more general product formulas are known only up to $6^{\\textrm{th}}$ order.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.27896v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "science-frontier-20261123-16",
+            "source": "arXiv Preprint",
+            "date": "2026-11-20",
+            "headline": "World Models for Learning Quantum Many-Body Dynamics",
+            "summary": "We propose using world models for learning Hamiltonians from measured dynamics of a quantum computer or simulator. Implicitly, the parameters of a Hamiltonian are encoded in how the measured few-body observables evolve. By using a joint-embedding predictive architecture (JEPA) to perform prediction in latent space, we show that the device Hamiltonian can be efficiently inferred from noisy measurements.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.27871v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "science-frontier-20261123-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-20",
+            "headline": "The moments and asymptotic spectral distribution of the Grassmannian ensemble",
+            "summary": "In this paper, we study random density matrices constructed by taking partial traces of projections onto random subspaces of a bipartite Hilbert space $\\mathcal{H}_A \\otimes \\mathcal{H}_{B}$ distributed according to the pushforward measure of the action of the unitary group on the Grassmannian $\\text{Gr}_{n}(\\mathcal{H}_A \\otimes \\mathcal{H}_{B})$. This ensemble models a `typical' quantum subspace. All tracial moments of the density operator, as well as mixed tracial moments of reduced density operators, are computed explicitly using Weingarten calculus.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.27914v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 4.4,
+              "magnitude": 6,
+              "relevance": 6.5,
+              "total": 5.8
+            }
+          },
+          {
+            "id": "science-frontier-20261123-25",
+            "source": "arXiv Preprint",
+            "date": "2026-11-20",
+            "headline": "Quantum Many-Body Scars from Operator Size",
+            "summary": "We present a general construction of approximate many-body scar states in two copies of a system using a bilocal size interaction that couples one site to its partner on the other copy. For an uncoupled two-sided Hamiltonian whose terms have fixed size in an operator basis, we identify polynomially many Krylov basis states that it annihilates and that, in the thermodynamic limit, become concentrated on a single size sector. The size operator splits them into a tower of equally spaced levels that gives rise to coherent revivals characterized by collective oscillations of energy across the two copies.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.27982v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261123-20",
+            "source": "Wired Culture",
+            "date": "2026-11-18",
+            "headline": "The ‘GTA 6’ Work Blackout Is Here",
+            "summary": "From taking sick days and vacation days to gaming at the office, many are going all out to embrace the franchise’s long-awaited release.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/13-years-of-anticipation-deserves-a-day-off-the-gta-vi-work-blackout-is-here/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261123-1",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-23",
+            "headline": "Why I Changed My Mind About the Death Penalty",
+            "summary": "We were warned not to lift our faces. We had to press our noses to the floor. The hotel was cheap and the carpet stank.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/magazine/2027/01/pro-life-death-penalty/689406/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 9.2,
+              "relevance": 7.8,
+              "total": 8.1
+            }
+          },
+          {
+            "id": "culture-voices-20261123-6",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-21",
+            "headline": "Hollywood Needs a New Pixar",
+            "summary": "H ollywood earned its cultural monopoly by absorbing radical technologies that it first resisted: sound, color, computer graphics. People in the industry initially feared that Pixar’s computer animation would replace human actors with “digital doubles.” Similarly, most of the conversation about AI today revolves around cost savings and artist displacement. These issues are important, but they miss an even bigger shift that AI is accelerating.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/movies-pixar-animation-media/689535/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 4.4,
+              "magnitude": 9.8,
+              "relevance": 8.8,
+              "total": 7.7
+            }
+          },
+          {
+            "id": "culture-voices-20261123-8",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-23",
+            "headline": "Air Is Easing Out of the AI Bubble",
+            "summary": "ET on November 23, 2026 This should be a bullish time for investors in the AI business. Nvidia, which designs most of the chips that have driven the AI boom, just reported that its sales and profits doubled year-over-year, and that it’s on pace to grow another 75 percent next year. The industry as a whole, Nvidia said, has a backlog of $2.5 trillion in future orders, meaning that demand remains strong.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/ai-bubble-returns-timeline/689504/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 6.5,
+              "total": 7.5
+            }
+          },
+          {
+            "id": "culture-voices-20261123-7",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-22",
+            "headline": "My Apology to American Democracy",
+            "summary": "This article was featured in the One Story to Read Today newsletter. A fter any election, it’s natural to hunt for results that prove you were right all along. Landslides in particular provide the winners with ample evidence to sustain just about every prior position.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/doomerism-elections-authoritarianism-trump/689493/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.2,
+              "relevance": 7.8,
+              "total": 7.5
+            }
+          },
+          {
+            "id": "culture-voices-20261123-9",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-23",
+            "headline": "Orwell Has Become What He Despised",
+            "summary": "“Orwell Saw This Coming” ran the headline, and if you didn’t read any further, you might agree. The president was whipping up hatred in elaborate rage-fueled rallies and plastering banners bearing his glowering, oversize face on government buildings. The National Guard was patrolling the streets of Washington.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/george-orwell-trump-authoritarianism/689542/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 4.4,
+              "magnitude": 6,
+              "relevance": 9.5,
+              "total": 7
+            }
+          }
+        ]
+      }
+    }
+  }
+}
