@@ -1,0 +1,675 @@
+{
+  "date": "2026-11-24",
+  "label": "Today",
+  "lastUpdated": "2026-11-24T16:40:39.213Z",
+  "agentLog": [
+    {
+      "timestamp": "16:39:56",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 3d57bc3: \"Three tests down one feature: unit, integration an\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:39:56",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:40:00",
+      "module": "SCOUT",
+      "message": "Scouted 112 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:40:00",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:40:00",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 66 off-beat/redundant wires. 46 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:40:00",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:40:00",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:40:39",
+      "module": "SYNTH",
+      "message": "Deterministic synthesis (LLM temporarily unavailable, HTTP 503): 28 items via deterministic synthesis, 0 via LLM (0 dropped for thin context). Est cost: free tier.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:40:39",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:40:39",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (28 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:40:39",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-24 live (28 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261124-11",
+            "source": "TechCrunch AI",
+            "date": "2026-11-23",
+            "headline": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
+            "summary": "Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without having to pick the stocks yourself.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6.5,
+              "relevance": 8.8,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261124-17",
+            "source": "TechCrunch AI",
+            "date": "2026-11-24",
+            "headline": "Why a Crusoe investor is betting on solar and batteries to power future AI data centers",
+            "summary": "Next-generation data centers will need tens of gigawatts of power every year. One of Crusoe's investors thinks solar and energy storage are the obvious choice.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/24/why-a-crusoe-investor-is-betting-on-solar-and-batteries-to-power-future-ai-data-centers/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261124-14",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-20",
+            "headline": "The most misunderstood graph in AI just got a major update",
+            "summary": "A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding. The report is an update to the organization’s time horizon plot, which was widely….",
+            "tag": "BENCHMARK",
+            "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261124-15",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-23",
+            "headline": "A legendary philosopher isn’t buying Anthropic’s consciousness argument",
+            "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing.",
+            "tag": "RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261124-18",
+            "source": "arXiv Preprint",
+            "date": "2026-11-23",
+            "headline": "How Far Can Linear Go? BiPert, a Unified Framework for Single-Cell Perturbation Modelling",
+            "summary": "Understanding how genetic perturbations affect cellular behaviour is essential for studying gene function and regulatory mechanisms. Large-scale CRISPR screens measure these effects across thousands of genes, but cover relatively few cellular contexts. Predicting perturbation responses in unseen cell types and identifying perturbed genes from their transcriptional effects therefore remain challenging.",
+            "tag": "FRONTIER",
+            "url": "http://arxiv.org/abs/2611.31227v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-research-20261124-22",
+            "source": "arXiv Preprint",
+            "date": "2026-11-23",
+            "headline": "Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action",
+            "summary": "Reasoning vision-language-action (VLA) models for autonomous driving use chain-of-thought (CoT) reasoning to guide action generation, but incur substantial memory and computational costs. We study structured pruning for these models, focusing on preserving both scene understanding and trajectory prediction. Our analysis of Taylor importance in Alpamayo-1.5-10B shows that reasoning and trajectory objectives assign different importance to the same vision-language model (VLM) structures.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.31240v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261124-23",
+            "source": "arXiv Preprint",
+            "date": "2026-11-23",
+            "headline": "TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming",
+            "summary": "CLIP-style dual encoders map images and text through two separate towers into a shared embedding space, where the two modalities occupy distinct regions separated by a modality gap. Retrieval fails when wrong matches, or hard negatives, outrank the correct one, and the gap is the usual suspect. Yet removing it post hoc degrades retrieval on every CLIP checkpoint we test.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.31233v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261124-8",
+            "source": "The Verge AI",
+            "date": "2026-11-23",
+            "headline": "Nothing’s upcoming Ear Note is a pair of earbuds with AI transcription",
+            "summary": "Nothing's new AI device is the Ear Note, a set of earbuds and their microphone-equipped charging case that can record and transcribe conversations, with a connected app to manage the recordings, transcriptions and AI-generated summaries, similar to Apple's new Watch feature and devices like Amazon's Bee wearable. Nothing CEO Carl Pei demonstrated the new device […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/gadgets/1040357/nothing-ear-note-earbuds-ai-recording",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.1
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261124-10",
+            "source": "The Verge AI",
+            "date": "2026-11-23",
+            "headline": "Nvidia CEO Jensen Huang is back. What happens next?",
+            "summary": "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation. However, after The New York Times reported there was evidence of another affair, this time with an Nvidia executive who reported directly to him, a board meeting that night ended […].",
+            "tag": "REGULATORY",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 9.7,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261124-13",
+            "source": "The Verge AI",
+            "date": "2026-11-23",
+            "headline": "How Jensen Huang ended up as Nvidia CEO again",
+            "summary": "The Jensen Huang era of Nvidia nearly came to an end this month. Huang, who three decades ago cofounded what's come to be considered one of the most important companies in AI, resigned from his role on November 12th over mounting scrutiny around his alleged affairs. Huang admitted he had been \"unfaithful\" to his wife […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1040428/nvidia-jensen-huang-ceo-return",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 8.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261124-19",
+            "source": "The Verge AI",
+            "date": "2026-11-23",
+            "headline": "Trump engineered a risky comeback for Jensen Huang",
+            "summary": "After Nvidia's board accepted Jensen Huang's resignation as CEO, following reports that Huang had an affair with an alleged Chinese spy, President Donald Trump, too, appeared to submit to the new reality. Smith's radio show shortly after the news came out, Trump said that Huang would \"end up on his feet.\" […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261124-20",
+            "source": "The Verge AI",
+            "date": "2026-11-23",
+            "headline": "Welcome to elite impunity, Jensen Huang",
+            "summary": "I suppose I must issue a hearty congratulations to Jensen Huang. Huang is CEO of Nvidia again, to the surprise of basically everyone except President Donald Trump and Vice President JD Vance, who made sure it happened. Now, those of us who had some kind of basic education on what a \"free market\" is might […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261124-2",
+            "source": "FTC Press",
+            "date": "2026-11-20",
+            "headline": "Ten Additional States Join FTC Lawsuit Alleging Dollar General Charged Consumers More than Advertised for Many Products",
+            "summary": "The Federal Trade Commission filed an amended complaint adding ten states as co-plaintiffs in a lawsuit alleging that Dollar General Corporation engaged in long-running deceptive pricing practices by routinely charging customers more at the register than the prices displayed on shelves, price tags and advertisements, costing consumers millions of dollars.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ten-additional-states-join-ftc-lawsuit-alleging-dollar-general-charged-consumers-more-advertised",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261124-3",
+            "source": "FTC Press",
+            "date": "2026-11-17",
+            "headline": "FTC Takes Enforcement Action Against Safety-Harness Manufacturer for Allegedly False Made in the USA Claims",
+            "summary": "FTC’s proposed order requires the company to stop making deceptive claims and pay a monetary judgment The Federal Trade Commission is taking action against Elk River Inc., an Alabama-based manufacturer of safety harnesses and other fall protection equipment for workers, for falsely claiming that its harnesses are “Made in USA.”.",
+            "tag": "POLICY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-takes-enforcement-action-against-safety-harness-manufacturer-allegedly-false-made-usa-claims",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 7.8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261124-26",
+            "source": "MarketWatch Top",
+            "date": "2026-11-24",
+            "headline": "Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week.",
+            "summary": "The move risks new trade friction, but spares already imported holiday goods.",
+            "tag": "MARKETS",
+            "url": "https://www.marketwatch.com/story/americans-dont-like-trumps-tariffs-hes-doubling-down-anyway-as-soon-as-this-week-74c8bed5?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          },
+          {
+            "id": "markets-macro-20261124-27",
+            "source": "MarketWatch Top",
+            "date": "2026-11-24",
+            "headline": "A 10% cap on credit-card interest rates? Holiday shoppers shouldn’t bank on it.",
+            "summary": "As Americans prepare to pull out their credit cards for the holiday shopping season, President Donald Trump is saying he’s up for capping the interest rates they’re paying on their cards.",
+            "tag": "MARKETS",
+            "url": "https://www.marketwatch.com/story/trump-is-open-to-capping-credit-card-interest-rates-but-holiday-shoppers-shouldnt-bank-on-it-yet-34260705?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          },
+          {
+            "id": "markets-macro-20261124-28",
+            "source": "MarketWatch Top",
+            "date": "2026-11-24",
+            "headline": "Anthropic’s stock just broke below its IPO price for the first time",
+            "summary": "Shares traded below their IPO price of $83 on Tuesday morning, less than a week after their debut on the Nasdaq.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/anthropics-stock-just-broke-below-its-ipo-price-for-the-first-time-5dc82668?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261124-5",
+            "source": "ScienceDaily",
+            "date": "2026-11-24",
+            "headline": "A simple metal is hiding a strange new form of magnetism",
+            "summary": "Scientists have discovered a strange form of magnetism in an ordinary-looking metal that has no overall magnetization yet profoundly changes how electrons behave. The breakthrough offers a promising new path toward understanding exotic quantum materials and developing future electronic technologies.",
+            "tag": "PHYSICS",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261123005341.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 7.4
+            }
+          },
+          {
+            "id": "science-frontier-20261124-12",
+            "source": "ScienceDaily",
+            "date": "2026-11-24",
+            "headline": "IBM quantum computer solves problem classical computers can’t in just 15 minutes",
+            "summary": "IBM and University of Chicago researchers have demonstrated that a quantum computer can complete an extraordinarily complex calculation in just 15 minutes, beyond the practical reach of leading classical computing methods. A novel error-detection technique also allows scientists to establish confidence in the accuracy of the results, overcoming a major hurdle in quantum computing.",
+            "tag": "PHYSICS",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261123231244.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "science-frontier-20261124-16",
+            "source": "arXiv Preprint",
+            "date": "2026-11-23",
+            "headline": "Simple design of adaptive protocols for quantum metrology with limited data",
+            "summary": "Recent sensing experiments have used a Bayesian notion of precision gain to adapt control parameters for fixed measurements. Here, we advocate a simple design principle based on Personick's minimum mean square loss formalism to extend this procedure in order to include measurement optimisation, determining the optimal measurement for each probe and providing a prior-dependent precision gain to optimise the probe itself. This offers a Bayesian counterpart to protocol design based on the Fisher information, with a similar algebraic structure but incorporating the full prior.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.31230v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "science-frontier-20261124-24",
+            "source": "arXiv Preprint",
+            "date": "2026-11-23",
+            "headline": "Two messages suffice for quantum interactive proof systems",
+            "summary": "Quantum interactive proof systems can be parallelized to three messages, as shown by Kitaev and Watrous (STOC 2000), perhaps their most striking distinction from classical counterparts. In this work, we establish that any quantum interactive proof system can further be parallelized to two messages, with the verifier sending halves of EPR pairs (``quantum public coins'') and, after the prover's response, using only stoquastic verification. Technically, we strengthen ${\\sf QIP}(3) = {\\sf QIP} = {\\sf PSPACE}$ of Jain, Ji, Upadhyay, and Watrous (JACM, 2011) and fully characterize two-message quantum interactive proof systems by proving \\[ {\\rm qq}\\text{-}{\\sf StoqAM} = {\\rm qq}\\text{-}{\\sf QAM} = {\\sf QIP}(2) = {\\sf QIP} = {\\sf PSPACE}.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.31236v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          },
+          {
+            "id": "science-frontier-20261124-25",
+            "source": "arXiv Preprint",
+            "date": "2026-11-23",
+            "headline": "Small-world networks yield tunable quantum codes at short circuit depth",
+            "summary": "Monitored random quantum circuits naturally generate quantum error-correcting codes. We generate quantum codes with tunable properties by implementing random Clifford circuits on Watts--Strogatz `small-world' networks and tailor code properties via three knobs: nonlocal graph rewiring, measurement rate, and circuit depth. On fully rewired networks, circuits of logarithmic depth produce codes with a finite rate and an extensive mean contiguous distance with failure probability substantially lower than codes produced from local circuits.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.31224v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261124-21",
+            "source": "Wired Culture",
+            "date": "2026-11-24",
+            "headline": "Inside the Chinese City Where Furniture Dupes Are Made",
+            "summary": "Across social media, influencers share the fake luxury pieces they got directly from China—for one-tenth the price. Here’s where that viral sofa came from.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/foshan-china-dupes-furniture/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261124-1",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-23",
+            "headline": "Why I Changed My Mind About the Death Penalty",
+            "summary": "We were warned not to lift our faces. We had to press our noses to the floor. The hotel was cheap and the carpet stank.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/magazine/2027/01/pro-life-death-penalty/689406/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 9.2,
+              "relevance": 7.8,
+              "total": 8.1
+            }
+          },
+          {
+            "id": "culture-voices-20261124-4",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-23",
+            "headline": "Air Is Easing Out of the AI Bubble",
+            "summary": "ET on November 23, 2026 This should be a bullish time for investors in the AI business. Nvidia, which designs most of the chips that have driven the AI boom, just reported that its sales and profits doubled year-over-year, and that it’s on pace to grow another 75 percent next year. The industry as a whole, Nvidia said, has a backlog of $2.5 trillion in future orders, meaning that demand remains strong.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/ai-bubble-returns-timeline/689504/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 6.5,
+              "total": 7.5
+            }
+          },
+          {
+            "id": "culture-voices-20261124-6",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-24",
+            "headline": "‘Our History Is Better Than Anybody Else’s’",
+            "summary": "F or years now, Donald Trump and the MAGA movement have cast the United States as the heir to and defender of Western civilization. In the second Trump administration, this sort of grandiose rhetoric has increased; the administration presents itself as the lone bulwark against the barbarians at the gates who would annihilate everything good about the world. “Our lineage and our legacy hails back to Athens, to Rome,” Stephen Miller, Trump’s longtime adviser and new chief of staff, said at the funeral for the assassinated conservative activist Charlie Kirk.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/western-civilization-culture-war/689289/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.3
+            }
+          },
+          {
+            "id": "culture-voices-20261124-7",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-23",
+            "headline": "Why Trump Rescued Jensen Huang",
+            "summary": "A presidency that operated by normal rules of ethics or even self-preservation would be scrambling to distance itself from the repercussions of the Nvidia scandal. Last night, The New York Times reported that a Chinese woman who had an affair with Jensen Huang, Nvidia’s once and future chief executive, was in regular contact with China’s spy agency . The woman, Alice Huang, may have influenced the Nvidia CEO’s decision to sell advanced chips to companies that transferred them to China.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/trump-jensen-huang-backing/689545/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 8.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 7.8,
+              "total": 7.3
+            }
+          },
+          {
+            "id": "culture-voices-20261124-9",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-23",
+            "headline": "A New Age of Sail",
+            "summary": "Photographs by Peter Fisher For a few hours , it was magical. The Neoliner Origin, the world’s largest sailing cargo ship, was cruising across the Atlantic Ocean powered by nothing but wind. Four huge sails billowed from masts towering 90 meters above the waterline.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/magazine/2027/01/neoliner-origin-wind-powered-cargo-ship/689402/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 7.4,
+              "relevance": 6.5,
+              "total": 7
+            }
+          }
+        ]
+      }
+    }
+  }
+}
