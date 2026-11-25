@@ -1,0 +1,635 @@
+{
+  "date": "2026-11-25",
+  "label": "Today",
+  "lastUpdated": "2026-11-25T16:24:56.874Z",
+  "agentLog": [
+    {
+      "timestamp": "16:23:19",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 66c8185: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:23:19",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:23:27",
+      "module": "SCOUT",
+      "message": "Scouted 112 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:23:27",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:23:27",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 68 off-beat/redundant wires. 44 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:23:27",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:23:27",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:24:56",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 26 items (11 via LLM, 15 via deterministic synthesis; top 15 LLM quota applied, 1 dropped for thin context). Tokens: 9631. Est cost: $0.00203.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:24:56",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:24:56",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (26 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "16:24:56",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-25 live (26 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [
+          {
+            "id": "ai-venture-venture-20261125-21",
+            "source": "TechCrunch AI",
+            "date": "2026-11-24",
+            "headline": "Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
+            "summary": "It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          },
+          {
+            "id": "ai-venture-venture-20261125-22",
+            "source": "TechCrunch AI",
+            "date": "2026-11-24",
+            "headline": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
+            "summary": "The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company.",
+            "tag": "VENTURE",
+            "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "venture",
+            "scores": {
+              "authority": 7.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ],
+        "research": [
+          {
+            "id": "ai-venture-research-20261125-3",
+            "source": "arXiv Preprint",
+            "date": "2026-11-24",
+            "headline": "Tiny Gradient Edits Fix Small Language Model Thinking Loops",
+            "summary": "Fine-tuning a small language model on its own correct answers using gradients fixes thinking loops and raises MATH-500 accuracy to 39.0-45.5%. Combining this gradient edit with a frontier model weight edit reaches a score of 62.2% at 32k tokens. The gradient concentrates on the most nearly constant channels of the first three layers, acting as a constant vector added to the residual stream.",
+            "tag": "AI_RESEARCH",
+            "url": "http://arxiv.org/abs/2611.33133v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261125-5",
+            "source": "arXiv Preprint",
+            "date": "2026-11-24",
+            "headline": "Distilling long-horizon policies from teacher actions enables cross-format transfer without hidden chains-of-thought",
+            "summary": "Researchers demonstrate that long-horizon policies can be distilled from teacher actions alone without needing the teacher's hidden chain-of-thought, using a KL loss to limit drift. The resulting student models exhibit cross-format transfer, carrying over performance to inference with thinking enabled and improving task success rates across benchmarks. Introducing short summaries called CoT-proxies further boosts student performance when distilling from both open and closed teachers.",
+            "tag": "RESEARCH",
+            "url": "http://arxiv.org/abs/2611.33148v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.2,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261125-7",
+            "source": "arXiv Preprint",
+            "date": "2026-11-24",
+            "headline": "OmniAct cross-embodiment manipulation policy achieves high success across diverse robots",
+            "summary": "OmniAct is a cross-embodiment manipulation policy that conditions directly on robot kinematics and scene context to produce embodiment-specific behavior. Trained on one million procedurally designed simulated embodiments, the policy achieves a 63.0% success rate on evaluation episodes and outperforms baseline methods on unseen real-world robots.",
+            "tag": "ROBOTICS",
+            "url": "http://arxiv.org/abs/2611.33158v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261125-10",
+            "source": "arXiv Preprint",
+            "date": "2026-11-24",
+            "headline": "SAG-Mem Framework Enhances Long-Term Conversational Memory via Lexical Expansion",
+            "summary": "SAG-Mem preserves complete dialogue messages in non-overlapping chunks and uses query-time lexical expansion to discover complementary evidence without requiring model inference for memory construction. The framework achieves the highest overall scores on the LoCoMo and LongMemEval benchmarks among evaluated methods, while the SAG-Mem-Lite configuration achieves lower operational costs and low query latency.",
+            "tag": "AI-VENTURE",
+            "url": "http://arxiv.org/abs/2611.33124v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 6,
+              "relevance": 9.5,
+              "total": 7.2
+            }
+          },
+          {
+            "id": "ai-venture-research-20261125-15",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-20",
+            "headline": "The most misunderstood graph in AI just got a major update",
+            "summary": "A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding. The report is an update to the organization’s time horizon plot, which was widely….",
+            "tag": "BENCHMARK",
+            "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261125-14",
+            "source": "The Verge AI",
+            "date": "2026-11-25",
+            "headline": "Amazon is reportedly in talks to end Muse AI shopping block",
+            "summary": "Amazon has held talks about letting Meta's Muse AI agent shop on its online marketplace, according to a report from Fortune. The discussions, which could end Amazon's block on Muse, reportedly center on the kinds of products the AI agent recommends and the potential impact on the ecommerce giant's advertising revenue. As reported by Fortune, […].",
+            "tag": "EARNINGS",
+            "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.6
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261125-19",
+            "source": "The Verge AI",
+            "date": "2026-11-24",
+            "headline": "Jensen Huang reportedly tells Nvidia staff it’s ‘not true’ Trump got him rehired",
+            "summary": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports from Bloomberg, The New York Times, and The Handbasket's Marisa Kabas. During the meeting, Huang […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261125-18",
+            "source": "The Verge AI",
+            "date": "2026-11-23",
+            "headline": "Trump engineered a risky comeback for Jensen Huang",
+            "summary": "After Nvidia's board accepted Jensen Huang's resignation as CEO, following reports that Huang had an affair with an alleged Chinese spy, President Donald Trump, too, appeared to submit to the new reality. Smith's radio show shortly after the news came out, Trump said that Huang would \"end up on his feet.\" […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.3
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261125-23",
+            "source": "The Verge AI",
+            "date": "2026-11-24",
+            "headline": "Jensen Huang deepfakes are the hot new AI slop",
+            "summary": "Jensen Huang is partying it up in Ibiza. In a video with nearly 6 million views on Instagram, the former CEO of Nvidia is dancing in a crowded club, champagne glass in hand, still wearing his signature black leather jacket. Suddenly, from behind him, Alice Huang - the Chinese technology executive and suspected spy he […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.1
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261125-1",
+            "source": "FTC Press",
+            "date": "2026-11-24",
+            "headline": "SHEIN Will Pay $100 Million to Settle FTC Deceptive Practice Allegations",
+            "summary": "SHEIN will pay $100 million in consumer redress to settle Federal Trade Commission allegations of unfair and deceptive practices. The FTC alleged that the fast-fashion retailer suppressed negative reviews, failed to keep shipping promises, and made deceptive claims regarding its supply chain and cotton origin. Furthermore, the agency stated SHEIN made it unreasonably difficult for consumers to resolve purchase issues.",
+            "tag": "REGULATORY_FTC",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/shein-pay-100-million-over-allegations-deceptive-unfair-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 8.2,
+              "relevance": 8.8,
+              "total": 8.8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261125-4",
+            "source": "FTC Press",
+            "date": "2026-11-20",
+            "headline": "Ten Additional States Join FTC Lawsuit Against Dollar General",
+            "summary": "Ten states joined the FTC's amended complaint as co-plaintiffs in a lawsuit against Dollar General Corporation. The lawsuit alleges the company engaged in deceptive pricing practices by charging customers more at the register than the advertised shelf prices, resulting in millions of dollars in consumer costs.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ten-additional-states-join-ftc-lawsuit-alleging-dollar-general-charged-consumers-more-advertised",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261125-2",
+            "source": "FTC Press",
+            "date": "2026-11-25",
+            "headline": "FTC Finalizes Antitrust Order Governing Beretta and Ruger Deal",
+            "summary": "The Federal Trade Commission has finalized an order addressing antitrust concerns from a stock purchase agreement between Beretta Holding S.A. and Sturm, Ruger & Co. Inc. The measure resolves regulatory issues by barring anticompetitive entanglements between the two major firearm manufacturers.",
+            "tag": "ANTITRUST",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-finalizes-order-resolving-antitrust-concerns-stemming-beretta-ruger-stock-purchase-deal",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 7.9
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261125-24",
+            "source": "MarketWatch Top",
+            "date": "2026-11-25",
+            "headline": "Inflation gets worse. Now the Fed no choice but to raise U.S. interest rates.",
+            "summary": "The measure of inflation used by the Federal Reserve to influence U.S. interest rates rose again in October at an accelerated rate, virtually assuring the central bank will increase borrowing costs next month.",
+            "tag": "MACRO",
+            "url": "https://www.marketwatch.com/story/inflation-gets-worse-now-the-fed-no-choice-but-to-raise-u-s-interest-rates-8b0c2c1f?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "markets-macro-20261125-26",
+            "source": "MarketWatch Top",
+            "date": "2026-11-25",
+            "headline": "Nvidia’s stock is giving back more than half of Monday’s rally as dip buyers cash in",
+            "summary": "Based on where retail investors bought Nvidia’s stock on the dip last week, their gains are nearly all gone, according to Vanda Research.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/nvidias-stock-is-giving-back-more-than-half-of-mondays-rally-as-dip-buyers-cash-in-ee4fa52c?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261125-8",
+            "source": "ScienceDaily",
+            "date": "2026-11-25",
+            "headline": "Physicists trap and cool a positron near absolute zero",
+            "summary": "Physicists successfully suspended and cooled a positron in a wall-free trap to separate it safely from ordinary matter. The team plans to conduct the most precise comparison yet between matter and antimatter. Any discovered differences could expose cracks in the Standard Model of particle physics.",
+            "tag": "PHYSICS",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261124055849.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261125-6",
+            "source": "arXiv Preprint",
+            "date": "2026-11-24",
+            "headline": "Ultrathin titanium seed layer enables robust room-temperature growth of alpha-tantalum on sapphire",
+            "summary": "Researchers demonstrate a reliable room-temperature method for growing alpha-phase tantalum films on sapphire substrates using an ultrathin titanium seed layer. The resulting coplanar-waveguide resonators achieve two-level-system-limited quality factors comparable to current state-of-the-art standards. Additionally, temperature-dependent evaluations show that growth methods and post-processing treatments directly influence microwave performance by introducing temperature-activated losses.",
+            "tag": "SUPERCONDUCTORS",
+            "url": "http://arxiv.org/abs/2611.33112v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.2,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "science-frontier-20261125-12",
+            "source": "ScienceDaily",
+            "date": "2026-11-25",
+            "headline": "A space telescope hunting for dark matter just discovered something unexpected",
+            "summary": "ESA’s Euclid space telescope has discovered its first previously unknown comet, despite being designed to study distant galaxies and the mysteries of the dark Universe. The icy object is approximately 1.3 billion kilometers from Earth and follows an unusual orbit that takes thousands of years to complete.",
+            "tag": "AEROSPACE",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261124055852.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "science-frontier-20261125-13",
+            "source": "ScienceDaily",
+            "date": "2026-11-24",
+            "headline": "IBM quantum computer solves problem classical computers can’t in just 15 minutes",
+            "summary": "IBM and University of Chicago researchers have demonstrated that a quantum computer can complete an extraordinarily complex calculation in just 15 minutes, beyond the practical reach of leading classical computing methods. A novel error-detection technique also allows scientists to establish confidence in the accuracy of the results, overcoming a major hurdle in quantum computing.",
+            "tag": "PHYSICS",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261123231244.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "science-frontier-20261125-25",
+            "source": "arXiv Preprint",
+            "date": "2026-11-24",
+            "headline": "Evolutionary constraints on protein fold diversity",
+            "summary": "Arrangements of secondary structures in proteins yield a wide variety of possible topologies, yet the protein folds observed in nature are limited in their diversity. Is the number of protein folds limited by biophysical constraints or by evolutionary contingency? In recent years, the development of new methods for protein structure prediction and comparison, molecular design, and the rapid progress of cryo-electron microscopy revealed new insights into the protein fold space.",
+            "tag": "AEROSPACE",
+            "url": "http://arxiv.org/abs/2611.33104v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261125-20",
+            "source": "Wired Culture",
+            "date": "2026-11-24",
+            "headline": "Inside the Chinese City Where Furniture Dupes Are Made",
+            "summary": "Across social media, influencers share the fake luxury pieces they got directly from China—for one-tenth the price. Here’s where that viral sofa came from.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/foshan-china-dupes-furniture/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261125-9",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-24",
+            "headline": "Conservatives Invoke Western Civilization Myth to Justify Political Power",
+            "summary": "Donald Trump and the MAGA movement have increasingly framed the U.S. as the defender of Western civilization to legitimize claims of superiority and dominance. Critics argue this narrative relies on an outdated, mythologized view of history that ignores the interconnected, cross-cultural exchanges actually driving human progress.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/western-civilization-culture-war/689289/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 7.3
+            }
+          },
+          {
+            "id": "culture-voices-20261125-11",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-23",
+            "headline": "Donald Trump Pushes to Reinstate Nvidia CEO Jensen Huang",
+            "summary": "Donald Trump intervened to reinstate Jensen Huang as Nvidia's CEO despite reports linking Huang to a Chinese spy agency and chip transfers to China. Trump defended the decision, claiming he discussed the matter with Chinese President Xi Jinping, while showing disregard for potential national security impacts.",
+            "tag": "VOICES",
+            "url": "https://www.theatlantic.com/ideas/2026/11/trump-jensen-huang-backing/689545/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 8.5,
+              "total": 7.2
+            }
+          },
+          {
+            "id": "culture-voices-20261125-16",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-25",
+            "headline": "The Misguided Democratic Opposition to Permitting Reform",
+            "summary": "In a break with Congress’s Orwellian naming conventions, the Bipartisan American Affordability and Jobs Act is genuinely bipartisan, pro-affordability, and would create some jobs. Although affordability is a popular concept—the entire Democratic Party campaigned on it in the midterm elections—it isn’t easy to execute. Bringing down inflation by reducing the budget deficit would require painful choices to raise taxes or cut spending.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/permit-reform-democratic-accountability/689575/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 2.5,
+              "relevance": 6.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "culture-voices-20261125-17",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-25",
+            "headline": "The Great American Tradition",
+            "summary": "In September, after the White House barred CNN journalists from its grounds, some of the top news organizations in the country suspended their pooled coverage there. The Department of Justice is now investigating them for this act of defiance. In a statement, a department spokesperson accused the networks of having “proudly boycotted covering White House events” and warned that “group boycotts among commercial competitors can violate the Sherman Act.” This argument is not a new one.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/boycotts-mississippi-naacp-press-scotus/689568/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 2.4,
+              "magnitude": 5.2,
+              "relevance": 8.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    }
+  }
+}
