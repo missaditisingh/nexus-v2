@@ -1,0 +1,574 @@
+{
+  "date": "2026-11-26",
+  "label": "Today",
+  "lastUpdated": "2026-11-26T15:59:07.244Z",
+  "agentLog": [
+    {
+      "timestamp": "15:57:47",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit 439b55c: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:57:47",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:57:53",
+      "module": "SCOUT",
+      "message": "Scouted 110 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:57:53",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:57:53",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 78 off-beat/redundant wires. 32 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:57:53",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:57:54",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:59:07",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 23 items (12 via LLM, 11 via deterministic synthesis; top 15 LLM quota applied, 0 dropped for thin context). Tokens: 13685. Est cost: $0.00263.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:59:07",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:59:07",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (23 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:59:07",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-26 live (23 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [],
+        "research": [
+          {
+            "id": "ai-venture-research-20261126-5",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Attack policy selection significantly misleads AI monitor evaluations",
+            "summary": "An evaluation of an ex-production OpenAI monitor shows that measured false negative rates are highly sensitive to the method and optimization level used to generate attack policies. These variations indicate that evaluations using basic attack methods can provide false confidence, and interpreting results requires justification of the proxies used.",
+            "tag": "AI_MONITORING",
+            "url": "http://arxiv.org/abs/2611.34934v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.2,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261126-10",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-20",
+            "headline": "METR updates AI time horizon plot showing exponential capability growth",
+            "summary": "A new report from AI evaluation nonprofit METR indicates that AI capabilities continue to improve exponentially. However, the findings reveal that models struggle more with tasks requiring judgment compared to coding.",
+            "tag": "AI_RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "ai-venture-research-20261126-11",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Researchers Introduce Mixture-of-Loops Transformer to Balance Expressivity and Efficiency",
+            "summary": "The Mixture-of-Loops Transformer (MoLT) uses keys and values as memory for selective reuse across depths and loops to push the expressivity-efficiency frontier of looped Transformers. Variants like U-shaped MoLT balance efficiency and quality by separating memory construction from prediction readout and skipping unused decoder traversals. In pretraining evaluations, U-MoLT outperforms OLMo3 models and lowers cross-entropy on continued pretraining baselines.",
+            "tag": "AI-VENTURE",
+            "url": "http://arxiv.org/abs/2611.34923v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-research-20261126-14",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-23",
+            "headline": "A legendary philosopher isn’t buying Anthropic’s consciousness argument",
+            "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing.",
+            "tag": "RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261126-18",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Can image generation help visual reasoning? An empirical study",
+            "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together.",
+            "tag": "REASONING",
+            "url": "http://arxiv.org/abs/2611.34935v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261126-9",
+            "source": "The Verge AI",
+            "date": "2026-11-25",
+            "headline": "Amazon Discusses Potential Lifting of Muse AI Shopping Block",
+            "summary": "Amazon has held discussions regarding ending its block on Meta's Muse AI agent to allow it to shop on the online marketplace. The talks focus on product recommendations and the potential impact on Amazon's advertising revenue, according to a Fortune report.",
+            "tag": "AI-VENTURE",
+            "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 7.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261126-16",
+            "source": "The Verge AI",
+            "date": "2026-11-24",
+            "headline": "Jensen Huang reportedly tells Nvidia staff it’s ‘not true’ Trump got him rehired",
+            "summary": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports from Bloomberg, The New York Times, and The Handbasket's Marisa Kabas. During the meeting, Huang […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261126-1",
+            "source": "FTC Press",
+            "date": "2026-11-24",
+            "headline": "SHEIN Agrees to Pay $100 Million to Settle FTC Deceptive Practice Allegations",
+            "summary": "SHEIN will pay $100 million in consumer redress to settle Federal Trade Commission allegations that the fast-fashion retailer engaged in unfair customer service practices and deceived consumers. The FTC claims SHEIN made purchase resolutions difficult, failed shipping promises, suppressed negative reviews, and made deceptive supply chain and cotton-origin claims.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/shein-pay-100-million-over-allegations-deceptive-unfair-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 8.2,
+              "relevance": 9.5,
+              "total": 8.9
+            }
+          },
+          {
+            "id": "politics-regulatory-20261126-2",
+            "source": "FTC Press",
+            "date": "2026-11-25",
+            "headline": "FTC Finalizes Antitrust Order on Beretta and Ruger Stock Agreement",
+            "summary": "The Federal Trade Commission has finalized an order addressing antitrust concerns regarding a stock purchase agreement between firearm manufacturers Beretta Holding S.A. and Sturm, Ruger & Co. Inc. The order prohibits anticompetitive entanglements between the two companies.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-finalizes-order-resolving-antitrust-concerns-stemming-beretta-ruger-stock-purchase-deal",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261126-3",
+            "source": "FTC Press",
+            "date": "2026-11-25",
+            "headline": "FTC Narrows 2018 Northrop Grumman Order to Large Solid Rocket Motors",
+            "summary": "The Federal Trade Commission has partially granted and partially denied a petition from Northrop Grumman Corporation. The agency modified its 2018 order regarding the acquisition of Orbital ATK, narrowing its scope to apply exclusively to missile competitions involving large solid rocket motors.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-grants-part-denies-part-northrop-grumman-petition-set-aside-order",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261126-4",
+            "source": "FTC Press",
+            "date": "2026-11-20",
+            "headline": "Ten Additional States Join FTC Lawsuit Against Dollar General",
+            "summary": "Ten states have joined the Federal Trade Commission's amended complaint as co-plaintiffs in a lawsuit against Dollar General Corporation. The suit alleges the company engaged in deceptive pricing practices by charging customers more at the register than advertised prices.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ten-additional-states-join-ftc-lawsuit-alleging-dollar-general-charged-consumers-more-advertised",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [
+          {
+            "id": "markets-macro-20261126-23",
+            "source": "MarketWatch Top",
+            "date": "2026-11-26",
+            "headline": "Futures point to Black Friday gains on Wall Street as global markets welcome U.S. resilience",
+            "summary": "A rebound off lows for the S&P 500 on Wednesday calms bourses after the tech washout.",
+            "tag": "EQUITIES",
+            "url": "https://www.marketwatch.com/story/futures-point-to-black-friday-gains-for-wall-street-as-global-markets-welcome-u-s-resilience-ad6bcef2?mod=mw_rss_topstories",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "macro",
+            "scores": {
+              "authority": 8.4,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 5.6
+            }
+          }
+        ],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261126-13",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Neural Network Decoders For Qubit Loss",
+            "summary": "Qubit loss is a significant source of error in many quantum hardware platforms, requiring circuits that periodically replace or reset qubits to maintain fault-tolerance. When the reset process includes loss-resolving measurements, this information can improve decoding and substantially reduce overhead compared to the case where this information is not available. Prior work has demonstrated loss-tolerant circuits for the surface code that show significantly improved thresholds and subthreshold scaling by incorporating loss information.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.34891v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "science-frontier-20261126-19",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Schrödinger's Legacy: The Wave Function and Quantum Reality",
+            "summary": "The article discusses how Schrödinger arrived at the formulation of wave mechanics and his legacy on the philosophy of quantum mechanics, focusing in particular on the metaphysics of the wave function. Schrödinger's interpretation of the wave function as electron charge density is generally dismissed or presented only as a curious historical example in the literature. On a closer look, however, while this interpretation was eventually abandoned in favor of Born's statistical interpretation, Schrödinger's idea survived in modern realist approaches to the wave function, such as the mass-density approach and the multi-field interpretation.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.34895v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6
+            }
+          },
+          {
+            "id": "science-frontier-20261126-20",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Transition Path Sampling for Rare Events in Non-Markovian Open Quantum Systems",
+            "summary": "Rare transitions govern the dynamics of many open quantum systems, but their probabilities and rates are difficult to calculate. Transition path sampling (TPS) of quantum systems has so far been limited to Markovian, perturbative descriptions. Here, we formulate TPS for non-Markovian quantum state diffusion, which is exact for Gaussian baths, extending it to non-Markovian and strongly coupled open quantum systems.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.34883v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6
+            }
+          },
+          {
+            "id": "science-frontier-20261126-21",
+            "source": "Phys.org",
+            "date": "2026-11-26",
+            "headline": "Protein redesign boosts DNA insertion activity and reveals how molecular machinery selects targets",
+            "summary": "Genome engineering is exciting, given its vast potential to treat and even cure diseases, but it is still a largely uncharted biomedical innovation. Jude Children's Research Hospital recently uncovered the mechanisms involved in precisely integrating DNA into a target genomic location using CRISPR-associated transposases (CASTs). By studying type I-F3 CAST, the researchers unveiled structural findings that explain how this CAST family achieves successful DNA integration at precise target sites and offer insights for future genomic engineering approaches.",
+            "tag": "BIOTECH",
+            "url": "https://phys.org/news/2026-11-protein-redesign-boosts-dna-insertion.html",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 5.8
+            }
+          },
+          {
+            "id": "science-frontier-20261126-22",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Complementary mechanisms of critical quantum metrology",
+            "summary": "Critical metrology conventionally exploits enhanced susceptibility to a system parameter near a phase transition. Here we identify a complementary mechanism for critically enhanced estimation of intrinsic system parameters via suppressed quantum noise rather than enhanced response. We demonstrate both mechanisms in coherently radiating spin states (CRSS)-correlated states of $N$ spin-$1/2$ particles defined as asymptotic eigenstates of the collective-spin lowering operator with complex eigenvalue $r e^{-i\\varphi}$.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.34916v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261126-17",
+            "source": "Wired Culture",
+            "date": "2026-11-24",
+            "headline": "Inside the Chinese City Where Furniture Dupes Are Made",
+            "summary": "Across social media, influencers share the fake luxury pieces they got directly from China—for one-tenth the price. Here’s where that viral sofa came from.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/foshan-china-dupes-furniture/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261126-6",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-24",
+            "headline": "Conservatives promote Western civilization narrative to justify dominance and power",
+            "summary": "Donald Trump's administration and the MAGA movement have increasingly framed the United States as the exclusive defender of Western civilization. This ideological project relies on an outdated historiography that views human progress as the product of ethnic homogeneity and isolation rather than cross-cultural exchange. Critics argue this narrative serves to legitimize power and dominance while ignoring the interconnected nature of antiquity.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/western-civilization-culture-war/689289/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 7.3
+            }
+          },
+          {
+            "id": "culture-voices-20261126-7",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-23",
+            "headline": "Donald Trump successfully pushes to reinstate Nvidia CEO Jensen Huang",
+            "summary": "Donald Trump intervened to reinstate Jensen Huang as Nvidia's CEO despite reports linking Huang to a Chinese spy and concerns over advanced chips reaching China. Trump dismissed national security implications, even discussing the matter with Chinese President Xi Jinping. His actions reflect a disregard for national interests and a prioritization of the stock market.",
+            "tag": "VOICES",
+            "url": "https://www.theatlantic.com/ideas/2026/11/trump-jensen-huang-backing/689545/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 6,
+              "relevance": 8.5,
+              "total": 7
+            }
+          },
+          {
+            "id": "culture-voices-20261126-12",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-25",
+            "headline": "Congressional Democrats divided over passing the bipartisan infrastructure permitting reform bill",
+            "summary": "Democratic lawmakers in Congress are split over supporting the Bipartisan American Affordability and Jobs Act, which aims to streamline infrastructure and energy projects. While some green-energy champions back the reform to accelerate decarbonization, traditional environmental groups oppose it to maintain existing regulatory hurdles. Consequently, the party's internal division threatens the passage of a bill designed to lower energy costs and reduce greenhouse gas emissions.",
+            "tag": "PERMITTING",
+            "url": "https://www.theatlantic.com/ideas/2026/11/permit-reform-democratic-accountability/689575/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 2.5,
+              "relevance": 9,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "culture-voices-20261126-8",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-26",
+            "headline": "Adapting the Scandinavian Compromise for American Economic Renewal",
+            "summary": "The author proposes adopting a Scandinavian-inspired economic model that combines robust social welfare and inclusion with aggressive free-market dynamism. By balancing progressive safety nets with conservative free-trade and deregulatory principles, the United States can address declining productivity and pervasive economic insecurity without total partisan victory.",
+            "tag": "POLICY",
+            "url": "https://www.theatlantic.com/ideas/2026/11/scandinavia-inclusion-dynamism-welfare-sweden/689556/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "culture-voices-20261126-15",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-25",
+            "headline": "The Great American Tradition",
+            "summary": "In September, after the White House barred CNN journalists from its grounds, some of the top news organizations in the country suspended their pooled coverage there. The Department of Justice is now investigating them for this act of defiance. In a statement, a department spokesperson accused the networks of having “proudly boycotted covering White House events” and warned that “group boycotts among commercial competitors can violate the Sherman Act.” This argument is not a new one.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/boycotts-mississippi-naacp-press-scotus/689568/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 2.4,
+              "magnitude": 5.2,
+              "relevance": 8.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    }
+  }
+}
