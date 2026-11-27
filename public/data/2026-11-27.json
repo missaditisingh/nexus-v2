@@ -1,0 +1,553 @@
+{
+  "date": "2026-11-27",
+  "label": "Today",
+  "lastUpdated": "2026-11-27T15:46:55.052Z",
+  "agentLog": [
+    {
+      "timestamp": "15:46:06",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit e98f921: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:06",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:13",
+      "module": "SCOUT",
+      "message": "Scouted 104 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:13",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:13",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 72 off-beat/redundant wires. 32 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:13",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:13",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:55",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 22 items (15 via LLM, 7 via deterministic synthesis; top 15 LLM quota applied, 0 dropped for thin context). Tokens: 17685. Est cost: $0.00337.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:55",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:55",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (22 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "15:46:55",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-27 live (22 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [],
+        "research": [
+          {
+            "id": "ai-venture-research-20261127-5",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Attack Policy Selection Significantly Misleads AI Monitor Evaluations",
+            "summary": "An evaluation of an ex-production OpenAI monitor shows that measured false negative rates are highly sensitive to the method and optimization level used to generate attack policies. These sensitivity variations indicate that basic attack methods can provide false confidence, and interpreting evaluation results as deployment performance requires a legitimacy argument for the proxy transcripts.",
+            "tag": "AI_MONITORING",
+            "url": "http://arxiv.org/abs/2611.34934v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.2,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261127-10",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-20",
+            "headline": "METR Report Updates AI Time Horizon Plot and Capability Trajectories",
+            "summary": "A new report from AI evaluation nonprofit METR indicates that certain AI capabilities continue following an exponential trajectory. However, the findings also show that current models struggle more with tasks requiring judgment compared to coding tasks.",
+            "tag": "AI_RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "ai-venture-research-20261127-15",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-23",
+            "headline": "Philosopher questions Anthropic's AI consciousness risk factor",
+            "summary": "Anthropic identified the possibility of AI sentience or consciousness as a risk factor for investors before going public. A legendary philosopher is reportedly skeptical of this argument, questioning the validity of the premise.",
+            "tag": "AI-VENTURE",
+            "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "ai-venture-research-20261127-11",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Researchers Introduce Mixture-of-Loops Transformer to Balance Efficiency and Expressivity",
+            "summary": "The Mixture-of-Loops Transformer (MoLT) uses Mixture-of-Loops Attention to treat keys and values as memory for selective reuse across depths and loops. In 400B-token pretraining, the U-shaped MoLT variant outperforms OLMo3 across various dense and Mixture-of-Experts models while maintaining competitive inference latency.",
+            "tag": "AI_RESEARCH",
+            "url": "http://arxiv.org/abs/2611.34923v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-research-20261127-19",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Can image generation help visual reasoning? An empirical study",
+            "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together.",
+            "tag": "REASONING",
+            "url": "http://arxiv.org/abs/2611.34935v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261127-14",
+            "source": "The Verge AI",
+            "date": "2026-11-25",
+            "headline": "Amazon and Meta discuss ending Muse AI shopping block",
+            "summary": "Amazon is in talks regarding allowing Meta's Muse AI agent to shop on its online marketplace. The discussions focus on product recommendations and the potential impact on Amazon's advertising revenue.",
+            "tag": "AI_VENTURE",
+            "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261127-17",
+            "source": "The Verge AI",
+            "date": "2026-11-24",
+            "headline": "Jensen Huang reportedly tells Nvidia staff it’s ‘not true’ Trump got him rehired",
+            "summary": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports from Bloomberg, The New York Times, and The Handbasket's Marisa Kabas. During the meeting, Huang […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261127-1",
+            "source": "FTC Press",
+            "date": "2026-11-24",
+            "headline": "SHEIN Will Pay $100 Million to Settle FTC Deceptive Practice Allegations",
+            "summary": "Fast-fashion retailer SHEIN will pay $100 million in consumer redress to settle allegations from the Federal Trade Commission regarding deceptive and unfair business practices. The FTC alleged that SHEIN suppressed negative customer reviews, failed to meet shipping promises, and made false claims regarding its supply chain and cotton origins. Additionally, the regulator cited the company for making it unreasonably difficult for consumers to resolve purchase issues.",
+            "tag": "REGULATION",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/shein-pay-100-million-over-allegations-deceptive-unfair-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 8.2,
+              "relevance": 8.8,
+              "total": 8.8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261127-2",
+            "source": "FTC Press",
+            "date": "2026-11-25",
+            "headline": "FTC Finalizes Antitrust Order on Beretta and Ruger Stock Agreement",
+            "summary": "The Federal Trade Commission has finalized an order addressing antitrust concerns regarding a stock purchase agreement between firearm manufacturers Beretta Holding S.A. and Sturm, Ruger & Co. Inc. The directive explicitly prohibits anticompetitive entanglements between the two corporations.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-finalizes-order-resolving-antitrust-concerns-stemming-beretta-ruger-stock-purchase-deal",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 8.1
+            }
+          },
+          {
+            "id": "politics-regulatory-20261127-3",
+            "source": "FTC Press",
+            "date": "2026-11-25",
+            "headline": "FTC Narrows 2018 Order on Northrop Grumman Orbital ATK Acquisition",
+            "summary": "The Federal Trade Commission modified a 2018 order regarding Northrop Grumman Corporation's acquisition of Orbital ATK. The updated order limits its scope exclusively to missile competitions involving large solid rocket motors.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-grants-part-denies-part-northrop-grumman-petition-set-aside-order",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261127-4",
+            "source": "FTC Press",
+            "date": "2026-11-20",
+            "headline": "Ten States Join FTC Lawsuit Against Dollar General Over Deceptive Pricing",
+            "summary": "Ten additional states have joined an amended FTC lawsuit against Dollar General Corporation as co-plaintiffs. The complaint alleges that the company engaged in deceptive pricing by charging customers more at the register than the advertised shelf prices.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ten-additional-states-join-ftc-lawsuit-alleging-dollar-general-charged-consumers-more-advertised",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 8
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [],
+        "company-moves": [],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261127-6",
+            "source": "ScienceDaily",
+            "date": "2026-11-27",
+            "headline": "Harvard researchers develop microscopic device generating high ultraviolet light output",
+            "summary": "Harvard-led researchers have created a microscopic device that efficiently converts red light into ultraviolet light, producing 120 times more UV output than comparable past approaches. This technological breakthrough has the potential to enable smaller quantum computers, ultra-precise atomic clocks, and compact environmental sensors. The development marks a significant advancement in miniaturizing optical components for advanced technological applications.",
+            "tag": "FRONTIER",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261126063333.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "science-frontier-20261127-13",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Neural Network Decoders Improve Qubit Loss Handling in Quantum Codes",
+            "summary": "Researchers have developed a loss-aware convolutional neural-network decoder framework to address computational complexity challenges in simulating and decoding high-rate qLDPC codes with qubit loss. Enabled by a novel circuit sampler called slim, the decoder matches expensive most-likely error decoder accuracy at lower latency on the surface code. Furthermore, studies on the bivariate bicycle code demonstrate significantly lower logical error rates for loss-dominated models compared to pure Pauli error models.",
+            "tag": "QUANTUM",
+            "url": "http://arxiv.org/abs/2611.34891v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "science-frontier-20261127-20",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Schrödinger's Legacy: The Wave Function and Quantum Reality",
+            "summary": "The article discusses how Schrödinger arrived at the formulation of wave mechanics and his legacy on the philosophy of quantum mechanics, focusing in particular on the metaphysics of the wave function. Schrödinger's interpretation of the wave function as electron charge density is generally dismissed or presented only as a curious historical example in the literature. On a closer look, however, while this interpretation was eventually abandoned in favor of Born's statistical interpretation, Schrödinger's idea survived in modern realist approaches to the wave function, such as the mass-density approach and the multi-field interpretation.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.34895v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6
+            }
+          },
+          {
+            "id": "science-frontier-20261127-21",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Transition Path Sampling for Rare Events in Non-Markovian Open Quantum Systems",
+            "summary": "Rare transitions govern the dynamics of many open quantum systems, but their probabilities and rates are difficult to calculate. Transition path sampling (TPS) of quantum systems has so far been limited to Markovian, perturbative descriptions. Here, we formulate TPS for non-Markovian quantum state diffusion, which is exact for Gaussian baths, extending it to non-Markovian and strongly coupled open quantum systems.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.34883v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6
+            }
+          },
+          {
+            "id": "science-frontier-20261127-22",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Complementary mechanisms of critical quantum metrology",
+            "summary": "Critical metrology conventionally exploits enhanced susceptibility to a system parameter near a phase transition. Here we identify a complementary mechanism for critically enhanced estimation of intrinsic system parameters via suppressed quantum noise rather than enhanced response. We demonstrate both mechanisms in coherently radiating spin states (CRSS)-correlated states of $N$ spin-$1/2$ particles defined as asymptotic eigenstates of the collective-spin lowering operator with complex eigenvalue $r e^{-i\\varphi}$.",
+            "tag": "PHYSICS",
+            "url": "http://arxiv.org/abs/2611.34916v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 5.8
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261127-18",
+            "source": "Wired Culture",
+            "date": "2026-11-24",
+            "headline": "Inside the Chinese City Where Furniture Dupes Are Made",
+            "summary": "Across social media, influencers share the fake luxury pieces they got directly from China—for one-tenth the price. Here’s where that viral sofa came from.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/foshan-china-dupes-furniture/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261127-8",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-27",
+            "headline": "A Holiday Gift Guide for Navigating the AI Apocalypse",
+            "summary": "The article explores how artificial intelligence may reshape ordinary life rather than cause total extinction. It suggests thoughtful, tangible gifts to counteract issues like misinformation, loss of expertise, and cultural stagnation. These items aim to preserve human connection, privacy, serendipity, and physical reality in an increasingly digital world.",
+            "tag": "AI_APOCALYPSE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/gift-guide-ai-apocalypse/689561/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "culture-voices-20261127-7",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-24",
+            "headline": "Conservatives promote Western civilization narrative as political ideology",
+            "summary": "Donald Trump and the MAGA movement have increasingly framed the United States as the supreme defender of Western civilization. Critics argue this narrative relies on an outdated historiography and a myth of ethnic purity to legitimize power. Historical evidence shows that ancient civilizations advanced through cultural exchange rather than isolation.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/western-civilization-culture-war/689289/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 7.3
+            }
+          },
+          {
+            "id": "culture-voices-20261127-12",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-25",
+            "headline": "Congressional Democrats divided over passing the Bipartisan American Affordability and Jobs Act",
+            "summary": "The Bipartisan American Affordability and Jobs Act aims to streamline infrastructure and energy project permits to lower costs and reduce emissions. However, Democratic lawmakers in Congress are split, with many supplying no votes under pressure from environmental groups seeking to preserve existing regulatory hurdles. Consequently, the bill's future remains uncertain without active support from House leadership.",
+            "tag": "PERMITTING_REFORM",
+            "url": "https://www.theatlantic.com/ideas/2026/11/permit-reform-democratic-accountability/689575/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 2.5,
+              "relevance": 9.2,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "culture-voices-20261127-9",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-26",
+            "headline": "Adapting Scandinavian Economic Models to Overcome American Polarization",
+            "summary": "The text examines how Scandinavian nations successfully combine aggressive free-market capitalism with robust welfare systems, offering a potential roadmap for the United States. It argues that American politics is trapped in a false dichotomy between economic dynamism and inclusion, which could be resolved through a compromise featuring both social support and market freedom.",
+            "tag": "POLICY",
+            "url": "https://www.theatlantic.com/ideas/2026/11/scandinavia-inclusion-dynamism-welfare-sweden/689556/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 6.7
+            }
+          },
+          {
+            "id": "culture-voices-20261127-16",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-27",
+            "headline": "Why College Towns Are Booming",
+            "summary": "Berkeley, California, a quintessential university town, may well be the birthplace of anti-growth politics. In 1916, local reformers adopted the country’s first single-family zoning, prohibiting apartments in most residential neighborhoods as a way to exclude disfavored minorities. Progressives would carry on this legacy for the next century in the name of protecting residents from unwanted development.",
+            "tag": "REPORT",
+            "url": "https://www.theatlantic.com/ideas/2026/11/housing-yimby-college-towns/689596/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          }
+        ]
+      }
+    }
+  }
+}
