@@ -1,0 +1,554 @@
+{
+  "date": "2026-11-28",
+  "label": "Today",
+  "lastUpdated": "2026-11-28T14:42:53.425Z",
+  "agentLog": [
+    {
+      "timestamp": "14:41:54",
+      "module": "SCOUT",
+      "message": "Pipeline active on commit f3590c1: \"chore(data): auto-publish daily briefing [2026-11-\"",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:41:54",
+      "module": "SCOUT",
+      "message": "Initializing ingestion pipeline across 5 beats (strict 7-day recency filter).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:42:00",
+      "module": "SCOUT",
+      "message": "Scouted 108 candidate signals across 5 beats (all within 7-day window).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:42:00",
+      "module": "RANK",
+      "message": "Initiating deduplication & 4-factor scoring heuristics (discriminating deals vs administrative noise).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:42:00",
+      "module": "RANK",
+      "message": "Deduplication & relevance floor dropped 70 off-beat/redundant wires. 38 candidates evaluated.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:42:00",
+      "module": "SYNTH",
+      "message": "Selecting candidates clearing quality floor for synthesis.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:42:00",
+      "module": "SYNTH",
+      "message": "Verified curated models: gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:42:53",
+      "module": "SYNTH",
+      "message": "Synthesis complete for 22 items (15 via LLM, 7 via deterministic synthesis; top 15 LLM quota applied, 0 dropped for thin context). Tokens: 17057. Est cost: $0.00334.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:42:53",
+      "module": "EDITOR",
+      "message": "Computing composite 5-factor scores and executing non-destructive edition merge.",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:42:53",
+      "module": "EDITOR",
+      "message": "Enforced strict 5-item column quotas across all beats (22 total dispatches).",
+      "status": "ok"
+    },
+    {
+      "timestamp": "14:42:53",
+      "module": "PUBLISH",
+      "message": "Artifacts committed to /public/data/. Edition 2026-11-28 live (22 dispatches).",
+      "status": "ok"
+    }
+  ],
+  "beats": {
+    "ai-venture": {
+      "columns": {
+        "venture": [],
+        "research": [
+          {
+            "id": "ai-venture-research-20261128-4",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Attack Policy Selection and Optimization Mislead AI Monitor Evaluators",
+            "summary": "An evaluation of an ex-production OpenAI monitor shows that measured false negative rates are highly sensitive to the generation method and optimization level of attack policies. These variations create false confidence in monitor strength when using basic attack methods, revealing that justifying proxy informativeness remains an open problem.",
+            "tag": "AI_MONITORING",
+            "url": "http://arxiv.org/abs/2611.34934v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 9.4,
+              "relevance": 9.2,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "ai-venture-research-20261128-12",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Researchers Introduce Mixture-of-Loops Transformer to Boost Expressivity and Efficiency",
+            "summary": "The Mixture-of-Loops Transformer (MoLT) uses Mixture-of-Loops Attention to enable selective memory reuse across depths and loops using keys and values. The U-shaped variant, U-MoLT, balances efficiency and quality by separating memory construction from prediction readout and skipping unused decoder traversals. In pretraining evaluations, U-MoLT outperforms baseline models across various token counts and scales while maintaining comparable inference latency.",
+            "tag": "AI-RESEARCH",
+            "url": "http://arxiv.org/abs/2611.34923v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-research-20261128-16",
+            "source": "MIT Tech Review AI",
+            "date": "2026-11-23",
+            "headline": "A legendary philosopher isn’t buying Anthropic’s consciousness argument",
+            "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing.",
+            "tag": "RESEARCH",
+            "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 9,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.4
+            }
+          },
+          {
+            "id": "ai-venture-research-20261128-19",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Can image generation help visual reasoning? An empirical study",
+            "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together.",
+            "tag": "REASONING",
+            "url": "http://arxiv.org/abs/2611.34935v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          },
+          {
+            "id": "ai-venture-research-20261128-20",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "A gene informed benchmark for BioScoring of pathology foundation models",
+            "summary": "Pathology foundation models are usually compared by their performance on downstream tasks such as classification and retrieval. While such benchmarks measure how useful a model is, they provide no insight into the biology it represents. We introduce BioScore, a benchmark that quantifies how well an image encoder captures cell identities, with spatial transcriptomics of the same tissue as the reference.",
+            "tag": "BENCHMARK",
+            "url": "http://arxiv.org/abs/2611.34930v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "research",
+            "scores": {
+              "authority": 8.5,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 6
+            }
+          }
+        ],
+        "titans": [
+          {
+            "id": "ai-venture-titans-20261128-15",
+            "source": "The Verge AI",
+            "date": "2026-11-25",
+            "headline": "Amazon explores allowing Meta Muse AI shopping on marketplace",
+            "summary": "Amazon has held discussions regarding lifting its block on Meta's Muse AI agent to allow it to shop on the online marketplace. The talks focus on product recommendations and potential effects on advertising revenue, according to a Fortune report.",
+            "tag": "AI_VENTURE",
+            "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 6.5
+            }
+          },
+          {
+            "id": "ai-venture-titans-20261128-17",
+            "source": "The Verge AI",
+            "date": "2026-11-24",
+            "headline": "Jensen Huang reportedly tells Nvidia staff it’s ‘not true’ Trump got him rehired",
+            "summary": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports from Bloomberg, The New York Times, and The Handbasket's Marisa Kabas. During the meeting, Huang […].",
+            "tag": "TITANS",
+            "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "ai-venture",
+            "column": "titans",
+            "scores": {
+              "authority": 7.7,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 7.8,
+              "total": 6.3
+            }
+          }
+        ]
+      }
+    },
+    "politics": {
+      "columns": {
+        "regulatory": [
+          {
+            "id": "politics-regulatory-20261128-1",
+            "source": "FTC Press",
+            "date": "2026-11-24",
+            "headline": "SHEIN Pays $100 Million to Settle FTC Deceptive Practice Allegations",
+            "summary": "SHEIN will pay $100 million in consumer redress to settle Federal Trade Commission allegations of unfair and deceptive practices. The FTC alleged that the fast-fashion retailer suppressed negative reviews, broke shipping promises, and made deceptive claims regarding its supply chain and cotton origin. Additionally, the agency alleged SHEIN made it unreasonably difficult for millions of American consumers to resolve purchase issues.",
+            "tag": "FTC_SETTLEMENT",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/shein-pay-100-million-over-allegations-deceptive-unfair-practices",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 8.2,
+              "relevance": 9,
+              "total": 8.8
+            }
+          },
+          {
+            "id": "politics-regulatory-20261128-2",
+            "source": "FTC Press",
+            "date": "2026-11-25",
+            "headline": "FTC Finalizes Order Prohibiting Anticompetitive Entanglements Between Beretta and Sturm Ruger",
+            "summary": "The Federal Trade Commission finalized an order to resolve antitrust concerns arising from a stock purchase deal between firearm makers Beretta Holding S.A. and Sturm, Ruger & Co. Inc. The order addresses competitive risks by prohibiting anticompetitive entanglements between the two companies.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-finalizes-order-resolving-antitrust-concerns-stemming-beretta-ruger-stock-purchase-deal",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 7.9
+            }
+          },
+          {
+            "id": "politics-regulatory-20261128-3",
+            "source": "FTC Press",
+            "date": "2026-11-25",
+            "headline": "FTC Narrows Northrop Grumman Order Scope to Large Solid Rocket Motors",
+            "summary": "The Federal Trade Commission modified a 2018 order concerning Northrop Grumman Corporation’s acquisition of aerospace and defense contractor Orbital ATK. The ruling grants in part and denies in part Northrop Grumman's petition to set aside the order. Consequently, the order's updated scope applies exclusively to missile competitions involving large solid rocket motors.",
+            "tag": "REGULATORY",
+            "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-grants-part-denies-part-northrop-grumman-petition-set-aside-order",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "politics",
+            "column": "regulatory",
+            "scores": {
+              "authority": 9.7,
+              "corroboration": 9.2,
+              "novelty": 7.8,
+              "magnitude": 4.2,
+              "relevance": 8.5,
+              "total": 7.9
+            }
+          }
+        ],
+        "global": [],
+        "voices": []
+      }
+    },
+    "markets": {
+      "columns": {
+        "macro": [],
+        "company-moves": [
+          {
+            "id": "markets-company-moves-20261128-22",
+            "source": "SEC EDGAR / 8-K",
+            "date": "2026-11-27",
+            "headline": "National Healthcare Properties, Inc.: Form 8-K Discloses Asset Acquisition or Disposition",
+            "summary": "SEC regulatory submission filed by National Healthcare Properties, Inc. Disclosed event: Asset Acquisition or Disposition. Verified filing date 2026-11-27.",
+            "tag": "MARKETS",
+            "url": "https://www.sec.gov/edgar/browse/?CIK=0001561032",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "markets",
+            "column": "company-moves",
+            "scores": {
+              "authority": 7.2,
+              "corroboration": 4,
+              "novelty": 2.4,
+              "magnitude": 2.5,
+              "relevance": 7.8,
+              "total": 4.8
+            }
+          }
+        ],
+        "analysts": []
+      }
+    },
+    "science": {
+      "columns": {
+        "frontier": [
+          {
+            "id": "science-frontier-20261128-6",
+            "source": "ScienceDaily",
+            "date": "2026-11-27",
+            "headline": "Harvard researchers develop microscopic device generating high-intensity ultraviolet light",
+            "summary": "Harvard-led researchers have engineered a tiny device that efficiently converts red light into ultraviolet light, producing 120 times more UV output than comparable previous methods. This technological advancement could enable the creation of smaller quantum computers, compact environmental sensors, and ultra-precise atomic clocks.",
+            "tag": "FRONTIER",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261126063333.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "science-frontier-20261128-11",
+            "source": "ScienceDaily",
+            "date": "2026-11-28",
+            "headline": "Researchers develop non-fading, pigment-free coating using microscopic silicon spheres",
+            "summary": "Researchers have created a lightweight, pigment-free coating inspired by nature that uses microscopic silicon spheres to produce durable, non-fading colors. The technology provides the rich appearance of automotive paint while maintaining consistent color from various viewing angles. Additionally, the coating is extremely lightweight, with the color layer for an entire passenger airliner theoretically weighing less than a carton of milk.",
+            "tag": "FRONTIER",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261127203630.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9.5,
+              "total": 7
+            }
+          },
+          {
+            "id": "science-frontier-20261128-10",
+            "source": "ScienceDaily",
+            "date": "2026-11-28",
+            "headline": "Yale Researchers Discover Calorie Restriction Lowers Anti-Aging Immune Protein",
+            "summary": "Yale scientists found that moderate calorie restriction reduces an immune protein linked to aging and chronic inflammation. This reduction appears to occur independently of weight loss, suggesting that blocking the protein could potentially mimic the health benefits of eating less.",
+            "tag": "FRONTIER",
+            "url": "https://www.sciencedaily.com/releases/2026/11/261128010416.htm",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 7.5,
+              "corroboration": 9.2,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 6.9
+            }
+          },
+          {
+            "id": "science-frontier-20261128-14",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Neural Network Decoders Overcome Computational Complexity in Qubit Loss Simulation",
+            "summary": "Researchers have developed a loss-aware convolutional neural-network decoder framework to address the computational complexity of loss simulation and decoding in quantum error correction. Enabled by a novel sampler called slim, the approach matches most-likely error decoder accuracy at lower latency on the surface code and demonstrates significantly lower logical error rates for a bivariate bicycle code under loss-dominated error models.",
+            "tag": "QUANTUM",
+            "url": "http://arxiv.org/abs/2611.34891v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9.2,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "science-frontier-20261128-21",
+            "source": "arXiv Preprint",
+            "date": "2026-11-25",
+            "headline": "Schrödinger's Legacy: The Wave Function and Quantum Reality",
+            "summary": "The article discusses how Schrödinger arrived at the formulation of wave mechanics and his legacy on the philosophy of quantum mechanics, focusing in particular on the metaphysics of the wave function. Schrödinger's interpretation of the wave function as electron charge density is generally dismissed or presented only as a curious historical example in the literature. On a closer look, however, while this interpretation was eventually abandoned in favor of Born's statistical interpretation, Schrödinger's idea survived in modern realist approaches to the wave function, such as the mass-density approach and the multi-field interpretation.",
+            "tag": "BIOTECH",
+            "url": "http://arxiv.org/abs/2611.34895v1",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "science",
+            "column": "frontier",
+            "scores": {
+              "authority": 8.6,
+              "corroboration": 3,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6
+            }
+          }
+        ]
+      }
+    },
+    "culture": {
+      "columns": {
+        "industry": [
+          {
+            "id": "culture-industry-20261128-18",
+            "source": "Wired Culture",
+            "date": "2026-11-24",
+            "headline": "Inside the Chinese City Where Furniture Dupes Are Made",
+            "summary": "Across social media, influencers share the fake luxury pieces they got directly from China—for one-tenth the price. Here’s where that viral sofa came from.",
+            "tag": "REPORT",
+            "url": "https://www.wired.com/story/foshan-china-dupes-furniture/",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "industry",
+            "scores": {
+              "authority": 8.1,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 6.5,
+              "total": 6.2
+            }
+          }
+        ],
+        "voices": [
+          {
+            "id": "culture-voices-20261128-5",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-28",
+            "headline": "Underdog Houthi forces gain strategic advantage over Saudi Arabia using cost-effective weapons",
+            "summary": "Despite Saudi Arabia possessing advanced and expensive Western weaponry, the Houthi rebels have gained the upper hand in the ongoing conflict through the use of simpler, homebuilt, and adaptable weapons and drones. The Houthis have targeted critical Saudi economic infrastructure while utilizing tactics that exploit the high cost and limited stockpiles of Saudi air defense systems. This dynamic demonstrates how underdog militaries can put larger powers on the defensive with agile, low-cost armaments.",
+            "tag": "WARFARE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/houthis-future-warfare-technology/689559/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 9.8,
+              "relevance": 8.8,
+              "total": 7.8
+            }
+          },
+          {
+            "id": "culture-voices-20261128-7",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-27",
+            "headline": "A Curated Gift Guide for Navigating the AI Apocalypse",
+            "summary": "This article examines how ordinary life might continue to change during an AI-driven apocalypse rather than ending entirely. It suggests thoughtful, tangible gifts—ranging from cameras with hardware-authenticated digital signatures to print newspapers and bowling league memberships—to help counteract the societal impacts of artificial intelligence.",
+            "tag": "CULTURE",
+            "url": "https://www.theatlantic.com/ideas/2026/11/gift-guide-ai-apocalypse/689561/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 9.4,
+              "magnitude": 4.2,
+              "relevance": 9,
+              "total": 7.6
+            }
+          },
+          {
+            "id": "culture-voices-20261128-8",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-28",
+            "headline": "Conservative Nonprofits Weaponize the Civil Rights Act of 1866 Against Minority Programs",
+            "summary": "Following the Supreme Court's 2023 affirmative action decision, conservative nonprofits have launched lawsuits using the Civil Rights Act of 1866 to target scholarships, grants, and professional directories intended for minority Americans. These organizations argue that programs benefiting racial minorities violate the statute's contract provisions, prompting widespread preemptive changes among companies and grantmakers despite persistent racial wealth and funding gaps.",
+            "tag": "CIVIL_RIGHTS",
+            "url": "https://www.theatlantic.com/ideas/2026/11/civil-rights-discrimination-law/689565/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 7.4,
+              "relevance": 9.5,
+              "total": 7.4
+            }
+          },
+          {
+            "id": "culture-voices-20261128-13",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-25",
+            "headline": "Congressional Democrats Divided Over Bipartisan Permitting Reform Legislation",
+            "summary": "The Bipartisan American Affordability and Jobs Act aims to streamline infrastructure and energy project construction to lower costs and reduce emissions without federal spending. Despite these goals, congressional Democrats supplied the majority of 'no' votes due to opposition from traditional environmental groups defending legacy regulatory hurdles like the National Environmental Policy Act.",
+            "tag": "POLICY",
+            "url": "https://www.theatlantic.com/ideas/2026/11/permit-reform-democratic-accountability/689575/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 7.8,
+              "magnitude": 2.5,
+              "relevance": 8.5,
+              "total": 6.8
+            }
+          },
+          {
+            "id": "culture-voices-20261128-9",
+            "source": "The Atlantic Ideas",
+            "date": "2026-11-26",
+            "headline": "Adapting the Scandinavian Compromise for American Economic Renewal",
+            "summary": "The author proposes that the United States can resolve its crises of inclusion and dynamism by adopting elements of the Scandinavian model. This approach combines aggressive free-market capitalism and flexible labor markets with generous welfare systems and public support. Ultimately, the compromise requires progressives to accept a business-friendly environment while conservatives embrace a larger government safety net.",
+            "tag": "SCANDINAVIA",
+            "url": "https://www.theatlantic.com/ideas/2026/11/scandinavia-inclusion-dynamism-welfare-sweden/689556/?utm_source=feed",
+            "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80",
+            "beat": "culture",
+            "column": "voices",
+            "scores": {
+              "authority": 8.8,
+              "corroboration": 6.5,
+              "novelty": 5.2,
+              "magnitude": 4.2,
+              "relevance": 8.8,
+              "total": 6.7
+            }
+          }
+        ]
+      }
+    }
+  }
+}
